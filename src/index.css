@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --font-menrope: 'Manrope', sans-serif;
+  --font-fira: 'Fira Code', monospace;
+
+  --color-primary: #125B9A;
+  --color-secondary: #F05A7E;
+  --color-accent: #0B8494;
+  --color-highlight: #FFD166;
+
+  --light-background: #F0F4F8;
+  --light-text: #2E3A47;
+  --light-details: #0B8494;
+
+  --dark-background: #1A1E26;
+  --dark-text: #E0E4E8;
+  --dark-details: #0B8494;
+}
+
+[data-theme="light"] {
+  --bg-color: var(--light-background);
+  --text-color: var(--light-text);
+}
+
+[data-theme="dark"] {
+  --bg-color: var(--dark-background);
+  --text-color: var(--dark-text);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
