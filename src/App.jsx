@@ -1,22 +1,13 @@
-import HoverEffectText from "./components/fx/mouse-color-changer";
-import { UmTexto } from "./components/fx/um-texto";
+import { NavbarScrollspy } from "./components/navbar-scrollspy";
+import { SocialIcons } from "./components/social-icons";
+import { Hero } from "./components/hero";
 
 const App = () => {
   return (
     <>
-      <HoverEffectText />
-      <UmTexto />
-      <div className="h-screen w-screen flex flex-col items-center justify-center gap-6">
-        <h1 className="text-3xl font-bold text-sky-600 hover-effect">
-          app app app app app app app
-        </h1>
-        <h1 className="text-3xl font-bold text-green-600">
-          app app app app app app app
-        </h1>
-        <h1 className="text-3xl font-bold text-black hover-effect">
-          app app app app app app app
-        </h1>
-      </div>
+      <NavbarScrollspy />
+      <SocialIcons />
+      <Hero />
     </>
   );
   // quem vc é?

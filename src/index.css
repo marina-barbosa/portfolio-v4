@@ -3,6 +3,10 @@
 @theme {
   --font-menrope: 'Manrope', sans-serif;
   --font-fira: 'Fira Code', monospace;
+  --font-raleway: 'Raleway', sans-serif;
+  --font-ibm: 'IBM Plex Mono', monospace;
+  --font-spacegrotesk: 'Space Grotesk', sans-serif;
+  --font-vcr: 'VCR OSD Mono', monospace;
 
   --color-primary: #125B9A;
   --azul: #009ccc;
