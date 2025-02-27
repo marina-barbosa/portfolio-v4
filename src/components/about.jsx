@@ -23,6 +23,13 @@ export default function About() {
             novos desafios e oportunidades para crescer e aprimorar minhas
             habilidades.
           </p>
+          <p className="text-gray-600 leading-relaxed">
+            Olá, sou um desenvolvedor apaixonado por tecnologia e inovação.
+            Trabalho com diversas tecnologias de desenvolvimento e tenho
+            experiência com aplicações web e mobile. Estou sempre em busca de
+            novos desafios e oportunidades para crescer e aprimorar minhas
+            habilidades.
+          </p>
         </div>
       </div>
     </section>
