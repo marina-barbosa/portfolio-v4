@@ -30,6 +30,10 @@ const ScrollMarquee = () => {
         scrub: 2,
       },
     });
+        // return () => {
+        //   // Limpar o ScrollTrigger quando o componente for desmontado
+        //   ScrollTrigger.kill();
+        // };
   }, []);
 
   return (

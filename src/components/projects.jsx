@@ -23,7 +23,7 @@ const projects = [
   // Adicione mais projetos conforme necessário
 ];
 
-export default function ProjectsSection() {
+export default function Projects() {
   return (
     <div className="mx-auto w-full py-20 px-40 flex flex-col gap-16">
       {projects.map((project, index) => (

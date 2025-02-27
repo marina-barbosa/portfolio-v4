@@ -1,13 +1,14 @@
 import { NavbarScrollspy } from "./components/navbar-scrollspy";
 import { SocialIcons } from "./components/social-icons";
 import { Hero } from "./components/hero";
-import  ProjectsSection  from "./components/projects";
+import  Projects from "./components/projects";
 import ServicesList from "./components/services-list";
 import About from "./components/about";
 import { Footer } from "./components/footer";
 import ScrollMarquee from "./fx/scroll-marquee";
-import { Trajetoria } from "./components/trajetoria";
+import Trajetoria from "./components/trajetoria";
 import { Testimonials } from "./components/testimonials";
+import ProjectsSection from "./fx/projects-section";
 
 const App = () => {
   return (
@@ -16,12 +17,10 @@ const App = () => {
       <SocialIcons />
       <Hero />
       <ProjectsSection />
+      <Projects />
       <ServicesList />
       <About />
-      <div style={{ paddingTop: "50px" }}>
-        {/* height: "200vh",  */}
-        <ScrollMarquee />
-      </div>
+      <ScrollMarquee />
       <Trajetoria />
       <Testimonials />
       <Footer />
