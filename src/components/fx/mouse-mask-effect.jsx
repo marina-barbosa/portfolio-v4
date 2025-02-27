@@ -171,8 +171,9 @@ const MouseWindow = () => {
 
 const Home = () => {
   return (
-    <div className="h-screen w-screen z-10 absolute">
+    <div className="h-screen w-screen z-10 absolute flex items-center justify-center">
       <h1 className="text-3xl font-bold text-sky-600">Home</h1>
+      <h1 className="text-3xl font-bold text-black">Home</h1>
     </div>
   );
 };
