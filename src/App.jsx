@@ -9,11 +9,13 @@ import ScrollMarquee from "./fx/scroll-marquee";
 import Trajetoria from "./components/trajetoria";
 import { Testimonials } from "./components/testimonials";
 import ProjectsSection from "./fx/projects-section";
+import { ProjectsSectionExp } from "./fx/projects-section-exp";
 
 const App = () => {
   return (
     <>
-      <NavbarScrollspy />
+      <ProjectsSectionExp />
+      {/* <NavbarScrollspy />
       <SocialIcons />
       <Hero />
       <ProjectsSection />
@@ -23,7 +25,7 @@ const App = () => {
       <ScrollMarquee />
       <Trajetoria />
       <Testimonials />
-      <Footer />
+      <Footer /> */}
     </>
   );
   // quem vc é?
