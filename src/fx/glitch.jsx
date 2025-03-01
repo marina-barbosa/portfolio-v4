@@ -1,89 +1,59 @@
 export const Glitch = () => {
     return (
       <>
-        <a href="#" className="glitch" data-glitch="Glitch">
-          Glitch
-        </a>
-
         <style>
           {`
-                 body {
-    background-color: #232323;
-}
+            @keyframes glitch-tremble {
+              0% {
+                transform: translate(0, 0);
+              }
+              20% {
+                transform: translate(-2px, 0);
+              }
+              40% {
+                transform: translate(2px, 0);
+              }
+              60% {
+                transform: translate(-2px, -1px);
+              }
+              80% {
+                transform: translate(2px, 1px);
+              }
+              100% {
+                transform: translate(0, 0);
+              }
+            }
 
-.glitch {
-    font-size: 8.125em;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    text-decoration: none;
-    text-transform: uppercase;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    color: #fff;
-    letter-spacing: 5px;
-}
+            .glitch-tremble:hover {
+              animation: glitch-tremble 0.2s infinite;
+            }
 
-.glitch::before,
-.glitch::after {
-    display: block;
-    content: attr(data-glitch);
-    text-transform: uppercase;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0.8;
-}
+            @keyframes glitch-colors {
+              0% {
+                box-shadow: -3px -2px lightseagreen, 2px 3px #f0f;
+              }
+              20% {
+                box-shadow: -3px 2px #f0f, -2px -3px lightseagreen;
+              }
+              40% {
+                box-shadow: 2px 3px lightseagreen, 3px -2px #f0f;
+              }
+              60% {
+                box-shadow: 3px -1px #f0f, -1px 3px lightseagreen;
+              }
+              80% {
+                box-shadow: -3px 1px lightseagreen, 1px -3px #f0f;
+              }
+              100% {
+                box-shadow: 2px -3px #f0f, -3px 2px lightseagreen;
+              }
+            }
 
-.glitch::after {
-    color: #f0f;
-    z-index: -2;
-}
+            .glitch-colors:hover {
+              animation: glitch-colors 0.2s infinite;
+            }
 
-.glitch::before {
-    color: #0ff;
-    z-index: -1;
-}
-
-.glitch:hover::before {
-    animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both 5;
-}
-
-.glitch:hover::after {
-    animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both 5;
-}
-
-@media only screen and (max-width: 400px) {
-    .glitch {
-        font-size: 3em;
-    }
-}
-
-@keyframes glitch {
-    0% {
-        transform: translate(0);
-    }
-    20% {
-        transform: translate(-5px, 5px);
-    }
-    40% {
-        transform: translate(-5px, -5px);
-    }
-    60% {
-        transform: translate(5px, 5px);
-    }
-    80% {
-        transform: translate(5px, -5px);
-    }
-    100% {
-        transform: translate(0);
-    }
-}
-                `}
+          `}
         </style>
       </>
     );

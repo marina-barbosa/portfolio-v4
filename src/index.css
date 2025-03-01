@@ -38,3 +38,43 @@ body {
   color: var(--text-color);
   transition: background-color 0.3s, color 0.3s;
 }
+/* CURSOR */
+
+body {
+  cursor: none;
+}
+
+button, a, .clickable {
+  cursor: pointer;
+}
+
+
+/* BARRA DE ROLAGEM */
+
+/* WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 8px; /* Largura da barra de rolagem */
+}
+
+/* Fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+/* Barra deslizante (thumb) */
+::-webkit-scrollbar-thumb {
+  background: #e0e0e0;
+  border-radius: 4px; 
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d0d0d0; 
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #e0e0e0 #ffffff;
+}
+

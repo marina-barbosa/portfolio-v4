@@ -9,14 +9,16 @@ export const Hero = () => {
           <div className="cosmic-orb orb-2"></div>
           <div className="cosmic-orb orb-3"></div>
         </div>
-        <h1 className="z-10 mx-auto max-w-[78vw] m-10 mb-0 text-7xl uppercase font-bold text-center">
+        <h1 className="open-mask-ball mouse-color-changer z-10 mx-auto max-w-[78vw] m-10 mb-0 text-7xl uppercase font-bold text-center">
           You dream, I create. <br />
           Just like that.
         </h1>
-        <h2 className="mt-4 mb-10 ">Fullstack Developer since 2023</h2>
-        <div>
+        <h2 className="mt-4 mb-10 mouse-color-changer">
+          Fullstack Developer since 2023
+        </h2>
+        <div className="open-mask-ball">
           <ButtonCosmic>say hi</ButtonCosmic>
-          <ButtonCosmic>download cv</ButtonCosmic>
+          <ButtonCosmic>get cv</ButtonCosmic>
         </div>
 
         {/* CSS for the gradient orbs */}
