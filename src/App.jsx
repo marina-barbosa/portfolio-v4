@@ -10,14 +10,16 @@ import Trajetoria from "./components/trajetoria";
 import { Testimonials } from "./components/testimonials";
 import ProjectsSection from "./fx/projects-section";
 import { ProjectsSectionExp } from "./fx/projects-section-exp";
+import CosmicHero from "./fx/gradient-orb";
 
 const App = () => {
   return (
     <>
-      <ProjectsSectionExp />
-      {/* <NavbarScrollspy />
+      <NavbarScrollspy />
       <SocialIcons />
       <Hero />
+      {/* <ProjectsSectionExp /> */}
+      {/* 
       <ProjectsSection />
       <Projects />
       <ServicesList />
@@ -25,7 +27,8 @@ const App = () => {
       <ScrollMarquee />
       <Trajetoria />
       <Testimonials />
-      <Footer /> */}
+      <Footer /> 
+      */}
     </>
   );
   // quem vc é?

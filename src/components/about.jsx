@@ -14,7 +14,7 @@ export default function About() {
         {/* Texto */}
         <div className="md:w-1/2 text-center md:text-left md:pl-8">
           <h2 className="text-3xl font-semibold text-gray-800 mb-4">
-            Sobre Mim
+            Sobre Mim / aba rh /aba dev / aba fun
           </h2>
           <p className="text-gray-600 leading-relaxed">
             Olá, sou um desenvolvedor apaixonado por tecnologia e inovação.

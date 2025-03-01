@@ -1,26 +1,27 @@
 
-import { ButtonCosmic } from "./button-cosmic";
-export const Hero = () => {
-    return (
-      <section className="mx-auto h-screen flex flex-col items-center justify-center bg-gray-100  font-raleway">
-        {/* Gradient Orbs */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="cosmic-orb orb-1"></div>
-          <div className="cosmic-orb orb-2"></div>
-          <div className="cosmic-orb orb-3"></div>
-        </div>
-        <h1 className="z-10 mx-auto max-w-[78vw] m-10 mb-0 text-7xl uppercase font-bold text-center">
-          You dream, I create. <br />
-          Just like that.
-        </h1>
-        <h2 className="mt-4 mb-10 ">Fullstack Developer since 2023</h2>
-        <div>
-          <ButtonCosmic>say hi</ButtonCosmic>
-          <ButtonCosmic>download cv</ButtonCosmic>
-        </div>
 
-        {/* CSS for the gradient orbs */}
-        <style>{`
+export default function CosmicHero() {
+  return (
+    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-slate-50 to-blue-50">
+      {/* Gradient Orbs */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="cosmic-orb orb-1"></div>
+        <div className="cosmic-orb orb-2"></div>
+        <div className="cosmic-orb orb-3"></div>
+      </div>
+
+      {/* Content */}
+      <div className="container relative z-10 mx-auto px-4 py-20 md:py-32">
+        <div className="flex flex-col items-center justify-center text-center">
+          <h1 className="mt-6 max-w-4xl bg-gradient-to-r from-violet-600 via-indigo-500 to-purple-600 bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-3xl md:text-4xl lg:text-5xl">
+            Explore the Universe in a Whole New Light
+          </h1>
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row"></div>
+        </div>
+      </div>
+
+      {/* CSS for the gradient orbs */}
+      <style>{`
         .cosmic-orb {
           position: absolute;
           border-radius: 50%;
@@ -67,8 +68,6 @@ export const Hero = () => {
           }
         }
       `}</style>
-      </section>
-    );
-};
-
-//  from-indigo-500 via-pink-500 to-sky-400
+    </div>
+  );
+}
