@@ -1,65 +1,52 @@
 export const Footer = () => {
   return (
-    <footer className="w-full py-6 border-t border-gray-100 bg-white">
-      <div className="container mx-auto px-4 max-w-5xl">
+    <footer className="relative w-full py-8 border-t border-gray-100">
+      <div className="mx-auto px-4 max-w-5xl">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-          {/* Logo */}
-          <div className="w-20 h-6 mb-4 md:mb-0">
-            <svg viewBox="0 0 100 30" className="w-full h-full">
-              <rect
-                width="100"
-                height="30"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1"
-              />
-              <text
-                x="50"
-                y="20"
-                fontSize="12"
-                textAnchor="middle"
-                fill="currentColor"
+          {/* Coluna da esquerda - Connect */}
+          <div className="flex-1 flex flex-col items-center md:items-start justify-between h-full">
+            <div className="space-y-6">
+              <h3 className="font-bold text-sm tracking-wider">CONNECT</h3>
+              <a
+                href="mailto:email@example.com"
+                className="block text-sm hover:opacity-70 transition-opacity"
               >
-                LOGO
-              </text>
-            </svg>
+                Email
+              </a>
+              <a
+                href="tel:+1234567890"
+                className="block text-sm hover:opacity-70 transition-opacity"
+              >
+                Phone
+              </a>
+            </div>
           </div>
-
-          {/* Connect Section */}
-          <div className="text-center md:text-left">
-            <h3 className="text-xs tracking-widest uppercase mb-2 font-light">
-              Connect
-            </h3>
-            <div className="flex gap-x-20">
-              <div className="flex flex-col flex-wrap gap-x-6 gap-y-1 text-sm text-gray-600">
-                <a href="#" className="hover:text-black transition-colors">
-                  Linkedin
+          {/* Logo */}
+          <div className="flex-1 flex justify-center items-center">
+            <img src="/twitch-dinodance.gif" className="h-10" />
+          </div>
+          {/* Coluna da direita - Créditos */}
+          <div className="flex-1 flex flex-col items-center md:items-end justify-between h-full">
+            <div>
+              <p className="text-xs text-gray-600 mb-1 text-right">Made in Brazil</p>
+              <p className="text-xs text-gray-600 mb-6 text-right">
+                Created & Coded by Marina
+              </p>
+              <div className="flex space-x-3 mt-2">
+                <a
+                  href="/contact"
+                  className="inline-flex items-center justify-center px-4 py-2 bg-black text-white text-sm font-medium rounded hover:bg-opacity-90 transition-colors"
+                >
+                  say hi →
                 </a>
-                <a href="#" className="hover:text-black transition-colors">
-                  Github
-                </a>
-                <a href="#" className="hover:text-black transition-colors">
-                  Behance
-                </a>
-              </div>
-              <div className="flex flex-col flex-wrap gap-x-6 gap-y-1 text-sm text-gray-600">
-                <a href="#" className="hover:text-black transition-colors">
-                  Email
-                </a>
-                <a href="#" className="hover:text-black transition-colors">
-                  Phone
-                </a>
-                <a href="#" className="hover:text-black transition-colors">
-                  Download CV
+                <a
+                  href="/cv.pdf"
+                  className="inline-flex items-center justify-center px-4 py-2 border border-black text-black text-sm font-medium rounded hover:bg-black hover:text-white transition-colors"
+                >
+                  get cv →
                 </a>
               </div>
             </div>
-          </div>
-
-          {/* Credits */}
-          <div className="text-xs text-gray-400 mt-4 md:mt-0 text-center md:text-right">
-            <p>Made in Brazil</p>
-            <p>Created & Coded by Marina</p>
           </div>
         </div>
       </div>

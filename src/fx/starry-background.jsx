@@ -23,7 +23,7 @@ export const StarryBackground = () => {
 
   return (
     <>
-      <div className="bg-black h-screen w-full absolute">
+      <div className="bg-black h-full w-full fixed z-0">
 
         {stars.map((star, index) => (
           <div

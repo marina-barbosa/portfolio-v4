@@ -47,7 +47,7 @@ export const MouseMaskWindow = () => {
   return (
     <>
       <motion.div
-        className="absolute inset-0 bg-white"
+        className="fixed inset-0 bg-white z-0 pointer-events-none"
         style={{
           maskImage: `radial-gradient(circle ${circleSize.get()}px at ${
             mousePosition.x
@@ -59,7 +59,7 @@ export const MouseMaskWindow = () => {
       />
       {isNearElement && (
         <motion.div
-          className="absolute rounded-full border border-gray-500"
+          className="fixed rounded-full border-2 border-gray-500"
           style={{
             width: "20px",
             height: "20px",

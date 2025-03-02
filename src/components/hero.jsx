@@ -2,7 +2,7 @@
 import { ButtonCosmic } from "./button-cosmic";
 export const Hero = () => {
     return (
-      <section className="mx-auto h-screen flex flex-col items-center justify-center bg-gray-100  font-raleway">
+      <section className="mx-auto h-screen flex flex-col items-center justify-center bg-gray-100 font-raleway">
         {/* Gradient Orbs */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="cosmic-orb orb-1"></div>
@@ -13,7 +13,7 @@ export const Hero = () => {
           You dream, I create. <br />
           Just like that.
         </h1>
-        <h2 className="mt-4 mb-10 mouse-color-changer">
+        <h2 className="mt-4 mb-10 z-20 open-mask-ball mouse-color-changer font-ibm">
           Fullstack Developer since 2023
         </h2>
         <div className="open-mask-ball">
@@ -27,7 +27,6 @@ export const Hero = () => {
           position: absolute;
           border-radius: 50%;
           filter: blur(60px);
-          opacity: 0.6;
         }
 
         .orb-1 {
@@ -36,6 +35,7 @@ export const Hero = () => {
           background: linear-gradient(135deg, #a78bfa, #818cf8);
           top: -100px;
           right: -100px;
+          opacity: 0.3;
           animation: float 20s ease-in-out infinite;
         }
 
@@ -45,15 +45,17 @@ export const Hero = () => {
           background: linear-gradient(135deg, #60a5fa, #34d399);
           top: 30%;
           right: 20%;
+          opacity: 0.6;
           animation: float 12s ease-in-out infinite 1s;
         }
 
         .orb-3 {
           width: 150px;
           height: 150px;
-          background: linear-gradient(135deg, #38bdf8, #818cf8);
+          background: linear-gradient(135deg, #ec4899, #818cf8);
           bottom: 20%;
           right: 30%;
+          opacity: 0.6;
           animation: float 10s ease-in-out infinite 3s;
         }
 
