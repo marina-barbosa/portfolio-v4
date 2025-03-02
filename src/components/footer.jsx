@@ -23,12 +23,14 @@ export const Footer = () => {
           </div>
           {/* Logo */}
           <div className="flex-1 flex justify-center items-center">
-            <img src="/twitch-dinodance.gif" className="h-10" />
+            <img src="/twitch-dinodance.gif" className="h-10 open-mask-medium" />
           </div>
           {/* Coluna da direita - Créditos */}
           <div className="flex-1 flex flex-col items-center md:items-end justify-between h-full">
             <div>
-              <p className="text-xs text-gray-600 mb-1 text-right">Made in Brazil</p>
+              <p className="text-xs text-gray-600 mb-1 text-right">
+                Made in Brazil
+              </p>
               <p className="text-xs text-gray-600 mb-6 text-right">
                 Created & Coded by Marina
               </p>

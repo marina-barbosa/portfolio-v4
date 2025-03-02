@@ -14,14 +14,18 @@ import MouseColorChanger from "./fx/mouse-color-changer";
 import { Glitch } from "./fx/glitch";
 import { HackerScrambles } from "./fx/hacker-scrambles";
 import { ProjectsScrollTrigger } from "./components/projects-scroll-trigger";
+import { BgMask } from "./z-experimental/mask/bg-mask";
+import { MouseMask } from "./z-experimental/mask/mouse-mask";
 
 const App = () => {
   return (
     <>
       <div className="min-h-screen flex flex-col antialiased">
         <StarryBackground />
-        <MouseColorChanger />
-        <MouseMaskWindow />
+        <BgMask />
+        <MouseMask />
+        {/* <MouseColorChanger /> */}
+        {/* <MouseMaskWindow /> */}
         <HackerScrambles />
         <NavbarScrollspy />
         <Glitch />
@@ -31,7 +35,7 @@ const App = () => {
         <ServicesList />
         <About />
         <ScrollMarquee />
-        <div className="h-20"/>
+        <div className="h-20" />
         {/* <Trajetoria /> */}
         <Testimonials />
         <Footer />

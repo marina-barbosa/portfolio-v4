@@ -63,12 +63,8 @@ export const MouseMaskWindow = () => {
       <motion.div
         className="fixed inset-0 bg-white z-0 pointer-events-none"
         style={{
-          maskImage: `radial-gradient(circle ${circleSize.get()}px at ${
-            mousePosition.x
-          }px ${mousePosition.y}px, transparent 90%, black 100%)`,
-          WebkitMaskImage: `radial-gradient(circle ${circleSize.get()}px at ${
-            mousePosition.x
-          }px ${mousePosition.y}px, transparent 90%, black 100%)`,
+          maskImage: `radial-gradient(circle ${circleSize.get()}px at ${mousePosition.x}px ${mousePosition.y}px, transparent 90%, black 100%)`,
+          WebkitMaskImage: `radial-gradient(circle ${circleSize.get()}px at ${mousePosition.x}px ${mousePosition.y}px, transparent 90%, black 100%)`,
         }}
       />
     </>
