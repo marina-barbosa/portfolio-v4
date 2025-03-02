@@ -2,7 +2,7 @@
 import { ButtonCosmic } from "./button-cosmic";
 export const Hero = () => {
     return (
-      <section className="mx-auto h-screen flex flex-col items-center justify-center bg-gray-100 font-raleway">
+      <section className="mx-auto h-screen flex flex-col items-center justify-center font-raleway">
         {/* Gradient Orbs */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="cosmic-orb orb-1"></div>
@@ -36,7 +36,7 @@ export const Hero = () => {
           top: -100px;
           right: -100px;
           opacity: 0.3;
-          animation: float 20s ease-in-out infinite;
+          animation: float 5s ease-in-out infinite;
         }
 
         .orb-2 {
@@ -46,7 +46,7 @@ export const Hero = () => {
           top: 30%;
           right: 20%;
           opacity: 0.6;
-          animation: float 12s ease-in-out infinite 1s;
+          animation: float 5s ease-in-out infinite 1s;
         }
 
         .orb-3 {
@@ -56,7 +56,7 @@ export const Hero = () => {
           bottom: 20%;
           right: 30%;
           opacity: 0.6;
-          animation: float 10s ease-in-out infinite 3s;
+          animation: float 5s ease-in-out infinite 3s;
         }
 
         @keyframes float {
@@ -64,7 +64,7 @@ export const Hero = () => {
             transform: translate(0, 0);
           }
           50% {
-            transform: translate(20px, 20px);
+            transform: translate(40px, 70px);
           }
           100% {
             transform: translate(0, 0);

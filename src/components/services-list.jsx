@@ -49,6 +49,7 @@ export default function ServicesList() {
          <h2 className="text-lg tracking-widest mb-12 font-medium">
            WHAT I DO
          </h2>
+         <div className="open-shape-mask relative border-2 border-gray-200 py-6 overflow-hidden"></div>
          <div className="">
            {services.map((service, index) => (
              <div

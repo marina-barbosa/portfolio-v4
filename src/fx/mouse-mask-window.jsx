@@ -2,36 +2,50 @@ import { useState, useEffect } from "react";
 import { motion, useSpring } from "framer-motion";
 
 export const MouseMaskWindow = () => {
-  const DISTANCE_THRESHOLD = 200; // Distância mínima do elemento
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isNearElement, setIsNearElement] = useState(false);
+  const DISTANCE_LARGE = 200; // Distância mínima para expansão grande
+  const DISTANCE_SMALL = 70; // Distância mínima para expansão pequena
+  const SIZE_LARGE = 200; // Tamanho de expansão grande
+  const SIZE_SMALL = 90; // Tamanho de expansão pequena
+  const DEFAULT_SIZE = 20; // Tamanho padrão
 
-  // Animação suave do tamanho do círculo
-  const circleSize = useSpring(20, { stiffness: 100, damping: 20 });
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [circleExpandSize, setCircleExpandSize] = useState(DEFAULT_SIZE);
+  const circleSize = useSpring(DEFAULT_SIZE, { stiffness: 100, damping: 20 });
 
   useEffect(() => {
     const handleMouseMove = (e) => {
       const { clientX, clientY } = e;
       setMousePosition({ x: clientX, y: clientY });
 
-      const elements = document.querySelectorAll(".open-mask-ball");
-      let isClose = false;
+      let newSize = DEFAULT_SIZE;
 
-      elements.forEach((el) => {
+      document.querySelectorAll(".open-mask-ball").forEach((el) => {
         const rect = el.getBoundingClientRect();
         const elX = rect.left + rect.width / 2;
         const elY = rect.top + rect.height / 2;
-
         const distance = Math.sqrt(
           Math.pow(clientX - elX, 2) + Math.pow(clientY - elY, 2)
         );
 
-        if (distance <= DISTANCE_THRESHOLD) {
-          isClose = true;
+        if (distance <= DISTANCE_LARGE) {
+          newSize = SIZE_LARGE;
         }
       });
 
-      setIsNearElement(isClose);
+      document.querySelectorAll(".open-mini-ball-mask").forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        const elX = rect.left + rect.width / 2;
+        const elY = rect.top + rect.height / 2;
+        const distance = Math.sqrt(
+          Math.pow(clientX - elX, 2) + Math.pow(clientY - elY, 2)
+        );
+
+        if (distance <= DISTANCE_SMALL && newSize < SIZE_SMALL) {
+          newSize = SIZE_SMALL;
+        }
+      });
+
+      setCircleExpandSize(newSize);
     };
 
     window.addEventListener("mousemove", handleMouseMove);
@@ -41,8 +55,8 @@ export const MouseMaskWindow = () => {
   }, []);
 
   useEffect(() => {
-    circleSize.set(isNearElement ? 200 : 20);
-  }, [isNearElement, circleSize]);
+    circleSize.set(circleExpandSize);
+  }, [circleExpandSize, circleSize]);
 
   return (
     <>
@@ -57,17 +71,6 @@ export const MouseMaskWindow = () => {
           }px ${mousePosition.y}px, transparent 90%, black 100%)`,
         }}
       />
-      {isNearElement && (
-        <motion.div
-          className="fixed rounded-full border-2 border-gray-500"
-          style={{
-            width: "20px",
-            height: "20px",
-            left: `${mousePosition.x - 10}px`,
-            top: `${mousePosition.y - 10}px`,
-          }}
-        />
-      )}
     </>
   );
 };

@@ -1,81 +1,48 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
 
 const Trajetoria = () => {
+  const sectionRef = useRef(null);
+  const contentRef = useRef(null);
+
   useEffect(() => {
-    // Registrar o ScrollTrigger com GSAP
-    gsap.registerPlugin(ScrollTrigger);
+    const trajetoria = sectionRef.current;
+    const content = contentRef.current;
 
-    const trajetoria = document.querySelector("#trajetoria");
-    const content = document.querySelector(".trajetoria-content");
+    if (!trajetoria || !content) return;
 
-    // Definindo a largura total do conteúdo
-    const contentWidth = content.offsetWidth;
+    const contentWidth = content.scrollWidth;
     const horizontalScrollLength = contentWidth - window.innerWidth;
 
-    // Configurando o ScrollTrigger
-    ScrollTrigger.scrollerProxy(trajetoria, {
-      scrollTop(value) {
-        return arguments.length ? window.scrollTo(0, value) : window.scrollY;
-      },
-      getBoundingClientRect() {
-        return {
-          left: 0,
-          top: 0,
-          width: window.innerWidth,
-          height: window.innerHeight,
-        };
-      },
-      pinType: trajetoria.style.transform ? "transform" : "fixed",
-    });
-
-    // Animação horizontal com GSAP
-    gsap.to(".trajetoria-content", {
+    gsap.to(content, {
+      x: -horizontalScrollLength,
+      ease: "none",
       scrollTrigger: {
-        scroller: trajetoria,
-        scrub: true,
-        trigger: "#trajetoria",
-        pin: true,
+        trigger: trajetoria,
         start: "top top",
         end: `+=${horizontalScrollLength}`,
+        scrub: 1,
+        pin: true,
+        anticipatePin: 1,
       },
-      x: -horizontalScrollLength,
     });
-
-    // return () => {
-    //   // Limpar o ScrollTrigger quando o componente for desmontado
-    //   ScrollTrigger.kill();
-    // };
   }, []);
 
   return (
     <section
+      ref={sectionRef}
       id="trajetoria"
-      className="mx-auto h-screen flex gap-52 items-center justify-between bg-gray-100 font-raleway text-gray-800 overflow-hidden"
+      className="relative w-full h-screen border-2 border-amber-400 font-raleway text-gray-800"
     >
-      <div className="trajetoria-content flex">
-        <h1 className="px-14 text-7xl uppercase font-bold text-center">
-          Trajetoria
-        </h1>
-        <h1 className="px-14 text-7xl uppercase font-bold text-center">
-          Trajetoria
-        </h1>
-        <h1 className="px-14 text-7xl uppercase font-bold text-center">
-          Trajetoria
-        </h1>
-        <h1 className="px-14 text-7xl uppercase font-bold text-center">
-          Trajetoria
-        </h1>
-        <h1 className="px-14 text-7xl uppercase font-bold text-center">
-          Trajetoria
-        </h1>
-        <h1 className="px-14 text-7xl uppercase font-bold text-center">
-          Trajetoria
-        </h1>
-        <h1 className="px-14 text-7xl uppercase font-bold text-center">
-          Trajetoria
-        </h1>
+      <div
+        ref={contentRef}
+        className="flex space-x-52 w-max h-full items-center px-14"
+      >
+        {Array.from({ length: 7 }).map((_, index) => (
+          <h1 key={index} className="text-7xl uppercase font-bold text-center">
+            Trajetória
+          </h1>
+        ))}
       </div>
     </section>
   );

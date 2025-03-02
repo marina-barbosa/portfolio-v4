@@ -4,7 +4,7 @@ import { Hero } from "./components/hero";
 import ServicesList from "./components/services-list";
 import About from "./components/about";
 import { Footer } from "./components/footer";
-import ScrollMarquee from "./z-experimental/scroll-marquee";
+import ScrollMarquee from "./fx/scroll-marquee";
 import Trajetoria from "./components/trajetoria";
 import { Testimonials } from "./components/testimonials";
 import CosmicHero from "./z-experimental/gradient-orb";
@@ -32,7 +32,7 @@ const App = () => {
         <About />
         <ScrollMarquee />
         <div className="h-20"/>
-        <Trajetoria />
+        {/* <Trajetoria /> */}
         <Testimonials />
         <Footer />
         {/*

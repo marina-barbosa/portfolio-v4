@@ -2,19 +2,10 @@
 export const NavbarScrollspy = () => {
     return (
       <nav className="open-mask-ball font-raleway font-medium fixed top-8 right-8 z-50 text-[18px] uppercase text-right">
-        <ul>
+        <ul className=" space-y-4">
           <li>
             <a
-              href="#about"
-              data-value="quem sou"
-              className="hacker-scrambles mouse-color-changer"
-            >
-              quem sou
-            </a>
-          </li>
-          <li>
-            <a
-              href="#project"
+              href=""
               data-value="projetos"
               className="hacker-scrambles mouse-color-changer"
             >
@@ -23,7 +14,16 @@ export const NavbarScrollspy = () => {
           </li>
           <li>
             <a
-              href="#connect"
+              href=""
+              data-value="quem sou"
+              className="hacker-scrambles mouse-color-changer"
+            >
+              quem sou
+            </a>
+          </li>
+          <li>
+            <a
+              href=""
               data-value="contato"
               className="hacker-scrambles mouse-color-changer"
             >
