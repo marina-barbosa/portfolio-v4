@@ -6,21 +6,21 @@ export const SocialIcons = () => {
       <li>
         <span className="glitch-tremble glitch-colors flex items-center justify-center w-11 h-11 border-2 border-transparent rounded-full">
           <a href="/" target="_blank" rel="noopener noreferrer">
-            <LuGithub className="glitch-tremble w-6 h-6 mouse-color-changer-stroke" />
+            <LuGithub className="social-icons-stroke glitch-tremble w-6 h-6" />
           </a>
         </span>
       </li>
       <li>
         <span className="glitch-tremble glitch-colors flex items-center justify-center w-11 h-11 border-2 border-transparent rounded-full">
           <a href="/" target="_blank" rel="noopener noreferrer">
-            <LuLinkedin className="glitch-tremble w-6 h-6 mouse-color-changer-stroke" />
+            <LuLinkedin className="social-icons-stroke glitch-tremble w-6 h-6" />
           </a>
         </span>
       </li>
       <li>
         <span className="glitch-tremble glitch-colors flex items-center justify-center w-11 h-11 border-2 border-transparent rounded-full">
           <a href="/" target="_blank" rel="noopener noreferrer">
-            <FaWhatsapp className="glitch-tremble w-6 h-6 mouse-color-changer-fill" />
+            <FaWhatsapp className="social-icons-fill glitch-tremble w-6 h-6" />
           </a>
         </span>
       </li>

@@ -15,7 +15,6 @@ import { Glitch } from "./fx/glitch";
 import { HackerScrambles } from "./fx/hacker-scrambles";
 import { ProjectsScrollTrigger } from "./components/projects-scroll-trigger";
 import { RevealTextFx } from "./fx/reveal-text";
-import TextRevealBox from "./z-experimental/text-reveal";
 
 const App = () => {
   return (
@@ -30,7 +29,6 @@ const App = () => {
         <Glitch />
         <SocialIcons />
         <Hero />
-        <TextRevealBox />
         <ProjectsScrollTrigger />
         <ServicesList />
         <About />

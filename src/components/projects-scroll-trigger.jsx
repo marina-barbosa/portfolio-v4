@@ -22,6 +22,8 @@ export const ProjectsScrollTrigger = () => {
       .to(".text1 p", { opacity: 1, x: 150 })
       .to(".text1 button", { opacity: 1, x: 150 })
       .to(".text1 button", { duration: 3 })
+      .to(".img1", { duration: 2, x: 800 })
+      .to(".text1", { x: -800 }, "<")
       .to(".img1", { duration: 2, x: 3000 })
       .to(".text1", { x: -3000 }, "<");
 
@@ -44,6 +46,8 @@ export const ProjectsScrollTrigger = () => {
       .to(".text2 p", { duration: 1, opacity: 1, x: 150 })
       .to(".text2 button", { duration: 1, opacity: 1, x: 150 })
       .to(".text2 button", { duration: 3 })
+      .to(".img2", { duration: 2, x: 800 })
+      .to(".text2", { duration: 2, x: -800 }, "<")
       .to(".img2", { duration: 2, x: 3000 })
       .to(".text2", { duration: 2, x: -3000 }, "<");
 
@@ -71,7 +75,7 @@ export const ProjectsScrollTrigger = () => {
           </div>
         </div>
 
-        <div className="h-[80vh]" />
+        {/* <div className="h-[80vh]" /> */}
 
         <div className="step2 relative h-[100vh] w-full p-[80px]">
           <img
@@ -90,7 +94,7 @@ export const ProjectsScrollTrigger = () => {
           </div>
         </div>
 
-        <div className="h-[130vh]" />
+        {/* <div className="h-[130vh]" /> */}
       </main>
     </>
   );

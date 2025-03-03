@@ -39,8 +39,8 @@ const tabs = [
         </div>
 
         <div className="md:w-1/2 text-center md:text-left md:pl-8 flex flex-col">
-          <h2 className="reveal-text title text-3xl font-semibold uppercase text-gray-800 mb-4">
-            <span>quem sou</span>
+          <h2 className="text-lg font-medium tracking-widest uppercase text-[#555555] mb-12">
+            <span className="reveal-text reveal-text-title">quem sou</span>
           </h2>
 
           <div className="flex text-gray-800 mb-6 font-medium">
@@ -59,8 +59,10 @@ const tabs = [
             ))}
           </div>
 
-          <div className="reveal-text content text-2xl text-gray-600 leading-relaxed font-ibm min-h-[250px] flex items-start">
-            <span>{tabs.find((tab) => tab.id === activeTab)?.content}</span>
+          <div className="text-2xl text-gray-600 leading-relaxed font-ibm min-h-[250px] flex items-start">
+            <span className="reveal-text reveal-text-body">
+              {tabs.find((tab) => tab.id === activeTab)?.content}
+            </span>
           </div>
         </div>
       </div>

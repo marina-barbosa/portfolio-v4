@@ -7,7 +7,7 @@ export const NavbarScrollspy = () => {
             <a
               href=""
               data-value="projetos"
-              className="hacker-scrambles mouse-color-changer"
+              className="hacker-scrambles text-[#555555]"
             >
               projetos
             </a>
@@ -16,7 +16,7 @@ export const NavbarScrollspy = () => {
             <a
               href=""
               data-value="quem sou"
-              className="hacker-scrambles mouse-color-changer"
+              className="hacker-scrambles text-[#555555]"
             >
               quem sou
             </a>
@@ -25,7 +25,7 @@ export const NavbarScrollspy = () => {
             <a
               href=""
               data-value="contato"
-              className="hacker-scrambles mouse-color-changer"
+              className="hacker-scrambles text-[#555555]"
             >
               contato
             </a>

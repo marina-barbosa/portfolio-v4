@@ -44,62 +44,60 @@ export default function ServicesList() {
   ];
 
    return (
-     <div className="no-mask-section relative text-gray-900 min-h-screen p-8 px-20 font-raleway">
-       <div className="max-w-4xl mx-auto">
-         <h2 className="text-lg tracking-widest mb-12 font-medium">
+     <section className="no-mask-section relative text-gray-900 min-h-screen py-8 font-raleway">
+       <div className="w-full mx-auto">
+         <h2 className="text-[#555555] max-w-4xl mx-auto text-lg tracking-widest mb-12 font-medium">
            WHAT I DO
          </h2>
-         <div className="">
-           {services.map((service, index) => (
+         {services.map((service, index) => (
+           <div
+             key={index}
+             className="relative border-t border-gray-200 py-6 overflow-hidden w-full"
+             onMouseEnter={() => setHoveredIndex(index)}
+             onMouseLeave={() => setHoveredIndex(null)}
+           >
+             {/* Fundo expansivo com estrelas */}
              <div
-               key={index}
-               className="relative border-t border-gray-200 py-6 overflow-hidden"
-               onMouseEnter={() => setHoveredIndex(index)}
-               onMouseLeave={() => setHoveredIndex(null)}
-             >
-               {/* Fundo expansivo com estrelas */}
-               <div
-                 className={`absolute inset-0 bg-black border border-white transition-transform duration-500 ease-in-out rounded-full 
+               className={`w-full absolute inset-0 bg-black border border-white transition-transform duration-500 ease-in-out 
                 ${
                   hoveredIndex === index ? "scale-100" : "scale-0"
-                } origin-center shadow-[inset_0_0_10px_2px_rgba(255,255,255,1),inset_0_0_10px_5px_rgba(255,255,255,1)]`}
-               >
-                 {/* Estrelas brilhantes */}
-                 {stars.map((star, i) => (
-                   <div
-                     key={i}
-                     className="absolute star bg-white rounded-full opacity-50 animate-pulse"
-                     style={{
-                       top: `${star.y}%`,
-                       left: `${star.x}%`,
-                       width: `${star.size}px`,
-                       height: `${star.size}px`,
-                       animationDuration: `${star.duration}s`,
-                     }}
-                   />
-                 ))}
-               </div>
-
-               {/* Conteúdo */}
-               <div className="h-24 md:h-32 flex items-center justify-center relative z-10">
-                 <h3
-                   className={`text-6xl uppercase font-bold text-center text-black transition-opacity duration-500 ${
-                     hoveredIndex === index ? "opacity-0" : "opacity-100"
-                   }`}
-                 >
-                   {service.title}
-                 </h3>
-                 <p
-                   className={`absolute text-lg text-center font-ibm text-white transition-opacity duration-500 ${
-                     hoveredIndex === index ? "opacity-100" : "opacity-0"
-                   }`}
-                 >
-                   {service.description}
-                 </p>
-               </div>
+                } origin-center`}
+             >
+               {/* Estrelas brilhantes */}
+               {stars.map((star, i) => (
+                 <div
+                   key={i}
+                   className="absolute star bg-white rounded-full opacity-50 animate-pulse"
+                   style={{
+                     top: `${star.y}%`,
+                     left: `${star.x}%`,
+                     width: `${star.size}px`,
+                     height: `${star.size}px`,
+                     animationDuration: `${star.duration}s`,
+                   }}
+                 />
+               ))}
              </div>
-           ))}
-         </div>
+
+             {/* Conteúdo */}
+             <div className="h-24 md:h-32 flex items-center justify-center relative z-10">
+               <h3
+                 className={`text-6xl uppercase font-bold text-center text-black transition-opacity duration-500 ${
+                   hoveredIndex === index ? "opacity-0" : "opacity-100"
+                 }`}
+               >
+                 {service.title}
+               </h3>
+               <p
+                 className={`absolute text-lg text-center font-ibm text-[lightseagreen] transition-opacity duration-500 ${
+                   hoveredIndex === index ? "opacity-100" : "opacity-0"
+                 }`}
+               >
+                 {service.description}
+               </p>
+             </div>
+           </div>
+         ))}
        </div>
 
        <style>
@@ -113,6 +111,6 @@ export default function ServicesList() {
             }
         `}
        </style>
-     </div>
+     </section>
    );
 }
