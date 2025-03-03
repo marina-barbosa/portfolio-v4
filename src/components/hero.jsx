@@ -13,7 +13,7 @@ export const Hero = () => {
           You dream, I create. <br />
           Just like that.
         </h1>
-        <h2 className="mt-4 mb-10 z-20 open-mini-ball-mask mouse-color-changer font-ibm">
+        <h2 className="text-xl mt-4 mb-10 z-20 open-mini-ball-mask mouse-color-changer font-ibm">
           Fullstack Developer since 2023
         </h2>
         <div className="open-mini-ball-mask">

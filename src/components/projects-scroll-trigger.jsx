@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import gsap from "gsap";
+import { ButtonCosmic } from "./button-cosmic";
 
 export const ProjectsScrollTrigger = () => {
   useEffect(() => {
@@ -18,11 +19,11 @@ export const ProjectsScrollTrigger = () => {
     tl1
       .to(".img1", { duration: 1 })
       .to(".img1", { duration: 2, scale: 0.7, x: 250 })
-      .to(".text1 h2", { opacity: 1, x: 150 }, "-=1")
-      .to(".text1 div", { opacity: 1, x: 150 }, "-=1")
-      .to(".text1 p", { opacity: 1, x: 150 })
-      .to(".text1 button", { opacity: 1, x: 150 })
-      .to(".text1 button", { duration: 3 })
+      .to(".text1 h2", { opacity: 1, x: 50 }, "-=1")
+      .to(".text1 div", { opacity: 1, x: 50 }, "-=1")
+      .to(".text1 p", { opacity: 1, x: 50 })
+      .to(".text1.btn1", { opacity: 1, x: 50 })
+      .to(".text1.btn1", { duration: 3 })
       .to(".img1", { duration: 2, x: 800 })
       .to(".text1", { x: -800 }, "<")
       .to(".img1", { duration: 2, x: 3000 })
@@ -68,17 +69,31 @@ export const ProjectsScrollTrigger = () => {
             className="img1 w-[70%] border-4 border-sky-400 mx-auto"
           />
           <div className="text1 absolute top-1/2 transform -translate-y-1/2">
-            <h2 className="text-3xl font-bold mb-4 opacity-0">Project 1</h2>
-            <div className="flex gap-4 w-full mx-auto">
-              <i className="open-mini-ball-mask devicon-javascript-plain colored text-3xl"></i>
-              <i className="open-mini-ball-mask devicon-express-original colored text-3xl"></i>
-              <i className="open-mini-ball-mask devicon-css3-plain-wordmark colored text-3xl"></i>
-              <i className="open-mini-ball-mask devicon-html5-plain-wordmark colored text-3xl"></i>
+            <h2 className="open-mini-ball-mask mouse-color-changer text-3xl font-bold mb-4 opacity-0">
+              Sprawl
+            </h2>
+            <div className="flex gap-4 w-full mx-auto mb-4 opacity-0">
+              <i className="devicon-javascript-plain colored text-3xl"></i>
+              <i className="devicon-express-original colored text-3xl"></i>
+              <i className="devicon-css3-plain-wordmark colored text-3xl"></i>
+              <i className="devicon-html5-plain-wordmark colored text-3xl"></i>
             </div>
-            <p className="text-gray-600 opacity-0">Description of Project 1</p>
-            <button className="bg-amber-400 hover:bg-amber-500 text-black px-4 py-2 mt-4 opacity-0">
-              View Project
-            </button>
+            <p className="mouse-color-changer text-gray-600 md:w-1/3 opacity-0">
+              Description of Project 1 Description of Project 1 Description of
+              Project 1 Description of Project 1 Description of Project 1
+              Description of Project 1 Description of Project 1 Description of
+              Project 1 Description of Project 1 Description of Project 1
+              Description of Project 1 Description of Project 1 Description of
+              Project 1
+            </p>
+            <div className="btn1 opacity-0">
+              <button className="bg-amber-400 hover:bg-amber-500 text-black px-4 py-2 mt-4">
+                View Project
+              </button>
+              <span className="open-mask-ball ">
+                <ButtonCosmic>View Code</ButtonCosmic>
+              </span>
+            </div>
           </div>
         </div>
 
@@ -91,7 +106,7 @@ export const ProjectsScrollTrigger = () => {
             className="img2 w-[70%] border-4 border-red-400 mx-auto"
           />
           <div className="text2 absolute top-1/2 transform -translate-y-1/2">
-            <h2 className="text-3xl font-bold mb-4 opacity-0">Project Dois</h2>
+            <h2 className="text-3xl font-bold mb-4 opacity-0">Refood</h2>
             <p className="text-gray-600 opacity-0">
               Description of Project Dois
             </p>

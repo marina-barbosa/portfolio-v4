@@ -1,9 +1,28 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function MouseColorChanger() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [isNearElement, setIsNearElement] = useState(false);
-  const DISTANCE_THRESHOLD = 300; // Distância mínima do elemento
+  const DISTANCE_THRESHOLD = 300;
+  const circleSize = 200;
+  const originalColors = useRef(new Map());
+
+  // Função para capturar a cor original correta
+  const getOriginalColor = (element) => {
+    const computedStyle = getComputedStyle(element);
+    return computedStyle.color || computedStyle.backgroundColor || "black";
+  };
+
+  useEffect(() => {
+    const elements = document.querySelectorAll(".mouse-color-changer");
+
+    elements.forEach((element) => {
+      if (!originalColors.current.has(element)) {
+        const color = getOriginalColor(element);
+        originalColors.current.set(element, color);
+      }
+    });
+  }, []);
 
   useEffect(() => {
     const handleMouseMove = (event) => {
@@ -41,21 +60,21 @@ export default function MouseColorChanger() {
         const distanceY = mousePos.y - (rect.top + rect.height / 2);
         const distance = Math.sqrt(distanceX ** 2 + distanceY ** 2);
 
-        const maxDistance = 200; // Distância máxima para efeito
-        const intensity = Math.max(0, 1 - distance / maxDistance);
-        const color = `rgb(${intensity * 32}, ${intensity * 178}, ${
-          intensity * 170
-        })`; // Cores aproximadas de LightSeaGreen
+        const intensity = Math.max(0, 1 - distance / circleSize);
+        const originalColor = originalColors.current.get(element) || "black";
+        const fxColor = "lightseagreen";
 
         if (property === "backgroundImage") {
-          const circleSize = isNearElement ? 200 : 20; // Define tamanho mínimo
+          const circleSize = isNearElement ? 200 : 20;
           element.style.backgroundImage = `radial-gradient(circle ${circleSize}px at ${
             mousePos.x - rect.left
-          }px ${mousePos.y - rect.top}px, lightseagreen 40%, black 100%)`;
+          }px ${
+            mousePos.y - rect.top
+          }px, ${fxColor} 40%, ${originalColor} 100%)`;
           element.style.webkitBackgroundClip = "text";
           element.style.webkitTextFillColor = "transparent";
         } else {
-          element.style[property] = color;
+          element.style[property] = fxColor;
         }
       });
     };

@@ -44,12 +44,12 @@ const tabs = [
             <span className="reveal-text reveal-text-title">quem sou</span>
           </h2>
 
-          <div className="mouse-color-changer flex text-[#555555] mb-6 font-medium text-lg tracking-widest">
+          <div className="flex text-[#555555] mb-6 font-medium text-lg tracking-widest">
             {tabs.map((tab, index) => (
               <div key={tab.id} className="flex items-center">
                 <button
                   onClick={() => setActiveTab(tab.id)}
-                  className={`space-x-2 cursor-pointer ${
+                  className={`space-x-2 cursor-pointer hover:text-[lightseagreen] ${
                     activeTab === tab.id ? "font-bold text-[lightseagreen]" : ""
                   }`}
                 >
