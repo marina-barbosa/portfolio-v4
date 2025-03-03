@@ -26,7 +26,7 @@ export const Footer = () => {
             </div>
           </div>
           {/* Logo */}
-          <div className="flex-1 flex justify-center items-center">
+          <div className="open-mini-ball-mask flex-1 flex justify-center items-center">
             <img
               src="/twitch-dinodance.gif"
               className="h-10 open-mask-medium"

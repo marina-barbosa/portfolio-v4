@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 
 export default function MouseColorChanger() {
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [mousePos, setMousePos] = useState({ x: 52, y: 50 });
   const [isNearElement, setIsNearElement] = useState(false);
   const DISTANCE_THRESHOLD = 300;
   const circleSize = 200;
@@ -28,7 +28,7 @@ export default function MouseColorChanger() {
     const handleMouseMove = (event) => {
       setMousePos({ x: event.clientX, y: event.clientY });
 
-      const elements = document.querySelectorAll(".open-mask-ball");
+      const elements = document.querySelectorAll(".mouse-color-changer");
       let isClose = false;
 
       elements.forEach((el) => {

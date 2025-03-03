@@ -8,7 +8,7 @@ export const MouseMaskWindow = () => {
   const SIZE_SMALL = 90;
   const DEFAULT_SIZE = 20;
 
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [mousePosition, setMousePosition] = useState({ x: 52, y: 50 });
   const [circleExpandSize, setCircleExpandSize] = useState(DEFAULT_SIZE);
   const circleSize = useSpring(DEFAULT_SIZE, { stiffness: 100, damping: 20 });
   const [isHoveringNoMask, setIsHoveringNoMask] = useState(false);

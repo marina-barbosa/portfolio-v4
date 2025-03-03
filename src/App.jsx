@@ -15,6 +15,7 @@ import { Glitch } from "./fx/glitch";
 import { HackerScrambles } from "./fx/hacker-scrambles";
 import { ProjectsScrollTrigger } from "./components/projects-scroll-trigger";
 import { RevealTextFx } from "./fx/reveal-text";
+import { Logo } from "./components/logo";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
         <RevealTextFx />
         <NavbarScrollspy />
         <Glitch />
+        <Logo />
         <SocialIcons />
         <span className="flex flex-col space-y-[6rem]">
           <Hero />
