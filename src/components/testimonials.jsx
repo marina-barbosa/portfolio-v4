@@ -38,7 +38,7 @@ export const Testimonials = () => {
   ];
 
   return (
-    <section className="relative mx-auto min-h-screen flex flex-col items-center justify-center font-raleway text-gray-800 p-8 px-20">
+    <section className="no-mask-section relative mx-auto min-h-screen flex flex-col items-center justify-center font-raleway text-gray-800 p-8 px-20">
       <div className="max-w-4xl w-full">
         <h2 className="text-lg tracking-widest mb-12 font-medium text-center">
           TESTIMONIALS

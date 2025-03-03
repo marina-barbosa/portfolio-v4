@@ -1,7 +1,7 @@
 export default function TextRevealBox() {
   return (
     <>
-      <div className="reveal_text p-6 max-w-2xl mx-auto text-center h-screen flex flex-col justify-center">
+      <div className="relative reveal_text p-6 max-w-2xl mx-auto text-center h-screen flex flex-col justify-center">
         <h2 className="text-3xl font-bold">
           <span>Texto Animado com Scroll</span>
         </h2>

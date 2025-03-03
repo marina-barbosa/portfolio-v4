@@ -21,11 +21,10 @@ export const BgMask = () => {
 
   return (
     <motion.div
-      className="fixed inset-0 pointer-events-none"
+      className="fixed inset-0 pointer-events-none bg-white"
       style={{
-        background: "white",
-        WebkitMaskImage: `radial-gradient(circle ${animatedSize.get()}px at ${animatedX.get()}px ${animatedY.get()}px, transparent 50%, black 100%)`,
-        maskImage: `radial-gradient(circle ${animatedSize.get()}px at ${animatedX.get()}px ${animatedY.get()}px, transparent 50%, black 100%)`,
+        WebkitMaskImage: `radial-gradient(circle ${animatedSize.get()}px at ${animatedX.get()}px ${animatedY.get()}px, transparent 90%, black 100%)`,
+        maskImage: `radial-gradient(circle ${animatedSize.get()}px at ${animatedX.get()}px ${animatedY.get()}px, transparent 90%, black 100%)`,
       }}
     />
   );

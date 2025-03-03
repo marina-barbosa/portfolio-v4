@@ -1,7 +1,7 @@
 
 export const NavbarScrollspy = () => {
     return (
-      <nav className="open-mask-ball font-raleway font-medium fixed top-8 right-8 z-50 text-[18px] uppercase text-right">
+      <nav className="open-mini-ball-mask font-raleway font-medium fixed top-8 right-8 z-50 text-[18px] uppercase text-right">
         <ul className=" space-y-4">
           <li>
             <a

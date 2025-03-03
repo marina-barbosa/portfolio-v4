@@ -11,6 +11,7 @@ export const ProjectsScrollTrigger = () => {
         scrub: 10,
         // markers: true,
         pin: true,
+        toggleActions: "play reverse play reverse",
       },
     });
 
@@ -29,9 +30,10 @@ export const ProjectsScrollTrigger = () => {
         trigger: ".step2",
         start: "top 3%",
         end: "90% top",
-        scrub: 10,
+        scrub: 2,
         // markers: true,
         pin: true,
+        toggleActions: "play reverse play reverse",
       },
     });
 

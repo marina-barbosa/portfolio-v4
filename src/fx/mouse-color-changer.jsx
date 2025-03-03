@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 export default function MouseColorChanger() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [isNearElement, setIsNearElement] = useState(false);
-  const DISTANCE_THRESHOLD = 200; // Distância mínima do elemento
+  const DISTANCE_THRESHOLD = 300; // Distância mínima do elemento
 
   useEffect(() => {
     const handleMouseMove = (event) => {
