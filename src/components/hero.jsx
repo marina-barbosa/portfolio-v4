@@ -30,11 +30,11 @@ export const Hero = () => {
         }
 
         .orb-1 {
-          width: 400px;
-          height: 400px;
+          width: 600px;
+          height: 500px;
           background: linear-gradient(135deg, #a78bfa, #818cf8);
-          top: -100px;
-          right: -100px;
+          top: -300px;
+          left: 150px;
           opacity: 0.3;
           animation: float 5s ease-in-out infinite;
         }

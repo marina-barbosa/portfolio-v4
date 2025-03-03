@@ -28,28 +28,29 @@ const tabs = [
 ];
 
   return (
-    <section className="font-raleway relative flex items-center justify-center py-16">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start">
+    <section className="font-raleway relative flex items-center justify-center">
+      <div className="max-w-6xl min-h-[550px] mx-auto flex flex-col md:flex-row items-start">
         <div className="mb-8 md:mb-0 md:w-1/2 flex justify-center">
           <img
-            src="/me.jpg"
+            src="/img-placeholder.png"
+            // src="/me.jpg"
             alt="About me"
-            className="w-80 h-80 rounded-full object-cover self-start"
+            className="w-80 h-80 rounded-full object-cover self-start border mt-10"
           />
         </div>
 
-        <div className="md:w-1/2 text-center md:text-left md:pl-8 flex flex-col">
-          <h2 className="text-lg font-medium tracking-widest uppercase text-[#555555] mb-12">
+        <div className="md:w-1/2 text-center md:text-left md:pl-8 flex flex-col md:-ms-11">
+          <h2 className="text-lg font-medium tracking-widest uppercase text-[#555555] mb-6">
             <span className="reveal-text reveal-text-title">quem sou</span>
           </h2>
 
-          <div className="flex text-gray-800 mb-6 font-medium">
+          <div className="mouse-color-changer flex text-[#555555] mb-6 font-medium text-lg tracking-widest">
             {tabs.map((tab, index) => (
               <div key={tab.id} className="flex items-center">
                 <button
                   onClick={() => setActiveTab(tab.id)}
-                  className={`px-2 cursor-pointer ${
-                    activeTab === tab.id ? "font-bold" : ""
+                  className={`space-x-2 cursor-pointer ${
+                    activeTab === tab.id ? "font-bold text-[lightseagreen]" : ""
                   }`}
                 >
                   {tab.label}

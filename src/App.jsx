@@ -4,7 +4,7 @@ import { Hero } from "./components/hero";
 import ServicesList from "./components/services-list";
 import About from "./components/about";
 import { Footer } from "./components/footer";
-import ScrollMarquee from "./fx/scroll-marquee";
+import ScrollMarquee from "./components/scroll-marquee";
 import Trajetoria from "./components/trajetoria";
 import { Testimonials } from "./components/testimonials";
 import CosmicHero from "./z-experimental/gradient-orb";
@@ -28,14 +28,16 @@ const App = () => {
         <NavbarScrollspy />
         <Glitch />
         <SocialIcons />
-        <Hero />
-        <ProjectsScrollTrigger />
-        <ServicesList />
-        <About />
-        <ScrollMarquee />
-        {/* <Trajetoria /> */}
-        {/* <Testimonials /> */}
-        <Footer />
+        <span className="flex flex-col space-y-[6rem]">
+          <Hero />
+          <ProjectsScrollTrigger />
+          <ServicesList />
+          <About />
+          <ScrollMarquee />
+          {/* <Trajetoria /> */}
+          {/* <Testimonials /> */}
+          <Footer />
+        </span>
         {/*
 
         */}

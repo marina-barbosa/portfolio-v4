@@ -19,6 +19,7 @@ export const ProjectsScrollTrigger = () => {
       .to(".img1", { duration: 1 })
       .to(".img1", { duration: 2, scale: 0.7, x: 250 })
       .to(".text1 h2", { opacity: 1, x: 150 }, "-=1")
+      .to(".text1 div", { opacity: 1, x: 150 }, "-=1")
       .to(".text1 p", { opacity: 1, x: 150 })
       .to(".text1 button", { opacity: 1, x: 150 })
       .to(".text1 button", { duration: 3 })
@@ -68,6 +69,12 @@ export const ProjectsScrollTrigger = () => {
           />
           <div className="text1 absolute top-1/2 transform -translate-y-1/2">
             <h2 className="text-3xl font-bold mb-4 opacity-0">Project 1</h2>
+            <div className="flex gap-4 w-full mx-auto">
+              <i className="open-mini-ball-mask devicon-javascript-plain colored text-3xl"></i>
+              <i className="open-mini-ball-mask devicon-express-original colored text-3xl"></i>
+              <i className="open-mini-ball-mask devicon-css3-plain-wordmark colored text-3xl"></i>
+              <i className="open-mini-ball-mask devicon-html5-plain-wordmark colored text-3xl"></i>
+            </div>
             <p className="text-gray-600 opacity-0">Description of Project 1</p>
             <button className="bg-amber-400 hover:bg-amber-500 text-black px-4 py-2 mt-4 opacity-0">
               View Project

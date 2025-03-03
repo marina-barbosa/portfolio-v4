@@ -44,7 +44,7 @@ export default function ServicesList() {
   ];
 
    return (
-     <section className="no-mask-section relative text-gray-900 min-h-screen py-8 font-raleway">
+     <section className="no-mask-section relative min-h-screen py-8 font-raleway">
        <div className="w-full mx-auto">
          <h2 className="text-[#555555] max-w-4xl mx-auto text-lg tracking-widest mb-12 font-medium">
            WHAT I DO
@@ -82,7 +82,7 @@ export default function ServicesList() {
              {/* Conteúdo */}
              <div className="h-24 md:h-32 flex items-center justify-center relative z-10">
                <h3
-                 className={`text-6xl uppercase font-bold text-center text-black transition-opacity duration-500 ${
+                 className={`text-6xl uppercase font-bold text-center  text-gray-900 transition-opacity duration-500 ${
                    hoveredIndex === index ? "opacity-0" : "opacity-100"
                  }`}
                >
