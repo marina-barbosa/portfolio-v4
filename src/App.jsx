@@ -16,6 +16,7 @@ import { HackerScrambles } from "./fx/hacker-scrambles";
 import { ProjectsScrollTrigger } from "./components/projects-scroll-trigger";
 import { RevealTextFx } from "./fx/reveal-text";
 import { Logo } from "./components/logo";
+import { DivExp } from "./components/div-exp";
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
         <SocialIcons />
         <span className="flex flex-col space-y-[6rem]">
           <Hero />
+          <DivExp />
           <ProjectsScrollTrigger />
           <ServicesList />
           <About />

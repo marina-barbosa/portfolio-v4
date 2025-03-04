@@ -15,19 +15,22 @@ export const ProjectsScrollTrigger = () => {
         toggleActions: "play reverse play reverse",
       },
     });
-
-    tl1
-      .to(".img1", { duration: 1 })
-      .to(".img1", { duration: 2, scale: 0.7, x: 250 })
-      .to(".text1 h2", { opacity: 1, x: 50 }, "-=1")
-      .to(".text1 div", { opacity: 1, x: 50 }, "-=1")
-      .to(".text1 p", { opacity: 1, x: 50 })
-      .to(".text1.btn1", { opacity: 1, x: 50 })
-      .to(".text1.btn1", { duration: 3 })
-      .to(".img1", { duration: 2, x: 800 })
-      .to(".text1", { x: -800 }, "<")
-      .to(".img1", { duration: 2, x: 3000 })
-      .to(".text1", { x: -3000 }, "<");
+    // coisas para testar //
+    // snap ?
+    // start: "top 3%",
+    // end: "+=1000px", // Define a distância do scroll para controlar a duração
+      tl1
+        .to(".img1", { duration: 1 })
+        .to(".img1", { duration: 2, scale: 0.7, x: 250 })
+        .to(".text1 h2", { opacity: 1, x: 50 }, "-=1")
+        .to(".text1 div", { opacity: 1, x: 50 }, "-=1")
+        .to(".text1 p", { opacity: 1, x: 50 })
+        .to(".btn1", { opacity: 1, x: 50 })
+        .to(".btn1", { duration: 3 })
+        .to(".img1", { duration: 2, x: 800 })
+        .to(".text1", { x: -800 }, "<")
+        .to(".img1", { duration: 2, x: 3000 })
+        .to(".text1", { x: -3000 }, "<");
 
     const tl2 = gsap.timeline({
       scrollTrigger: {
