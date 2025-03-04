@@ -1,160 +1,89 @@
+"use client"
+
 export const DivExp = () => {
-    return (
-      <>
-        <div className="tab" id="exp">
-          <div className="container">
-            <div className="container-exp">
-              <div className="linha-exp">
-                <div className="card-exp">
-                  <div className="ano">2023</div>
-                  <i id="inicio" className="fa-solid fa-school-flag"></i>
-                  <div className="conteudo">
-                    <div className="titulo">
-                      Desenvolvimento de Software - Backend
-                    </div>
-                    <div className="subtitulo">Cubos Academy</div>
-                    <div className="desc">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Et, sunt fugit. Magni consectetur eos qui veniam esse.
-                      Exercitationem amet rerum placeat sit ut saepe tenetur
-                      eaque reprehenderit, laborum ab dolor!
-                    </div>
-                  </div>
-                </div>
-                <div className="card-exp">
-                  <div className="ano">2023</div>
+  return (
+    <div className="bg-gradient-to-br from-blue-50 to-blue-100 min-h-screen" id="exp">
+      <div className="container mx-auto">
+        <div className="overflow-auto w-full">
+          <div className="flex justify-between p-12 gap-5 relative">
+            {/* Timeline line */}
+            <div className="absolute h-0.5 bg-blue-200 w-full left-0 top-1/2 -translate-y-1/2"></div>
+
+            {/* Card 1 */}
+            <div className="w-60 flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
+              <div className="flex flex-col justify-end text-center">
+                <h3 className="font-bold text-blue-800 mb-1">Desenvolvimento de Software - Backend</h3>
+                <h4 className="text-blue-600 mb-2">Cubos Academy</h4>
+                <p className="text-sm text-blue-500">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, sunt fugit. Magni consectetur eos qui
+                  veniam esse. Exercitationem amet rerum placeat sit ut saepe tenetur eaque reprehenderit, laborum ab
+                  dolor!
+                </p>
+              </div>
+              <div className="flex justify-center items-center">
+                <div className="bg-white w-12 h-12 rounded-full flex justify-center items-center text-2xl text-blue-800 shadow-md">
                   <i className="fa-solid fa-school-flag"></i>
-                  <div className="conteudo">
-                    <div className="titulo">
-                      Treinamento Sharp Coders - Fullstack
-                    </div>
-                    <div className="subtitulo">Ima Tech</div>
-                    <div className="desc">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Et, sunt fugit. Magni consectetur eos qui veniam esse.
-                      Exercitationem amet rerum placeat sit ut saepe tenetur
-                      eaque reprehenderit, laborum ab dolor!
-                    </div>
-                  </div>
                 </div>
-                <div className="card-exp">
-                  <div className="ano">2024</div>
+              </div>
+              <div className="flex justify-center items-start text-blue-800 font-bold">2023</div>
+            </div>
+
+            {/* Card 2 */}
+            <div className="w-60 flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
+              <div className="flex justify-center items-end text-blue-800 font-bold">2023</div>
+              <div className="flex justify-center items-center">
+                <div className="bg-white w-12 h-12 rounded-full flex justify-center items-center text-2xl text-blue-800 shadow-md">
                   <i className="fa-solid fa-school-flag"></i>
-                  <div className="conteudo">
-                    <div className="titulo">Engenharia de Software</div>
-                    <div className="subtitulo">Faculdade UNOPAR</div>
-                    <div className="desc">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Et, sunt fugit. Magni consectetur eos qui veniam esse.
-                      Exercitationem amet rerum placeat sit ut saepe tenetur
-                      eaque reprehenderit, laborum ab dolor!
-                    </div>
-                  </div>
                 </div>
-                <div className="card-exp">
-                  <div className="ano">2024</div>
+              </div>
+              <div className="flex flex-col justify-start text-center">
+                <h3 className="font-bold text-blue-800 mb-1">Treinamento Sharp Coders - Fullstack</h3>
+                <h4 className="text-blue-600 mb-2">Ima Tech</h4>
+                <p className="text-sm text-blue-500">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, sunt fugit. Magni consectetur eos qui
+                  veniam esse. Exercitationem amet rerum placeat sit ut saepe tenetur eaque reprehenderit, laborum ab
+                  dolor!
+                </p>
+              </div>
+            </div>
+
+            {/* Card 3 */}
+            <div className="w-60 flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
+              <div className="flex flex-col justify-end text-center">
+                <h3 className="font-bold text-blue-800 mb-1">Engenharia de Software</h3>
+                <h4 className="text-blue-600 mb-2">Faculdade UNOPAR</h4>
+                <p className="text-sm text-blue-500">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, sunt fugit. Magni consectetur eos qui
+                  veniam esse. Exercitationem amet rerum placeat sit ut saepe tenetur eaque reprehenderit, laborum ab
+                  dolor!
+                </p>
+              </div>
+              <div className="flex justify-center items-center">
+                <div className="bg-white w-12 h-12 rounded-full flex justify-center items-center text-2xl text-blue-800 shadow-md">
+                  <i className="fa-solid fa-school-flag"></i>
+                </div>
+              </div>
+              <div className="flex justify-center items-start text-blue-800 font-bold">2024</div>
+            </div>
+
+            {/* Card 4 */}
+            <div className="w-60 flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
+              <div className="flex justify-center items-end text-blue-800 font-bold">2024</div>
+              <div className="flex justify-center items-center">
+                <div className="bg-white w-12 h-12 rounded-full flex justify-center items-center text-2xl text-blue-800 shadow-md">
                   <i className="fa-solid fa-question"></i>
-                  <div className="conteudo">
-                    <div className="titulo"></div>
-                    <div className="subtitulo"></div>
-                    <div className="desc"></div>
-                  </div>
                 </div>
+              </div>
+              <div className="flex flex-col justify-start text-center">
+                <h3 className="font-bold text-blue-800 mb-1"></h3>
+                <h4 className="text-blue-600 mb-2"></h4>
+                <p className="text-sm text-blue-500"></p>
               </div>
             </div>
           </div>
         </div>
-
-        <style>
-          {`
-    
-
-#exp {    
-    background-image: linear-gradient(
-        45deg, #212632, #242A34, #3C4C5A
-    );
-    background-size: cover;
+      </div>
+    </div>
+  )
 }
 
-#exp .container {
-    display: flex;
-}
-
-.container-exp {
-    overflow: auto;    
-}
-
-.linha-exp {
-    height: 100%;
-    display: flex;
-    justify-content: left;
-    padding-left: 50px;
-    gap: 20px;    
-    
-}
-
-.card-exp {
-    width: 250px;
-    flex-shrink: 0;
-    display: grid;
-    grid-template-rows: 1fr 50px 1fr;
-    gap: 20px;    
-    position: relative;
-}
-
-#exp i {
-    background-color: var(--andromeda-light);
-    width: 50px;
-    height: 50px;
-    font-size: 2em;
-    color: var(--andromeda-dark);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    z-index: 2;
-}
-
-.ano {
-    display: flex;
-    align-items: end;
-    margin-left: 10px;
-}
-
-
-
-.card-exp:nth-child(odd) .conteudo {
-    grid-row-start: 1;
-    grid-row-end: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-}
-
-.card-exp:nth-child(odd) .ano {
-    grid-row-start: 3;
-    grid-row-end: 4;
-    align-items: start;
-}
-
-
-/* LINHA */
-
-#inicio::after {
-    position: absolute;
-    content: '';
-    background: var(--andromeda-light);
-    height: 2px;
-    width: 800px;
-    left: 20%;
-}
-
-
-
-
-
-    `}
-        </style>
-      </>
-    );
-};

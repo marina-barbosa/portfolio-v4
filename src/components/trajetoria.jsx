@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { RiSchoolLine } from "react-icons/ri";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -24,7 +25,7 @@ const Trajetoria = () => {
       scrollTrigger: {
         trigger: trajetoria,
         start: "top top",
-        end: `+=${scrollLength}`, // Garante que o scroll dura o suficiente para percorrer todo o conteúdo
+        end: `+=${scrollLength}`,
         scrub: 1,
         pin: true,
         anticipatePin: 1,
@@ -43,21 +44,143 @@ const Trajetoria = () => {
         id="trajetoria"
         className="fade-mask-nv2 relative w-full h-screen border-2 border-amber-400 font-raleway text-gray-800 overflow-hidden"
       >
-        <div
-          ref={contentRef}
-          className="flex space-x-52 w-max h-full items-center px-14"
-        >
-          {Array.from({ length: 5 }).map((_, index) => (
-            <h1
-              key={index}
-              className="text-7xl uppercase font-bold text-center"
-            >
-              Trajetória
-            </h1>
-          ))}
+        <div ref={contentRef} className="flex h-full items-center px-14">
+          {/* Timeline line */}
+          <div className="absolute h-0.5 bg-blue-200 w-[361vw] left-0 top-1/2 -translate-y-1/2"></div>
+
+          <h1 className="border text-5xl text-transparent uppercase font-bold text-center">
+            Trajetória
+          </h1>
+          {/* Card 1 */}
+          <div className="w-xl flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
+            <div className="flex flex-col justify-end text-center">
+              <h3 className="font-bold text-gray-800 mb-1">
+                1 Desenvolvimento de Software - Backend
+              </h3>
+              <h4 className="text-gray-600 mb-2">Cubos Academy</h4>
+              <p className="text-sm text-gray-500">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
+                sunt fugit. Magni consectetur eos qui veniam esse.
+                Exercitationem amet rerum placeat sit ut saepe tenetur eaque
+                reprehenderit, laborum ab dolor!
+              </p>
+            </div>
+            <div className="flex justify-center items-center">
+              <div className="bg-white w-12 h-12 rounded-full flex justify-center items-center text-2xl text-gray-800 shadow-md">
+                <RiSchoolLine />
+              </div>
+            </div>
+            <div className="flex justify-center items-start text-gray-800 font-bold">
+              2023
+            </div>
+          </div>
+          <h1 className="text-5xl text-transparent uppercase font-bold text-center">
+            Trajetória
+          </h1>
+          {/* Card 2 */}
+          <div className="w-xl flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
+            <div className="flex justify-center items-end text-gray-800 font-bold">
+              2023
+            </div>
+            <div className="flex justify-center items-center">
+              <div className="bg-white w-12 h-12 rounded-full flex justify-center items-center text-2xl text-gray-800 shadow-md">
+                <RiSchoolLine />
+              </div>
+            </div>
+            <div className="flex flex-col justify-start text-center">
+              <h3 className="font-bold text-gray-800 mb-1">
+                2 Treinamento Sharp Coders - Fullstack
+              </h3>
+              <h4 className="text-gray-600 mb-2">Ima Tech</h4>
+              <p className="text-sm text-gray-500">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
+                sunt fugit. Magni consectetur eos qui veniam esse.
+                Exercitationem amet rerum placeat sit ut saepe tenetur eaque
+                reprehenderit, laborum ab dolor!
+              </p>
+            </div>
+          </div>
+          <h1 className="text-5xl text-transparent uppercase font-bold text-center">
+            Trajetória
+          </h1>
+          {/* Card 3 */}
+          <div className="w-xl flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
+            <div className="flex flex-col justify-end text-center">
+              <h3 className="font-bold text-gray-800 mb-1">
+                3 Engenharia de Software
+              </h3>
+              <h4 className="text-gray-600 mb-2">Faculdade UNOPAR</h4>
+              <p className="text-sm text-gray-500">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
+                sunt fugit. Magni consectetur eos qui veniam esse.
+                Exercitationem amet rerum placeat sit ut saepe tenetur eaque
+                reprehenderit, laborum ab dolor!
+              </p>
+            </div>
+            <div className="flex justify-center items-center">
+              <div className="bg-white w-12 h-12 rounded-full flex justify-center items-center text-2xl text-gray-800 shadow-md">
+                <RiSchoolLine />
+              </div>
+            </div>
+            <div className="flex justify-center items-start text-gray-800 font-bold">
+              2024
+            </div>
+          </div>
+          <h1 className="text-5xl text-transparent uppercase font-bold text-center">
+            Trajetória
+          </h1>
+          {/* Card 1 */}
+          <div className="w-xl flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
+            <div className="flex flex-col justify-end text-center">
+              <h3 className="font-bold text-gray-800 mb-1">
+                4 Desenvolvimento de Software - Backend
+              </h3>
+              <h4 className="text-gray-600 mb-2">Cubos Academy</h4>
+              <p className="text-sm text-gray-500">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
+                sunt fugit. Magni consectetur eos qui veniam esse.
+                Exercitationem amet rerum placeat sit ut saepe tenetur eaque
+                reprehenderit, laborum ab dolor!
+              </p>
+            </div>
+            <div className="flex justify-center items-center">
+              <div className="bg-white w-12 h-12 rounded-full flex justify-center items-center text-2xl text-gray-800 shadow-md">
+                <RiSchoolLine />
+              </div>
+            </div>
+            <div className="flex justify-center items-start text-gray-800 font-bold">
+              2023
+            </div>
+          </div>
+          <h1 className="text-5xl text-transparent uppercase font-bold text-center">
+            Trajetória
+          </h1>
+          {/* Card 2 */}
+          <div className="w-xl flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
+            <div className="flex justify-center items-end text-gray-800 font-bold">
+              2023
+            </div>
+            <div className="flex justify-center items-center">
+              <div className="bg-white w-12 h-12 rounded-full flex justify-center items-center text-2xl text-gray-800 shadow-md">
+                <RiSchoolLine />
+              </div>
+            </div>
+            <div className="flex flex-col justify-start text-center">
+              <h3 className="font-bold text-gray-800 mb-1">
+                5 Treinamento Sharp Coders - Fullstack
+              </h3>
+              <h4 className="text-gray-600 mb-2">Ima Tech</h4>
+              <p className="text-sm text-gray-500">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
+                sunt fugit. Magni consectetur eos qui veniam esse.
+                Exercitationem amet rerum placeat sit ut saepe tenetur eaque
+                reprehenderit, laborum ab dolor!
+              </p>
+            </div>
+          </div>
         </div>
       </section>
-      <div className="h-[291vh]" />
+      <div className="h-[561vh]" />
       <style>{`
         .fade-mask-nv2 {
           position: relative;

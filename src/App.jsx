@@ -33,8 +33,7 @@ const App = () => {
         <SocialIcons />
         <span className="flex flex-col space-y-[6rem]">
           <Hero />
-          <DivExp />
-          <ProjectsScrollTrigger />
+          {/* <ProjectsScrollTrigger /> */}
           <ServicesList />
           <About />
           <ScrollMarquee />
