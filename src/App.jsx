@@ -36,7 +36,7 @@ const App = () => {
           <ServicesList />
           <About />
           <ScrollMarquee />
-          {/* <Trajetoria /> */}
+          <Trajetoria />
           {/* <Testimonials /> */}
           <Footer />
         </span>
