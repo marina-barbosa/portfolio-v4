@@ -46,7 +46,7 @@ const Trajetoria = () => {
       >
         <div ref={contentRef} className="flex h-full items-center px-14">
           {/* Timeline line */}
-          <div className="absolute h-0.5 bg-blue-200 w-[361vw] left-0 top-1/2 -translate-y-1/2"></div>
+          <div className="absolute h-0.5 bg-blue-200 w-[391vw] left-0 top-1/2 -translate-y-1/2"></div>
 
           <h1 className="border text-5xl text-transparent uppercase font-bold text-center">
             Trajetória
@@ -55,7 +55,7 @@ const Trajetoria = () => {
           <div className="w-xl flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
             <div className="flex flex-col justify-end text-center">
               <h3 className="font-bold text-gray-800 mb-1">
-                1 Desenvolvimento de Software - Backend
+                Desenvolvimento de Software - Backend
               </h3>
               <h4 className="text-gray-600 mb-2">Cubos Academy</h4>
               <p className="text-sm text-gray-500">
@@ -89,9 +89,9 @@ const Trajetoria = () => {
             </div>
             <div className="flex flex-col justify-start text-center">
               <h3 className="font-bold text-gray-800 mb-1">
-                2 Treinamento Sharp Coders - Fullstack
+                Treinamento Sharp Coders - Fullstack
               </h3>
-              <h4 className="text-gray-600 mb-2">Ima Tech</h4>
+              <h4 className="text-gray-600 mb-2">Ima Tech + MXM Sistemas</h4>
               <p className="text-sm text-gray-500">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
                 sunt fugit. Magni consectetur eos qui veniam esse.
@@ -106,10 +106,8 @@ const Trajetoria = () => {
           {/* Card 3 */}
           <div className="w-xl flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
             <div className="flex flex-col justify-end text-center">
-              <h3 className="font-bold text-gray-800 mb-1">
-                3 Engenharia de Software
-              </h3>
-              <h4 className="text-gray-600 mb-2">Faculdade UNOPAR</h4>
+              <h3 className="font-bold text-gray-800 mb-1">Treina Dev 12</h3>
+              <h4 className="text-gray-600 mb-2">Campus Code</h4>
               <p className="text-sm text-gray-500">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
                 sunt fugit. Magni consectetur eos qui veniam esse.
@@ -129,13 +127,37 @@ const Trajetoria = () => {
           <h1 className="text-5xl text-transparent uppercase font-bold text-center">
             Trajetória
           </h1>
-          {/* Card 1 */}
+          {/* Card 4 */}
+          <div className="w-xl flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
+            <div className="flex justify-center items-end text-gray-800 font-bold">
+              2023
+            </div>
+            <div className="flex justify-center items-center">
+              <div className="bg-white w-12 h-12 rounded-full flex justify-center items-center text-2xl text-gray-800 shadow-md">
+                <RiSchoolLine />
+              </div>
+            </div>
+            <div className="flex flex-col justify-start text-center">
+              <h3 className="font-bold text-gray-800 mb-1">
+                Desenvolvimento Fullstack Junior
+              </h3>
+              <h4 className="text-gray-600 mb-2">Mais Pra TI + Codifica Edu</h4>
+              <p className="text-sm text-gray-500">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
+                sunt fugit. Magni consectetur eos qui veniam esse.
+                Exercitationem amet rerum placeat sit ut saepe tenetur eaque
+                reprehenderit, laborum ab dolor!
+              </p>
+            </div>
+          </div>
+          <h1 className="text-5xl text-transparent uppercase font-bold text-center">
+            Trajetória
+          </h1>
+          {/* Card 5 */}
           <div className="w-xl flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
             <div className="flex flex-col justify-end text-center">
-              <h3 className="font-bold text-gray-800 mb-1">
-                4 Desenvolvimento de Software - Backend
-              </h3>
-              <h4 className="text-gray-600 mb-2">Cubos Academy</h4>
+              <h3 className="font-bold text-gray-800 mb-1">Engenharia de Software</h3>
+              <h4 className="text-gray-600 mb-2">Faculdade Unopar</h4>
               <p className="text-sm text-gray-500">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
                 sunt fugit. Magni consectetur eos qui veniam esse.
@@ -149,13 +171,13 @@ const Trajetoria = () => {
               </div>
             </div>
             <div className="flex justify-center items-start text-gray-800 font-bold">
-              2023
+              2024
             </div>
           </div>
           <h1 className="text-5xl text-transparent uppercase font-bold text-center">
             Trajetória
           </h1>
-          {/* Card 2 */}
+          {/* Card 6 */}
           <div className="w-xl flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
             <div className="flex justify-center items-end text-gray-800 font-bold">
               2023
@@ -167,9 +189,9 @@ const Trajetoria = () => {
             </div>
             <div className="flex flex-col justify-start text-center">
               <h3 className="font-bold text-gray-800 mb-1">
-                5 Treinamento Sharp Coders - Fullstack
+                Formação Desnevolvedor Fullstack
               </h3>
-              <h4 className="text-gray-600 mb-2">Ima Tech</h4>
+              <h4 className="text-gray-600 mb-2">CWI - Crescer lvl 1</h4>
               <p className="text-sm text-gray-500">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
                 sunt fugit. Magni consectetur eos qui veniam esse.
@@ -178,9 +200,12 @@ const Trajetoria = () => {
               </p>
             </div>
           </div>
+          <h1 className="text-5xl text-transparent uppercase font-bold text-center">
+            Trajetória
+          </h1>
         </div>
       </section>
-      <div className="h-[561vh]" />
+      <div className="h-[701vh]" />
       <style>{`
         .fade-mask-nv2 {
           position: relative;

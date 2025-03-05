@@ -55,31 +55,24 @@ button, a, .clickable {
 
 /* BARRA DE ROLAGEM */
 
-/* WebKit (Chrome, Edge, Safari) */
+/* Estilizar a barra de rolagem para navegadores com suporte a Webkit */
 ::-webkit-scrollbar {
-  width: 8px; /* Largura da barra de rolagem */
+    width: 8px;
+    height: 8px;
 }
 
-/* Fundo da barra de rolagem */
 ::-webkit-scrollbar-track {
-  background: #ffffff;
+    background-color: var(--color-background-secondary);
+    border-radius: 6px;
 }
 
-/* Barra deslizante (thumb) */
 ::-webkit-scrollbar-thumb {
-  background: #e0e0e0;
-  border-radius: 4px; 
-  transition: background 0.3s ease;
+    background-color: #555555;
+    border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #d0d0d0; 
-}
-
-/* Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #e0e0e0 #ffffff;
+    background-color: #666666;
 }
 
 

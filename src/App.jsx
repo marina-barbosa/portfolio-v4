@@ -7,7 +7,6 @@ import { Footer } from "./components/footer";
 import ScrollMarquee from "./components/scroll-marquee";
 import Trajetoria from "./components/trajetoria";
 import { Testimonials } from "./components/testimonials";
-import CosmicHero from "./z-experimental/gradient-orb";
 import { StarryBackground } from "./fx/starry-background";
 import { MouseMaskWindow } from "./fx/mouse-mask-window";
 import MouseColorChanger from "./fx/mouse-color-changer";
@@ -16,7 +15,6 @@ import { HackerScrambles } from "./fx/hacker-scrambles";
 import { ProjectsScrollTrigger } from "./components/projects-scroll-trigger";
 import { RevealTextFx } from "./fx/reveal-text";
 import { Logo } from "./components/logo";
-import { DivExp } from "./components/div-exp";
 
 const App = () => {
   return (
@@ -31,9 +29,9 @@ const App = () => {
         <Glitch />
         <Logo />
         <SocialIcons />
+        <Hero />
         <span className="flex flex-col space-y-[6rem]">
-          <Hero />
-          {/* <ProjectsScrollTrigger /> */}
+          <ProjectsScrollTrigger />
           <ServicesList />
           <About />
           <ScrollMarquee />
@@ -41,9 +39,6 @@ const App = () => {
           {/* <Testimonials /> */}
           <Footer />
         </span>
-        {/*
-
-        */}
       </div>
     </>
   );

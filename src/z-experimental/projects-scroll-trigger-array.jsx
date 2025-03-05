@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ButtonCosmic } from "./button-cosmic";
+import { ButtonCosmic } from "../components/button-cosmic";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,48 +17,20 @@ const projects = [
       "devicon-css3-plain-wordmark",
       "devicon-html5-plain-wordmark",
     ],
-    description: `Description of Project 1 Description of Project 1 Description of
-              Project 1 Description of Project 1 Description of Project 1
-              Description of Project 1 Description of Project 1 Description of
-              Project 1 Description of Project 1 Description of Project 1
-              Description of Project 1 Description of Project 1 Description of
-              Project 1`,
+    description: "Descrição do projeto 1...",
     viewLink: "#",
     codeLink: "#",
   },
   {
     id: 2,
-    name: "Refood",
-    image: "/img-project.jpg",
+    name: "NextGen",
+    image: "/img-project2.jpg",
     technologies: [
       "devicon-react-original",
       "devicon-nodejs-plain",
       "devicon-tailwindcss-plain",
     ],
-    description: `Description of Project 1 Description of Project 1 Description of
-              Project 1 Description of Project 1 Description of Project 1
-              Description of Project 1 Description of Project 1 Description of
-              Project 1 Description of Project 1 Description of Project 1
-              Description of Project 1 Description of Project 1 Description of
-              Project 1`,
-    viewLink: "#",
-    codeLink: "#",
-  },
-  {
-    id: 3,
-    name: "API Vendas",
-    image: "/img-project.jpg",
-    technologies: [
-      "devicon-react-original",
-      "devicon-nodejs-plain",
-      "devicon-tailwindcss-plain",
-    ],
-    description: `Description of Project 1 Description of Project 1 Description of
-              Project 1 Description of Project 1 Description of Project 1
-              Description of Project 1 Description of Project 1 Description of
-              Project 1 Description of Project 1 Description of Project 1
-              Description of Project 1 Description of Project 1 Description of
-              Project 1`,
+    description: "Descrição do projeto 2...",
     viewLink: "#",
     codeLink: "#",
   },
@@ -76,9 +48,7 @@ const ProjectSection = ({ project }) => {
       },
     });
 
-    tl
-    .to(`.img${project.id}`, { duration: 2 })
-    .to(`.img${project.id}`, {
+    tl.to(`.img${project.id}`, { duration: 2 }).to(`.img${project.id}`, {
       duration: 2,
       scale: 0.8,
       x: 250,
@@ -94,14 +64,12 @@ const ProjectSection = ({ project }) => {
       },
     });
 
-    tl2
-      .to(`.item${project.id}`, {
-        opacity: 1,
-        x: 50,
-        duration: 1,
-        stagger: 0.8,
-      })
-      .to(`.item${project.id}`, { duration: 2 });
+    tl2.to(`.item${project.id}`, {
+      opacity: 1,
+      x: 50,
+      duration: 1,
+      stagger: 0.8,
+    });
 
     const tl3 = gsap.timeline({
       scrollTrigger: {
@@ -125,7 +93,7 @@ const ProjectSection = ({ project }) => {
 
   return (
     <div
-      className={`step${project.id} relative h-screen w-full px-[6%] pt-[5%] mb-[10%]`}
+      className={`step${project.id} relative h-screen w-full px-[6%] pt-[5%]`}
     >
       <img
         src={project.image}
