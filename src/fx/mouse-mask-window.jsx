@@ -22,7 +22,7 @@ export const MouseMaskWindow = () => {
     } else if (screenWidth <= 768) {
       setMousePosition({ x: 0, y: 0 });
     } else if (screenWidth <= 1024) {
-      setMousePosition({ x: 0, y: 0 });
+      setMousePosition({ x: 52, y: 50 });
     } else if (screenWidth > 1024) {
       setMousePosition({ x: 52, y: 50 });
     }

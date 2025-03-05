@@ -4,9 +4,9 @@ export const Footer = () => {
   return (
     <footer className="tracking-widest relative w-full py-8 border-t border-gray-100">
       <div className="mx-auto px-4 max-w-5xl">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-col xl:flex-row xl:items-center xl:justify-between">
           {/* Coluna da esquerda - Connect */}
-          <div className="flex-1 flex flex-col items-center md:items-start justify-between h-full pb-2">
+          <div className="flex-1 flex flex-col items-center xl:items-start justify-between h-full pb-2">
             <div className="no-mask-section">
               <h3 className="py-3 font-bold text-sm tracking-wider no-mask-section">
                 CONNECT
@@ -33,7 +33,7 @@ export const Footer = () => {
             />
           </div>
           {/* Coluna da direita - Créditos */}
-          <div className="font-ibm flex-1 flex flex-col items-center md:items-end justify-between h-full">
+          <div className="font-ibm flex-1 flex flex-col items-center xl:items-end justify-between h-full">
             <div>
               <p className="open-mask-ball mouse-color-changer text-xs text-gray-600 mb-1 text-right pe-2">
                 Made in Brazil

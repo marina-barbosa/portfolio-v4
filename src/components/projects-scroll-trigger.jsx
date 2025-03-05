@@ -136,7 +136,7 @@ const ProjectSection = ({ project }) => {
         className={`text-box${project.id} absolute top-1/2 transform -translate-y-1/2`}
       >
         <h2
-          className={`item${project.id} open-mini-ball-mask text-3xl font-bold mb-4 opacity-0`}
+          className={`item${project.id} open-mask-ball mouse-color-changer text-3xl font-bold mb-4 opacity-0`}
         >
           {project.name}
         </h2>
@@ -147,7 +147,9 @@ const ProjectSection = ({ project }) => {
             <i key={index} className={`${tech} colored text-3xl`} />
           ))}
         </div>
-        <p className={`item${project.id} text-gray-600 md:w-1/3 opacity-0`}>
+        <p
+          className={`item${project.id} open-mask-ball mouse-color-changer text-gray-600 md:w-1/3 opacity-0`}
+        >
           {project.description}
         </p>
         <div className={`item${project.id} opacity-0`}>
@@ -165,7 +167,7 @@ const ProjectSection = ({ project }) => {
 
 export const ProjectsScrollTrigger = () => {
   return (
-    <main className="relative hidden md:block overflow-hidden">
+    <main className="relative hidden xl:block overflow-hidden">
       {projects.map((project) => (
         <>
           <ProjectSection key={project.id} project={project} />

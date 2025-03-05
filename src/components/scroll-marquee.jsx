@@ -37,7 +37,7 @@ const ScrollMarquee = () => {
   }, []);
 
   return (
-    <div className="flex flex-col gap-5 bg-transparent py-10 overflow-hidden fade-mask-nv2">
+    <div className="md:-mb-32 xl:mb-0 flex flex-col gap-5 bg-transparent py-10 overflow-hidden fade-mask-nv2">
       {/* Primeira faixa - rola para a esquerda */}
       <div className="w-full overflow-hidden relative">
         <div

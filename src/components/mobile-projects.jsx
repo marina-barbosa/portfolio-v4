@@ -43,13 +43,13 @@ export default function MobileProjects() {
   ];
 
   return (
-    <div className="relative md:hidden grid gap-6">
+    <div className="relative xl:hidden flex flex-col gap-24">
       {projects.map((project) => (
         <div
           key={project.id}
-          className="w-full max-w-sm mx-auto bg-white rounded-lg overflow-hidden shadow-md"
+          className="w-full max-w-xl mx-auto bg-white rounded-lg overflow-hidden shadow-md"
         >
-          <div className="relative h-64 w-full">
+          <div className="relative h-64 md:h-72 w-full">
             <img
               src={project.image || "/placeholder.svg"}
               alt={`Screenshot of ${project.name} project`}
@@ -75,7 +75,7 @@ export default function MobileProjects() {
               {project.description}
             </p>
 
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col md:flex-row gap-2">
               <a
                 href={project.viewLink}
                 className="w-full py-2 bg-amber-500 text-center text-white font-medium rounded-md flex items-center justify-center"
