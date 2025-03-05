@@ -32,13 +32,18 @@ const App = () => {
         <SocialIcons />
         <Hero />
         <span className="flex flex-col space-y-[6rem]">
+          <span id="projetos" className="block h-[100px] mt-[-100px]" />
           <MobileProjects />
           <ProjectsScrollTrigger />
           <ServicesList />
+          <span id="projetos-fim" className="block h-[100px] mt-[-100px]" />
+          <span id="sobre" className="block h-[100px] mt-[-100px]" />
           <About />
           <ScrollMarquee />
           <Trajetoria />
           {/* <Testimonials /> */}
+          <span id="sobre-fim" className="block h-[100px] mt-[-100px]" />
+          <span id="contato" className="block h-[100px] mt-[-100px]" />
           <Footer />
         </span>
       </div>

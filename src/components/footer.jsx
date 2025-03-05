@@ -12,13 +12,13 @@ export const Footer = () => {
                 CONNECT
               </h3>
               <a
-                href="mailto:email@example.com"
+                href="mailto:marinabarbosa.exp@gmail.com"
                 className="py-3 no-mask-section block text-sm hover:opacity-70 transition-opacity"
               >
                 Email: marinabarbosa.exp@gmail.com
               </a>
               <a
-                href="tel:+1234567890"
+                href="tel:+5513996697841"
                 className="py-3 no-mask-section block text-sm hover:opacity-70 transition-opacity"
               >
                 Phone: +55 (13) 99669-7841

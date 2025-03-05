@@ -214,7 +214,7 @@ const Trajetoria = () => {
           </h1>
         </div>
       </section>
-      <div className="h-[121vh] md:h-[248vh] xl:h-[521vh]" />
+      <div className="h-[121vh] md:h-[248vh] xl:h-[513vh]" />
       <style>{`
         .fade-mask-nv2 {
           position: relative;
