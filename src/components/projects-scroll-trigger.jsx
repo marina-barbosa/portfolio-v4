@@ -165,7 +165,7 @@ const ProjectSection = ({ project }) => {
 
 export const ProjectsScrollTrigger = () => {
   return (
-    <main className="relative overflow-hidden">
+    <main className="relative hidden md:block overflow-hidden">
       {projects.map((project) => (
         <>
           <ProjectSection key={project.id} project={project} />

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, useSpring } from "framer-motion";
 
 export const MouseMaskWindow = () => {
@@ -8,10 +8,25 @@ export const MouseMaskWindow = () => {
   const SIZE_SMALL = 90;
   const DEFAULT_SIZE = 20;
 
+  const itemRef = useRef(null);
   const [mousePosition, setMousePosition] = useState({ x: 52, y: 50 });
   const [circleExpandSize, setCircleExpandSize] = useState(DEFAULT_SIZE);
   const circleSize = useSpring(DEFAULT_SIZE, { stiffness: 100, damping: 20 });
   const [isHoveringNoMask, setIsHoveringNoMask] = useState(false);
+
+  useEffect(() => {
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth <= 480) {
+      setMousePosition({ x: 35, y: 50 });
+    } else if (screenWidth <= 768) {
+      setMousePosition({ x: 0, y: 0 });
+    } else if (screenWidth <= 1024) {
+      setMousePosition({ x: 0, y: 0 });
+    } else if (screenWidth > 1024) {
+      setMousePosition({ x: 52, y: 50 });
+    }
+  }, []);
 
   useEffect(() => {
     const handleMouseMove = (e) => {

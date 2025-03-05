@@ -52,7 +52,7 @@ const Trajetoria = () => {
             Trajetória
           </h1>
           {/* Card 1 */}
-          <div className="w-xl flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
+          <div className="w-md flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
             <div className="flex flex-col justify-end text-center">
               <h3 className="font-bold text-gray-800 mb-1">
                 Desenvolvimento de Software - Backend
@@ -78,7 +78,7 @@ const Trajetoria = () => {
             Trajetória
           </h1>
           {/* Card 2 */}
-          <div className="w-xl flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
+          <div className="w-md flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
             <div className="flex justify-center items-end text-gray-800 font-bold">
               2023
             </div>
@@ -104,7 +104,7 @@ const Trajetoria = () => {
             Trajetória
           </h1>
           {/* Card 3 */}
-          <div className="w-xl flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
+          <div className="w-md flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
             <div className="flex flex-col justify-end text-center">
               <h3 className="font-bold text-gray-800 mb-1">Treina Dev 12</h3>
               <h4 className="text-gray-600 mb-2">Campus Code</h4>
@@ -128,7 +128,7 @@ const Trajetoria = () => {
             Trajetória
           </h1>
           {/* Card 4 */}
-          <div className="w-xl flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
+          <div className="w-md flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
             <div className="flex justify-center items-end text-gray-800 font-bold">
               2023
             </div>
@@ -154,7 +154,7 @@ const Trajetoria = () => {
             Trajetória
           </h1>
           {/* Card 5 */}
-          <div className="w-xl flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
+          <div className="w-md flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
             <div className="flex flex-col justify-end text-center">
               <h3 className="font-bold text-gray-800 mb-1">Engenharia de Software</h3>
               <h4 className="text-gray-600 mb-2">Faculdade Unopar</h4>
@@ -178,7 +178,7 @@ const Trajetoria = () => {
             Trajetória
           </h1>
           {/* Card 6 */}
-          <div className="w-xl flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
+          <div className="w-md flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
             <div className="flex justify-center items-end text-gray-800 font-bold">
               2023
             </div>
