@@ -42,17 +42,20 @@ const Trajetoria = () => {
       <section
         ref={sectionRef}
         id="trajetoria"
-        className="fade-mask-nv2 relative w-full h-screen border-2 border-amber-400 font-raleway text-gray-800 overflow-hidden"
+        className="fade-mask-nv2 relative w-full h-screen font-raleway text-gray-800 overflow-hidden"
       >
         <div ref={contentRef} className="flex h-full items-center px-14">
           {/* Timeline line */}
-          <div className="absolute h-0.5 bg-blue-200 w-[391vw] left-0 top-1/2 -translate-y-1/2"></div>
+          <div className="absolute h-0.5 bg-blue-200 w-[405vw] sm:w-[391vw] left-0 top-1/2 -translate-y-1/2"></div>
 
-          <h1 className="border text-5xl text-transparent uppercase font-bold text-center">
+          <h1 className="hidden sm:block border text-5xl text-transparent uppercase font-bold text-center">
             Trajetória
           </h1>
+          <h1 className="block sm:hidden text-sm text-transparent uppercase font-bold text-center">
+            ee
+          </h1>
           {/* Card 1 */}
-          <div className="w-md flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
+          <div className="w-60 sm:w-md flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
             <div className="flex flex-col justify-end text-center">
               <h3 className="font-bold text-gray-800 mb-1">
                 Desenvolvimento de Software - Backend
@@ -66,7 +69,7 @@ const Trajetoria = () => {
               </p>
             </div>
             <div className="flex justify-center items-center">
-              <div className="bg-white w-12 h-12 rounded-full flex justify-center items-center text-2xl text-gray-800 shadow-md">
+              <div className="bg-white w-12 h-12 rounded-full flex justify-center items-center text-2xl text-gray-800 shadow-60 sm:w-md">
                 <RiSchoolLine />
               </div>
             </div>
@@ -74,16 +77,16 @@ const Trajetoria = () => {
               2023
             </div>
           </div>
-          <h1 className="text-5xl text-transparent uppercase font-bold text-center">
+          <h1 className="hidden sm:block text-5xl text-transparent uppercase font-bold text-center">
             Trajetória
           </h1>
           {/* Card 2 */}
-          <div className="w-md flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
+          <div className="w-60 sm:w-md flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
             <div className="flex justify-center items-end text-gray-800 font-bold">
               2023
             </div>
             <div className="flex justify-center items-center">
-              <div className="bg-white w-12 h-12 rounded-full flex justify-center items-center text-2xl text-gray-800 shadow-md">
+              <div className="bg-white w-12 h-12 rounded-full flex justify-center items-center text-2xl text-gray-800 shadow-60 sm:w-md">
                 <RiSchoolLine />
               </div>
             </div>
@@ -100,11 +103,11 @@ const Trajetoria = () => {
               </p>
             </div>
           </div>
-          <h1 className="text-5xl text-transparent uppercase font-bold text-center">
+          <h1 className="hidden sm:block text-5xl text-transparent uppercase font-bold text-center">
             Trajetória
           </h1>
           {/* Card 3 */}
-          <div className="w-md flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
+          <div className="w-60 sm:w-md flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
             <div className="flex flex-col justify-end text-center">
               <h3 className="font-bold text-gray-800 mb-1">Treina Dev 12</h3>
               <h4 className="text-gray-600 mb-2">Campus Code</h4>
@@ -116,7 +119,7 @@ const Trajetoria = () => {
               </p>
             </div>
             <div className="flex justify-center items-center">
-              <div className="bg-white w-12 h-12 rounded-full flex justify-center items-center text-2xl text-gray-800 shadow-md">
+              <div className="bg-white w-12 h-12 rounded-full flex justify-center items-center text-2xl text-gray-800 shadow-60 sm:w-md">
                 <RiSchoolLine />
               </div>
             </div>
@@ -124,16 +127,16 @@ const Trajetoria = () => {
               2024
             </div>
           </div>
-          <h1 className="text-5xl text-transparent uppercase font-bold text-center">
+          <h1 className="hidden sm:block text-5xl text-transparent uppercase font-bold text-center">
             Trajetória
           </h1>
           {/* Card 4 */}
-          <div className="w-md flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
+          <div className="w-60 sm:w-md flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
             <div className="flex justify-center items-end text-gray-800 font-bold">
               2023
             </div>
             <div className="flex justify-center items-center">
-              <div className="bg-white w-12 h-12 rounded-full flex justify-center items-center text-2xl text-gray-800 shadow-md">
+              <div className="bg-white w-12 h-12 rounded-full flex justify-center items-center text-2xl text-gray-800 shadow-60 sm:w-md">
                 <RiSchoolLine />
               </div>
             </div>
@@ -150,13 +153,15 @@ const Trajetoria = () => {
               </p>
             </div>
           </div>
-          <h1 className="text-5xl text-transparent uppercase font-bold text-center">
+          <h1 className="hidden sm:block text-5xl text-transparent uppercase font-bold text-center">
             Trajetória
           </h1>
           {/* Card 5 */}
-          <div className="w-md flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
+          <div className="w-60 sm:w-md flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
             <div className="flex flex-col justify-end text-center">
-              <h3 className="font-bold text-gray-800 mb-1">Engenharia de Software</h3>
+              <h3 className="font-bold text-gray-800 mb-1">
+                Engenharia de Software
+              </h3>
               <h4 className="text-gray-600 mb-2">Faculdade Unopar</h4>
               <p className="text-sm text-gray-500">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
@@ -166,7 +171,7 @@ const Trajetoria = () => {
               </p>
             </div>
             <div className="flex justify-center items-center">
-              <div className="bg-white w-12 h-12 rounded-full flex justify-center items-center text-2xl text-gray-800 shadow-md">
+              <div className="bg-white w-12 h-12 rounded-full flex justify-center items-center text-2xl text-gray-800 shadow-60 sm:w-md">
                 <RiSchoolLine />
               </div>
             </div>
@@ -174,16 +179,16 @@ const Trajetoria = () => {
               2024
             </div>
           </div>
-          <h1 className="text-5xl text-transparent uppercase font-bold text-center">
+          <h1 className="hidden sm:block text-5xl text-transparent uppercase font-bold text-center">
             Trajetória
           </h1>
           {/* Card 6 */}
-          <div className="w-md flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
+          <div className="w-60 sm:w-md flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
             <div className="flex justify-center items-end text-gray-800 font-bold">
               2023
             </div>
             <div className="flex justify-center items-center">
-              <div className="bg-white w-12 h-12 rounded-full flex justify-center items-center text-2xl text-gray-800 shadow-md">
+              <div className="bg-white w-12 h-12 rounded-full flex justify-center items-center text-2xl text-gray-800 shadow-60 sm:w-md">
                 <RiSchoolLine />
               </div>
             </div>
@@ -200,12 +205,15 @@ const Trajetoria = () => {
               </p>
             </div>
           </div>
-          <h1 className="text-5xl text-transparent uppercase font-bold text-center">
+          <h1 className="hidden sm:block text-5xl text-transparent uppercase font-bold text-center">
             Trajetória
+          </h1>
+          <h1 className="block sm:hidden text-sm text-transparent uppercase font-bold text-center">
+            eeee
           </h1>
         </div>
       </section>
-      <div className="h-[701vh]" />
+      <div className="h-[121vh] sm:h-[701vh]" />
       <style>{`
         .fade-mask-nv2 {
           position: relative;

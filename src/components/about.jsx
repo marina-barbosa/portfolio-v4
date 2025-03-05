@@ -30,7 +30,7 @@ const tabs = [
   return (
     <section className="font-raleway relative flex items-center justify-center">
       <div className="max-w-6xl min-h-[550px] mx-auto flex flex-col md:flex-row items-start">
-        <div className="mb-8 md:mb-0 md:w-1/2 flex justify-center">
+        <div className="mb-8 md:mb-0 md:w-1/2 flex justify-center mx-auto">
           <img
             src="/img-placeholder.png"
             // src="/me.jpg"
@@ -44,7 +44,7 @@ const tabs = [
             <span className="reveal-text reveal-text-title">quem sou</span>
           </h2>
 
-          <div className="flex text-[#555555] mb-6 font-medium text-lg tracking-widest">
+          <div className="flex text-[#555555] mb-6 font-medium text-lg tracking-widest mx-auto sm:mx-0">
             {tabs.map((tab, index) => (
               <div key={tab.id} className="flex items-center">
                 <button
@@ -60,7 +60,7 @@ const tabs = [
             ))}
           </div>
 
-          <div className="text-2xl text-gray-600 leading-relaxed font-ibm min-h-[250px] flex items-start">
+          <div className="text-2xl text-gray-600 leading-tight sm:leading-relaxed font-ibm min-h-[250px] flex items-start">
             <span className="reveal-text reveal-text-body">
               {tabs.find((tab) => tab.id === activeTab)?.content}
             </span>

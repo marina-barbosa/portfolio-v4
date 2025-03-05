@@ -11,7 +11,7 @@ const ScrollMarquee = () => {
   useEffect(() => {
     if (marqueeLeftRef.current) {
       gsap.to(marqueeLeftRef.current, {
-        xPercent: -100,
+        xPercent: -200,
         ease: "none",
         scrollTrigger: {
           trigger: marqueeLeftRef.current,
@@ -24,13 +24,13 @@ const ScrollMarquee = () => {
 
     if (marqueeRightRef.current) {
       gsap.to(marqueeRightRef.current, {
-        xPercent: 100,
+        xPercent: 200,
         ease: "none",
         scrollTrigger: {
           trigger: marqueeRightRef.current,
           start: "top bottom",
           end: "bottom top",
-          scrub: 2,
+          scrub: 1,
         },
       });
     }
@@ -41,50 +41,50 @@ const ScrollMarquee = () => {
       {/* Primeira faixa - rola para a esquerda */}
       <div className="w-full overflow-hidden relative">
         <div
-          className="flex gap-20 whitespace-nowrap will-change-transform"
+          className="flex gap-5 sm:gap-20 whitespace-nowrap will-change-transform"
           ref={marqueeLeftRef}
         >
-          <i className="open-mini-ball-mask devicon-docker-plain-wordmark colored text-8xl"></i>
-          <i className="open-mini-ball-mask devicon-java-plain-wordmark colored text-8xl"></i>
-          <i className="open-mini-ball-mask devicon-javascript-plain colored text-8xl"></i>
-          <i className="open-mini-ball-mask devicon-express-original colored text-8xl"></i>
-          <i className="open-mini-ball-mask devicon-css3-plain-wordmark colored text-8xl"></i>
-          <i className="open-mini-ball-mask devicon-html5-plain-wordmark colored text-8xl"></i>
-          <i className="open-mini-ball-mask devicon-tailwindcss-original colored text-8xl"></i>
-          <i className="open-mini-ball-mask devicon-csharp-plain colored text-8xl"></i>
-          <i className="open-mini-ball-mask devicon-jest-plain colored text-8xl"></i>
-          <i className="open-mini-ball-mask devicon-postgresql-plain-wordmark colored text-8xl"></i>
-          <i className="open-mini-ball-mask devicon-git-plain colored text-8xl"></i>
-          <i className="open-mini-ball-mask devicon-angularjs-plain colored text-8xl"></i>
-          <i className="open-mini-ball-mask devicon-react-original-wordmark colored text-8xl"></i>
-          <i className="open-mini-ball-mask devicon-nodejs-plain-wordmark colored text-8xl"></i>
-          <i className="open-mini-ball-mask devicon-spring-original-wordmark colored text-8xl"></i>
-          <i className="open-mini-ball-mask devicon-typescript-plain colored text-8xl"></i>
+          <i className="open-mini-ball-mask devicon-docker-plain-wordmark colored text-6xl sm:text-8xl"></i>
+          <i className="open-mini-ball-mask devicon-java-plain-wordmark colored text-6xl sm:text-8xl"></i>
+          <i className="open-mini-ball-mask devicon-javascript-plain colored text-6xl sm:text-8xl"></i>
+          <i className="open-mini-ball-mask devicon-express-original colored text-6xl sm:text-8xl"></i>
+          <i className="open-mini-ball-mask devicon-css3-plain-wordmark colored text-6xl sm:text-8xl"></i>
+          <i className="open-mini-ball-mask devicon-html5-plain-wordmark colored text-6xl sm:text-8xl"></i>
+          <i className="open-mini-ball-mask devicon-tailwindcss-original colored text-6xl sm:text-8xl"></i>
+          <i className="open-mini-ball-mask devicon-csharp-plain colored text-6xl sm:text-8xl"></i>
+          <i className="open-mini-ball-mask devicon-jest-plain colored text-6xl sm:text-8xl"></i>
+          <i className="open-mini-ball-mask devicon-postgresql-plain-wordmark colored text-6xl sm:text-8xl"></i>
+          <i className="open-mini-ball-mask devicon-git-plain colored text-6xl sm:text-8xl"></i>
+          <i className="open-mini-ball-mask devicon-angularjs-plain colored text-6xl sm:text-8xl"></i>
+          <i className="open-mini-ball-mask devicon-react-original-wordmark colored text-6xl sm:text-8xl"></i>
+          <i className="open-mini-ball-mask devicon-nodejs-plain-wordmark colored text-6xl sm:text-8xl"></i>
+          <i className="open-mini-ball-mask devicon-spring-original-wordmark colored text-6xl sm:text-8xl"></i>
+          <i className="open-mini-ball-mask devicon-typescript-plain colored text-6xl sm:text-8xl"></i>
         </div>
       </div>
 
       {/* Segunda faixa - rola para a direita */}
       <div className="w-full overflow-hidden relative">
         <div
-          className="flex gap-20 whitespace-nowrap will-change-transform flex-row-reverse"
+          className="flex gap-5 sm:gap-20 whitespace-nowrap will-change-transform flex-row-reverse"
           ref={marqueeRightRef}
         >
-          <i className="open-mini-ball-mask devicon-jest-plain colored text-8xl"></i>
-          <i className="open-mini-ball-mask devicon-postgresql-plain-wordmark colored text-8xl"></i>
-          <i className="open-mini-ball-mask devicon-git-plain colored text-8xl"></i>
-          <i className="open-mini-ball-mask devicon-angularjs-plain colored text-8xl"></i>
-          <i className="open-mini-ball-mask devicon-react-original-wordmark colored text-8xl"></i>
-          <i className="open-mini-ball-mask devicon-nodejs-plain-wordmark colored text-8xl"></i>
-          <i className="open-mini-ball-mask devicon-spring-original-wordmark colored text-8xl"></i>
-          <i className="open-mini-ball-mask devicon-typescript-plain colored text-8xl"></i>
-          <i className="open-mini-ball-mask devicon-docker-plain-wordmark colored text-8xl"></i>
-          <i className="open-mini-ball-mask devicon-java-plain-wordmark colored text-8xl"></i>
-          <i className="open-mini-ball-mask devicon-javascript-plain colored text-8xl"></i>
-          <i className="open-mini-ball-mask devicon-express-original colored text-8xl"></i>
-          <i className="open-mini-ball-mask devicon-css3-plain-wordmark colored text-8xl"></i>
-          <i className="open-mini-ball-mask devicon-html5-plain-wordmark colored text-8xl"></i>
-          <i className="open-mini-ball-mask devicon-tailwindcss-original colored text-8xl"></i>
-          <i className="open-mini-ball-mask devicon-csharp-plain colored text-8xl"></i>
+          <i className="open-mini-ball-mask devicon-jest-plain colored text-6xl sm:text-8xl"></i>
+          <i className="open-mini-ball-mask devicon-postgresql-plain-wordmark colored text-6xl sm:text-8xl"></i>
+          <i className="open-mini-ball-mask devicon-git-plain colored text-6xl sm:text-8xl"></i>
+          <i className="open-mini-ball-mask devicon-angularjs-plain colored text-6xl sm:text-8xl"></i>
+          <i className="open-mini-ball-mask devicon-react-original-wordmark colored text-6xl sm:text-8xl"></i>
+          <i className="open-mini-ball-mask devicon-nodejs-plain-wordmark colored text-6xl sm:text-8xl"></i>
+          <i className="open-mini-ball-mask devicon-spring-original-wordmark colored text-6xl sm:text-8xl"></i>
+          <i className="open-mini-ball-mask devicon-typescript-plain colored text-6xl sm:text-8xl"></i>
+          <i className="open-mini-ball-mask devicon-docker-plain-wordmark colored text-6xl sm:text-8xl"></i>
+          <i className="open-mini-ball-mask devicon-java-plain-wordmark colored text-6xl sm:text-8xl"></i>
+          <i className="open-mini-ball-mask devicon-javascript-plain colored text-6xl sm:text-8xl"></i>
+          <i className="open-mini-ball-mask devicon-express-original colored text-6xl sm:text-8xl"></i>
+          <i className="open-mini-ball-mask devicon-css3-plain-wordmark colored text-6xl sm:text-8xl"></i>
+          <i className="open-mini-ball-mask devicon-html5-plain-wordmark colored text-6xl sm:text-8xl"></i>
+          <i className="open-mini-ball-mask devicon-tailwindcss-original colored text-6xl sm:text-8xl"></i>
+          <i className="open-mini-ball-mask devicon-csharp-plain colored text-6xl sm:text-8xl"></i>
         </div>
       </div>
 
