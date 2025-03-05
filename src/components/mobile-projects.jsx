@@ -1,50 +1,9 @@
+import { projects } from "../utils/projects";
 export default function MobileProjects() {
-  const projects = [
-    {
-      id: 1,
-      name: "Sprawl",
-      image: "/img-project.jpg",
-      technologies: [
-        "devicon-javascript-plain",
-        "devicon-express-original",
-        "devicon-css3-plain-wordmark",
-        "devicon-html5-plain-wordmark",
-      ],
-      description: "Descrição do projeto Sprawl...",
-      viewLink: "#",
-      codeLink: "#",
-    },
-    {
-      id: 2,
-      name: "Refood",
-      image: "/img-project.jpg",
-      technologies: [
-        "devicon-react-original",
-        "devicon-nodejs-plain",
-        "devicon-tailwindcss-plain",
-      ],
-      description: "Descrição do projeto Refood...",
-      viewLink: "#",
-      codeLink: "#",
-    },
-    {
-      id: 3,
-      name: "API Vendas",
-      image: "/img-project.jpg",
-      technologies: [
-        "devicon-react-original",
-        "devicon-nodejs-plain",
-        "devicon-tailwindcss-plain",
-      ],
-      description: "Descrição do projeto API Vendas...",
-      viewLink: "#",
-      codeLink: "#",
-    },
-  ];
 
   return (
     <div className="relative xl:hidden flex flex-col gap-24">
-      {projects.map((project) => (
+      {projects &&projects.map((project) => (
         <div
           key={project.id}
           className="w-full max-w-xl mx-auto bg-white rounded-lg overflow-hidden shadow-md"

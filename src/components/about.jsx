@@ -8,23 +8,56 @@ const tabs = [
     id: "rh",
     label: "RH",
     content: `
-      Oi! Sou a Marina, dev fullstack e estudante de Engenharia de Software. Já trabalhei com Java, Spring Boot, Node.js, C#, .NET, PostgreSQL e React. Sou organizada, proativa e adoro resolver problemas. Atualmente, desenvolvo um e-commerce de kimonos, atuando no backend e frontend com Express e React.
-    `,
+      Oi, eu sou a Marina, dev fullstack com experiência em projetos acadêmicos e freelance voluntário. 
+      Minha base técnica inclui Java, Spring Boot, Javascript, React, Angular, Node.js 
+      e bancos de dados relacionais como PostgreSQL e MySQL. 
+      Tenho um perfil colaborativo e sou movida por desafios que me permitam aprender e evoluir. 
+      Atualmente, curso Engenharia de Software e atuo em um projeto voluntário de e-commerce de kimonos, 
+      o que me proporciona experiência real em desenvolvimento e trabalho em equipe. 
+      Estou sempre buscando oportunidades para aprimorar minhas habilidades 
+      e contribuir com novas soluções e agregar ao time!`,
   },
   {
     id: "dev",
     label: "Dev",
     content: `
-      Sou dev fullstack desde 2023, focada em APIs robustas e interfaces intuitivas. Trabalho com Java, Spring Boot, C#, .NET, Node.js, Express, PostgreSQL, React, Angular e Tailwind. Uso TDD, Jest, JUnit, Docker e CI/CD. Atualmente, contribuo em um e-commerce de kimonos, sempre priorizando código limpo, segurança e escalabilidade.
+       Sou dev desde 2023 em constante aprendizado. 
+       Minha stack principal inclui Java com Spring Boot, React, Node.js e PostgreSQL, 
+       mas também tenho experiência com .NET, C# e Ruby on Rails. 
+       Já desenvolvi em TDD usando JUnit, Jest e RSpec, 
+       além de metodologias ágeis e boas práticas de desenvolvimento. 
+       Atualmente, estou envolvida em um projeto de e-commerce voluntário, onde participo como fullstack. 
+       Tenho perfil prestativo, colaborativo, curioso, 
+       aprendo rápido, sou organizada, autogerenciada, esforçada e trabalho bem em equipe.
     `,
   },
   {
     id: "fun",
     label: "Fun",
     content: `
-      Fora do código, adoro desafios! 🎮 Mono Kassadin no LoL, 🍣 fã de sushi, 📺 viciada em séries e 🎨 exploradora de UI/UX. Sempre aprendendo algo novo, seja uma tecnologia, um jogo ou um prato diferente. Bora trocar uma ideia? 😃
+      🎮 Mono Kassadin no Wildrift e jungle quebra galho, 
+      🍣 apreciadora de sushi, 
+      📺 maratonista de séries e filmes, 
+      🎨 desbravadora de efeitos js e css. 
+      Sempre aprendendo algo novo, 
+      seja uma tecnologia, um jogo ou um prato diferente. 
+      Bora trocar uma ideia? 😃
+      Melhor... bora de duo em algum joguinho?
     `,
   },
+  // {
+  //   id: "leigo",
+  //   label: "Cliente",
+  //   content: `
+  //     Oi, eu sou a Marina, desenvolvedora de software apaixonada por criar soluções digitais que realmente fazem a diferença.
+  //     Meu trabalho é transformar ideias em sistemas eficientes,
+  //     seja um site, um aplicativo ou uma plataforma personalizada para o seu negócio.
+  //     Já desenvolvi desde lojas virtuais até sistemas de gestão,
+  //     sempre focando em usabilidade, desempenho e segurança.
+  //     O objetivo é simples: facilitar processos, automatizar tarefas e trazer resultados concretos para sua empresa.
+  //     Se você tem um projeto ou quer entender como a tecnologia pode ajudar,
+  //     estou aqui para te guiar da forma mais simples e direta possível!`,
+  // },
 ];
 
   return (

@@ -63,17 +63,41 @@ const Trajetoria = () => {
               </h3>
               <h4 className="text-gray-600 mb-2">Cubos Academy</h4>
               <p className="text-sm text-gray-500">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
-                sunt fugit. Magni consectetur eos qui veniam esse.
-                Exercitationem amet rerum placeat sit ut saepe tenetur eaque
-                reprehenderit, laborum ab dolor!
+                Desenvolvimento Backend com JavaScript, Node.js, Express.js e
+                PostgreSQL pela Cubos Academy em parceria com iFood.
               </p>
             </div>
+
             <div className="flex justify-center items-center">
-              <div className="bg-white w-12 h-12 rounded-full flex justify-center items-center text-2xl text-gray-800 shadow-60">
-                <RiSchoolLine />
+              <div className="relative w-20 h-20 flex justify-center items-center text-2xl text-gray-800 shadow-60">
+                {/* Hexágono maior atrás (simulando a borda) */}
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    clipPath:
+                      "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+                    backgroundColor: "lightseagreen", // Cor de fundo do hexágono maior
+                    zIndex: -1, // Hexágono maior fica atrás do ícone
+                  }}
+                ></div>
+
+                {/* Hexágono menor na frente (branco), agora um pouco menor */}
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    clipPath:
+                      "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+                    backgroundColor: "white", // Cor de fundo do hexágono menor
+                    border: "2px solid transparent", // Borda transparente para manter a forma do hexágono
+                    transform: "scale(0.8)", // Reduzindo um pouco o hexágono branco
+                  }}
+                ></div>
+
+                {/* Ícone no centro, agora com z-index maior para garantir visibilidade */}
+                <RiSchoolLine style={{ zIndex: 1 }} />
               </div>
             </div>
+
             <div className="flex justify-center items-start text-gray-800 font-bold">
               2023
             </div>
@@ -97,10 +121,8 @@ const Trajetoria = () => {
               </h3>
               <h4 className="text-gray-600 mb-2">Ima Tech + MXM Sistemas</h4>
               <p className="text-sm text-gray-500">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
-                sunt fugit. Magni consectetur eos qui veniam esse.
-                Exercitationem amet rerum placeat sit ut saepe tenetur eaque
-                reprehenderit, laborum ab dolor!
+                Desenvolvimento Fullstack com Angular, C# e .Net pela Ímã Tech
+                em parceria com a MXM Sistemas.
               </p>
             </div>
           </div>
@@ -113,10 +135,8 @@ const Trajetoria = () => {
               <h3 className="font-bold text-gray-800 mb-1">Treina Dev 12</h3>
               <h4 className="text-gray-600 mb-2">Campus Code</h4>
               <p className="text-sm text-gray-500">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
-                sunt fugit. Magni consectetur eos qui veniam esse.
-                Exercitationem amet rerum placeat sit ut saepe tenetur eaque
-                reprehenderit, laborum ab dolor!
+                TreinaDev 12, TDD com Ruby on Rails, RSpec, Capybara pela Campus
+                Code.
               </p>
             </div>
             <div className="flex justify-center items-center">
@@ -134,7 +154,7 @@ const Trajetoria = () => {
           {/* Card 4 */}
           <div className="w-60 sm:w-md flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
             <div className="flex justify-center items-end text-gray-800 font-bold">
-              2023
+              2024
             </div>
             <div className="flex justify-center items-center">
               <div className="bg-white w-12 h-12 rounded-full flex justify-center items-center text-2xl text-gray-800 shadow-60">
@@ -147,10 +167,9 @@ const Trajetoria = () => {
               </h3>
               <h4 className="text-gray-600 mb-2">Mais Pra TI + Codifica Edu</h4>
               <p className="text-sm text-gray-500">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
-                sunt fugit. Magni consectetur eos qui veniam esse.
-                Exercitationem amet rerum placeat sit ut saepe tenetur eaque
-                reprehenderit, laborum ab dolor!
+                Developer Fullstack Júnior com React, Design, Testes Unitários
+                com Jest, Java, MySQL, Spring Boot, JPA, JUnit pela +PraTi em
+                parceria com a Codifica Edu.
               </p>
             </div>
           </div>
@@ -186,7 +205,7 @@ const Trajetoria = () => {
           {/* Card 6 */}
           <div className="w-60 sm:w-md flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
             <div className="flex justify-center items-end text-gray-800 font-bold">
-              2023
+              2025
             </div>
             <div className="flex justify-center items-center">
               <div className="bg-white w-12 h-12 rounded-full flex justify-center items-center text-2xl text-gray-800 shadow-60">
@@ -199,10 +218,8 @@ const Trajetoria = () => {
               </h3>
               <h4 className="text-gray-600 mb-2">CWI - Crescer lvl 1</h4>
               <p className="text-sm text-gray-500">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
-                sunt fugit. Magni consectetur eos qui veniam esse.
-                Exercitationem amet rerum placeat sit ut saepe tenetur eaque
-                reprehenderit, laborum ab dolor!
+                Formação Fullstack com Java, JUnit, Javascript, Jest, HTML, CSS,
+                PostgrSQL pela CWI no programa Crescer Lvl. 1.
               </p>
             </div>
           </div>
@@ -214,6 +231,10 @@ const Trajetoria = () => {
           </h1>
         </div>
       </section>
+      {/* 2025: Bootcamp ONP. Desenvolvimento de e-commerce com Next.js,
+      metodologias ágeis (Daily, Sprint Review, Code Review), experiência
+      prática com servidores de desenvolvimento, homologação e produção, além de
+      colaboração com PO e QA. */}
       <div className="h-[121vh] md:h-[248vh] xl:h-[513vh]" />
       <style>{`
         .fade-mask-nv2 {

@@ -3,66 +3,10 @@ import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ButtonCosmic } from "./button-cosmic";
+import { projects } from "../utils/projects";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const projects = [
-  {
-    id: 1,
-    name: "Sprawl",
-    image: "/img-project.jpg",
-    technologies: [
-      "devicon-javascript-plain",
-      "devicon-express-original",
-      "devicon-css3-plain-wordmark",
-      "devicon-html5-plain-wordmark",
-    ],
-    description: `Description of Project 1 Description of Project 1 Description of
-              Project 1 Description of Project 1 Description of Project 1
-              Description of Project 1 Description of Project 1 Description of
-              Project 1 Description of Project 1 Description of Project 1
-              Description of Project 1 Description of Project 1 Description of
-              Project 1`,
-    viewLink: "#",
-    codeLink: "#",
-  },
-  {
-    id: 2,
-    name: "Refood",
-    image: "/img-project.jpg",
-    technologies: [
-      "devicon-react-original",
-      "devicon-nodejs-plain",
-      "devicon-tailwindcss-plain",
-    ],
-    description: `Description of Project 1 Description of Project 1 Description of
-              Project 1 Description of Project 1 Description of Project 1
-              Description of Project 1 Description of Project 1 Description of
-              Project 1 Description of Project 1 Description of Project 1
-              Description of Project 1 Description of Project 1 Description of
-              Project 1`,
-    viewLink: "#",
-    codeLink: "#",
-  },
-  {
-    id: 3,
-    name: "API Vendas",
-    image: "/img-project.jpg",
-    technologies: [
-      "devicon-react-original",
-      "devicon-nodejs-plain",
-      "devicon-tailwindcss-plain",
-    ],
-    description: `Description of Project 1 Description of Project 1 Description of
-              Project 1 Description of Project 1 Description of Project 1
-              Description of Project 1 Description of Project 1 Description of
-              Project 1 Description of Project 1 Description of Project 1
-              Description of Project 1 Description of Project 1 Description of
-              Project 1`,
-    viewLink: "#",
-    codeLink: "#",
-  },
-];
 
 const ProjectSection = ({ project }) => {
   useEffect(() => {
@@ -168,7 +112,7 @@ const ProjectSection = ({ project }) => {
 export const ProjectsScrollTrigger = () => {
   return (
     <main className="relative hidden xl:block overflow-hidden">
-      {projects.map((project) => (
+      {projects && projects.map((project) => (
         <>
           <ProjectSection key={project.id} project={project} />
           <div className="h-[90vh]" />
