@@ -1,4 +1,5 @@
 
+import { TitleHero } from "../fx/title-hero";
 import TypingFx from "../fx/typing-fx";
 import { ButtonCosmic } from "./button-cosmic";
 export const Hero = () => {
@@ -14,6 +15,9 @@ export const Hero = () => {
           You dream, I create. <br />
           Just like that.
         </h1>
+        {/* <span className="relative mb-4 z-10 mx-auto max-w-[78vw] m-10">
+          <TitleHero />
+        </span> */}
         <div className="relative h-[28px] min-w-[200px]">
           <TypingFx />
         </div>
