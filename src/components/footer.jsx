@@ -1,5 +1,5 @@
 import { ButtonCosmic } from "./button-cosmic";
-
+import { handleDownload } from "../utils/download-cv";
 export const Footer = () => {
   return (
     <footer className="tracking-widest relative w-full py-8 border-t border-gray-100">
@@ -43,7 +43,7 @@ export const Footer = () => {
               </p>
               <div className="open-mask-ball flex space-x-3 mt-2">
                 <ButtonCosmic>say hi</ButtonCosmic>
-                <ButtonCosmic>get cv</ButtonCosmic>
+                <ButtonCosmic onClick={handleDownload}>get cv</ButtonCosmic>
               </div>
             </div>
           </div>

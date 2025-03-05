@@ -2,7 +2,9 @@
 import { TitleHero } from "../fx/title-hero";
 import TypingFx from "../fx/typing-fx";
 import { ButtonCosmic } from "./button-cosmic";
+import { handleDownload } from "../utils/download-cv";
 export const Hero = () => {
+  
     return (
       <section className="mx-auto h-screen flex flex-col items-center justify-center font-raleway">
         {/* Gradient Orbs */}
@@ -21,9 +23,9 @@ export const Hero = () => {
         <div className="relative h-[28px] min-w-[200px]">
           <TypingFx />
         </div>
-        <div className="open-mini-ball-mask mt-10">
+        <div className="open-mini-ball-mask mt-10 z-50">
           <ButtonCosmic>say hi</ButtonCosmic>
-          <ButtonCosmic>get cv</ButtonCosmic>
+          <ButtonCosmic onClick={handleDownload}>get cv</ButtonCosmic>
         </div>
 
         {/* CSS for the gradient orbs */}
