@@ -1,4 +1,5 @@
 
+import TypingFx from "../fx/typing-fx";
 import { ButtonCosmic } from "./button-cosmic";
 export const Hero = () => {
     return (
@@ -9,14 +10,14 @@ export const Hero = () => {
           <div className="cosmic-orb orb-2"></div>
           <div className="cosmic-orb orb-3"></div>
         </div>
-        <h1 className="open-mask-ball mouse-color-changer z-10 mx-auto max-w-[78vw] m-10 mb-0 text-7xl uppercase font-bold text-center">
+        <h1 className="open-mask-ball mouse-color-changer mb-4 z-10 mx-auto max-w-[78vw] m-10 text-7xl uppercase font-bold text-center">
           You dream, I create. <br />
           Just like that.
         </h1>
-        <h2 className="text-xl mt-4 mb-10 z-20 open-mini-ball-mask mouse-color-changer font-ibm">
-          Fullstack Developer since 2023
-        </h2>
-        <div className="open-mini-ball-mask">
+        <div className="relative h-[28px] min-w-[200px]">
+          <TypingFx />
+        </div>
+        <div className="open-mini-ball-mask mt-10">
           <ButtonCosmic>say hi</ButtonCosmic>
           <ButtonCosmic>get cv</ButtonCosmic>
         </div>
