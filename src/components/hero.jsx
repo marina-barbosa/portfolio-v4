@@ -3,8 +3,10 @@ import { TitleHero } from "../fx/title-hero";
 import TypingFx from "../fx/typing-fx";
 import { ButtonCosmic } from "./button-cosmic";
 import { handleDownload } from "../utils/download-cv";
+import { useState } from "react";
+import { ContactModal } from "./contact-modal";
 export const Hero = () => {
-  
+  const [isModalOpen, setIsModalOpen] = useState(false);  
     return (
       <section className="mx-auto h-screen flex flex-col items-center justify-center font-raleway">
         {/* Gradient Orbs */}
@@ -14,7 +16,9 @@ export const Hero = () => {
           <div className="cosmic-orb orb-3"></div>
         </div>
         <h1 className="open-mask-ball mouse-color-changer mb-4 z-10 mx-auto max-w-[78vw] m-10 text-5xl sm:text-7xl uppercase font-bold text-center">
-          <span className="start-hacker-scrambles">You dream</span>, <br className="sm:hidden" /> <span className="start-hacker-scrambles">I create.</span> <br />
+          <span className="start-hacker-scrambles">You dream</span>,{" "}
+          <br className="sm:hidden" />{" "}
+          <span className="start-hacker-scrambles">I create.</span> <br />
           <span className="start-hacker-scrambles">Just like that.</span>
         </h1>
         {/* <span className="relative mb-4 z-10 mx-auto max-w-[78vw] m-10">
@@ -24,9 +28,16 @@ export const Hero = () => {
           <TypingFx />
         </div>
         <div className="open-mini-ball-mask mt-10 z-50">
-          <ButtonCosmic>say hi</ButtonCosmic>
+          <ButtonCosmic onClick={() => setIsModalOpen(true)}>
+            say hi
+          </ButtonCosmic>
           <ButtonCosmic onClick={handleDownload}>get cv</ButtonCosmic>
         </div>
+
+        <ContactModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+        />
 
         {/* CSS for the gradient orbs */}
         <style>{`
