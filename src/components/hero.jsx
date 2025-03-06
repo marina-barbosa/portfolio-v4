@@ -14,8 +14,8 @@ export const Hero = () => {
           <div className="cosmic-orb orb-3"></div>
         </div>
         <h1 className="open-mask-ball mouse-color-changer mb-4 z-10 mx-auto max-w-[78vw] m-10 text-5xl sm:text-7xl uppercase font-bold text-center">
-          You dream, <br className="sm:hidden" /> I create. <br />
-          Just like that.
+          <span className="start-hacker-scrambles">You dream</span>, <br className="sm:hidden" /> <span className="start-hacker-scrambles">I create.</span> <br />
+          <span className="start-hacker-scrambles">Just like that.</span>
         </h1>
         {/* <span className="relative mb-4 z-10 mx-auto max-w-[78vw] m-10">
           <TitleHero />

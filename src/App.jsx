@@ -43,7 +43,10 @@ const App = () => {
           <Trajetoria />
           {/* <Testimonials /> */}
           <span id="sobre-fim" className="block h-[100px] mt-[-100px]" />
-          <span id="contato" className="block h-[100px] mt-[-300px]" />
+          <span
+            id="contato"
+            className="block h-[100px] 2xl:h-[300px] mt-[-300px] 2xl:mt-[-400px]"
+          />
           <Footer />
         </span>
       </div>

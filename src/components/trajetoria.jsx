@@ -46,9 +46,9 @@ const Trajetoria = () => {
       >
         <div ref={contentRef} className="flex h-full items-center px-14">
           {/* Timeline line */}
-          <div className="absolute h-0.5 bg-blue-200 w-[405vw] sm:w-[655vw] xl:w-[345vw] left-0 top-1/2 -translate-y-1/2"></div>
+          <div className="absolute h-0.5 bg-blue-200 w-[405vw] sm:w-[655vw] xl:w-[345vw] 2xl:w-[309vw] left-0 top-1/2 -translate-y-1/2"></div>
 
-          <h1 className="hidden sm:block border xl:text-5xl text-transparent uppercase font-bold text-center">
+          <h1 className="hidden sm:block border xl:text-5xl 2xl:text-6xl text-transparent uppercase font-bold text-center">
             eeeeeeeeeeee
           </h1>
           <h1 className="block sm:hidden text-sm text-transparent uppercase font-bold text-center">
@@ -235,7 +235,7 @@ const Trajetoria = () => {
       metodologias ágeis (Daily, Sprint Review, Code Review), experiência
       prática com servidores de desenvolvimento, homologação e produção, além de
       colaboração com PO e QA. */}
-      <div className="h-[121vh] md:h-[248vh] xl:h-[513vh]" />
+      <div className="h-[121vh] md:h-[248vh] xl:h-[513vh] 2xl:h-[385vh]" />
       <style>{`
         .fade-mask-nv2 {
           position: relative;

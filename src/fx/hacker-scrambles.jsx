@@ -1,27 +1,29 @@
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 
 export const HackerScrambles = () => {
-  useEffect(() => {
+  useLayoutEffect(() => {
     const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    let intervalMap = new Map(); // Guarda os intervalos para cada elemento
+    let intervalMap = new Map();
 
-    const handleMouseOver = (event) => {
+    const scrambleEffect = (target) => {
       let iteration = 0;
-      const target = event.target;
       clearInterval(intervalMap.get(target));
 
+      const originalText = target.dataset.value || target.innerText;
+      target.dataset.value = originalText;
+
       const interval = setInterval(() => {
-        target.innerText = target.dataset.value
+        target.innerText = originalText
           .split("")
           .map((letter, index) => {
             if (index < iteration) {
-              return target.dataset.value[index]; // Retorna a letra original
+              return originalText[index];
             }
             return letters[Math.floor(Math.random() * letters.length)];
           })
           .join("");
 
-        if (iteration >= target.dataset.value.length) {
+        if (iteration >= originalText.length) {
           clearInterval(interval);
           intervalMap.delete(target);
         }
@@ -32,18 +34,22 @@ export const HackerScrambles = () => {
       intervalMap.set(target, interval);
     };
 
-    const elements = document.querySelectorAll(".hacker-scrambles");
-    elements.forEach((item) =>
-      item.addEventListener("mouseover", handleMouseOver)
-    );
+    setTimeout(() => {
+      const elements = document.querySelectorAll(".hacker-scrambles");
+      elements.forEach((item) =>
+        item.addEventListener("mouseover", (event) =>
+          scrambleEffect(event.target)
+        )
+      );
+
+      const autoElements = document.querySelectorAll(".start-hacker-scrambles");
+      autoElements.forEach(scrambleEffect);
+    }, 100)
 
     return () => {
-      elements.forEach((item) =>
-        item.removeEventListener("mouseover", handleMouseOver)
-      );
       intervalMap.forEach((interval) => clearInterval(interval));
     };
-  }, []); // Rodar apenas uma vez quando o componente for montado
+  }, []);
 
   return (
     <style>
