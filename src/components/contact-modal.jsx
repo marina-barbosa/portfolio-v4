@@ -18,10 +18,10 @@ export const ContactModal = ({ isOpen, onClose }) => {
       <div className="bg-white p-6 rounded-lg shadow-lg w-[90%] max-w-md">
         <h2 className="text-xl font-bold mb-4">Say Hi 👋</h2>
         <form
-        //   method="POST"
-          name="contato-portfolio"
-          action={"https://marina-barbosa.netlify.app/"}
-          netlify
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
           className="flex flex-col"
         >
           <input type="hidden" name="form-name" value="contact" />
