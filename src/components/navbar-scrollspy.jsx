@@ -48,15 +48,15 @@ export const NavbarScrollspy = () => {
   }, []);
 
   return (
-    <nav className="open-mini-ball-mask font-raleway sm:tracking-widest font-semibold 2xl:font-medium fixed top-8 right-4 sm:right-8 z-50 text-[14px] 2xl:text-[18px] uppercase text-right">
-      <ul className="sm:space-y-2 2xl:space-y-4">
+    <nav className="open-mini-ball-mask font-raleway sm:tracking-widest fixed top-8 right-4 sm:right-8 z-50 text-[14px] 2xl:text-[18px] uppercase text-right">
+      <ul className="sm:space-y-2 2xl:space-y-3">
         <li>
           <a
             href="#projetos"
             data-value="projetos"
             className={`hacker-scrambles ${
               activeSection === "projetos"
-                ? "text-[lightseagreen] font-bold"
+                ? "text-[lightseagreen]"
                 : "text-[#555555]"
             }`}
           >

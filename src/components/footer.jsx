@@ -2,13 +2,13 @@ import { ButtonCosmic } from "./button-cosmic";
 import { handleDownload } from "../utils/download-cv";
 export const Footer = () => {
   return (
-    <footer className="tracking-widest relative w-full py-8 border-t border-gray-100">
+    <footer className="tracking-widest relative w-full py-8 border-t border-gray-100 text-neutral-700">
       <div className="mx-auto px-4 max-w-5xl">
         <div className="flex flex-col xl:flex-row xl:items-center xl:justify-between">
           {/* Coluna da esquerda - Connect */}
-          <div className="flex-1 flex flex-col items-center xl:items-start justify-between h-full pb-2">
+          <div className="font-ibm  flex-1 flex flex-col items-center xl:items-start justify-between h-full pb-2">
             <div className="no-mask-section">
-              <h3 className="py-3 font-bold text-sm tracking-wider no-mask-section">
+              <h3 className="py-3 font-raleway text-lg tracking-wider no-mask-section">
                 CONNECT
               </h3>
               <a

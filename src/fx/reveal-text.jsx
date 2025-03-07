@@ -17,7 +17,7 @@ export const RevealTextFx = () => {
         }
         .reveal-text-body {
           animation-range-start: cover 25vh;
-          animation-range-end: cover 90vh;
+          animation-range-end: cover 70vh;
         }
         @keyframes reveal {
           to {

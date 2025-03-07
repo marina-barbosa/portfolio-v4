@@ -178,4 +178,7 @@ export const projects = [
     viewLink: "https://marina-barbosa.github.io/Jogo-Quiz/",
     codeLink: "https://github.com/marina-barbosa/Jogo-Quiz",
   },
+
+  // mini blog, 
+  // tcc html css
 ];

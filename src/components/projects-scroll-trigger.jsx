@@ -25,7 +25,7 @@ const ProjectSection = ({ project }) => {
     .to(`.img${project.id}`, {
       duration: 2,
       scale: 0.8,
-      x: 253,
+      x: 335,
       y: 50,
     });
 
@@ -75,13 +75,13 @@ const ProjectSection = ({ project }) => {
       <img
         src={project.image}
         alt={project.name}
-        className={`img${project.id} w-[70%] h-[80%] border-4 border-sky-400 mx-auto`}
+        className={`img${project.id} w-[70%] h-[80%] border border-gray-400 mx-auto`}
       />
       <div
         className={`text-box${project.id} absolute top-1/2 transform -translate-y-1/2`}
       >
         <h2
-          className={`item${project.id} open-mask-ball mouse-color-changer text-3xl font-bold mb-4 opacity-0`}
+          className={`item${project.id} font-raleway open-mask-ball mouse-color-changer text-3xl mb-4 opacity-0`}
         >
           {project.name}
         </h2>
@@ -93,17 +93,21 @@ const ProjectSection = ({ project }) => {
           ))}
         </div>
         <p
-          className={`item${project.id} open-mask-ball mouse-color-changer text-gray-600 md:w-1/3 min-h-[260px] opacity-0`}
+          className={`item${project.id} text-lg font-spacegrotesk open-mask-ball mouse-color-changer text-gray-600 md:w-1/3 min-h-[260px] opacity-0`}
         >
           {project.description}
         </p>
-        <div className={`item${project.id} opacity-0`}>
-          <button className="bg-amber-400 hover:bg-amber-500 text-black px-4 py-2 mt-4">
-            View Project
-          </button>
-          <span className="open-mask-ball">
-            <ButtonCosmic>View Code</ButtonCosmic>
-          </span>
+        <div className={`item${project.id} opacity-0 mt-4 -ms-1`}>
+          {project.viewLink && (
+            <button className="bg-amber-400 hover:bg-amber-500 text-black px-4 py-2 mt-4">
+              View Project
+            </button>
+          )}
+          {project.codeLink && (
+            <span className="open-mask-ball">
+              <ButtonCosmic>View Code</ButtonCosmic>
+            </span>
+          )}
         </div>
       </div>
     </div>

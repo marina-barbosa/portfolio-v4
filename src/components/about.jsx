@@ -14,8 +14,8 @@ const tabs = [
       Tenho um perfil colaborativo e sou movida por desafios que me permitam aprender e evoluir. 
       Atualmente, curso Engenharia de Software e atuo em um projeto voluntário de e-commerce de kimonos, 
       o que me proporciona experiência real em desenvolvimento e trabalho em equipe. 
-      Estou sempre buscando oportunidades para aprimorar minhas habilidades 
-      e contribuir com novas soluções e agregar ao time!`,
+      Estou sempre buscando oportunidades para aprimorar minhas habilidades, 
+      contribuir com novas soluções e agregar ao time!`,
   },
   {
     id: "dev",
@@ -61,9 +61,7 @@ const tabs = [
 ];
 
   return (
-    <section 
-      className="font-raleway relative flex items-center justify-center"
-    >
+    <section className="font-raleway relative flex items-center justify-center">
       <div className="max-w-6xl min-h-[550px] mx-auto flex flex-col xl:flex-row items-center xl:items-start">
         <div className="mb-8 md:mb-0 md:w-1/2 flex justify-center mx-auto">
           <img
@@ -75,11 +73,11 @@ const tabs = [
         </div>
 
         <div className="md:w-2/3 xl:w-1/2 text-center md:text-left md:pl-8 xl:pl-0 xl:pr-16 flex flex-col md:-ms-11">
-          <h2 className="text-lg font-medium tracking-widest uppercase text-[#555555] mb-6">
+          <h2 className="text-lg tracking-widest uppercase text-[#555555] mb-6">
             <span className="reveal-text reveal-text-title">quem sou</span>
           </h2>
 
-          <div className="flex text-[#555555] mb-6 font-medium text-lg tracking-widest mx-auto sm:mx-0">
+          <div className="flex text-[#555555] mb-6 text-lg tracking-widest mx-auto sm:mx-0">
             {tabs.map((tab, index) => (
               <div key={tab.id} className="flex items-center">
                 <button
@@ -95,7 +93,7 @@ const tabs = [
             ))}
           </div>
 
-          <div className="text-2xl text-gray-600 leading-tight sm:leading-relaxed font-ibm min-h-[250px] flex items-start">
+          <div className="text-lg font-light font-spacegrotesk sm:leading-relaxed tracking-normal max-w-[700px] text-gray-600 leading-tight min-h-[250px] flex items-start">
             <span className="reveal-text reveal-text-body">
               {tabs.find((tab) => tab.id === activeTab)?.content}
             </span>

@@ -44,15 +44,15 @@ export default function ServicesList() {
   ];
 
    return (
-     <section className="no-mask-section relative xl:min-h-screen py-8 font-raleway">
+     <section className="no-mask-section relative xl:min-h-screen 2xl:min-h-1/2 pt-8 font-raleway cursor-default">
        <div className="w-full mx-auto">
-         <h2 className="text-[#555555] max-w-4xl mx-auto text-lg tracking-widest text-center sm:text-left mb-12 md:ps-34 font-medium">
+         <h2 className="text-[#555555] text-lg tracking-widest max-w-4xl mx-auto text-center sm:text-left mb-12 md:ps-34">
            WHAT I DO
          </h2>
          {services.map((service, index) => (
            <div
              key={index}
-             className="relative border-t border-gray-200 py-6 overflow-hidden w-full"
+             className="relative border-b border-t border-gray-200 py-6 overflow-hidden w-full"
              onMouseEnter={() => setHoveredIndex(index)}
              onMouseLeave={() => setHoveredIndex(null)}
            >
@@ -82,7 +82,7 @@ export default function ServicesList() {
              {/* content */}
              <div className="sm:h-20 flex items-center justify-center relative z-10">
                <h3
-                 className={`text-4xl sm:text-6xl uppercase font-bold text-center  text-gray-900 transition-opacity duration-500 ${
+                 className={`text-4xl sm:text-6xl uppercase font-bold text-center text-neutral-700 transition-opacity duration-500 ${
                    hoveredIndex === index ? "opacity-0" : "opacity-100"
                  }`}
                >
