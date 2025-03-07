@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { NavbarScrollspy } from "./components/navbar-scrollspy";
 import { SocialIcons } from "./components/social-icons";
 import { Hero } from "./components/hero";
@@ -17,8 +18,20 @@ import { RevealTextFx } from "./fx/reveal-text";
 import { Logo } from "./components/logo";
 import MobileProjects from "./components/mobile-projects";
 import FloatingDino from "./fx/floating-dino";
+import LoadingScreen from "./components/loading-screen";
 
 const App = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
+
+  if (loading) {
+    return <LoadingScreen />;
+  }
   return (
     <>
       <div className="min-h-screen flex flex-col antialiased">
@@ -56,7 +69,7 @@ const App = () => {
   );
   // quem vc é?
   // oq vc faz?
-  // oq vc ja fez? 
+  // oq vc ja fez?
 };
 
 export default App;

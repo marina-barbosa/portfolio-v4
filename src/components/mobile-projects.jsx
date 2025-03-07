@@ -1,8 +1,9 @@
 import { projects } from "../utils/projects";
+import { ButtonCosmic } from "./button-cosmic";
 export default function MobileProjects() {
 
   return (
-    <div className="relative xl:hidden flex flex-col gap-24">
+    <div className="relative xl:hidden flex flex-col gap-24 px-3">
       {projects &&
         projects.map((project) => (
           <div
@@ -22,36 +23,33 @@ export default function MobileProjects() {
 
               <div className="flex flex-wrap gap-2 mb-3">
                 {project.technologies.map((tech, index) => (
-                  <span
-                    key={index}
-                    className="inline-block px-2 py-1 text-xs bg-gray-100 rounded-full"
-                  >
-                    {tech.replace("devicon-", "").replace("-plain", "")}
-                  </span>
+                  <i key={index} className={`${tech} colored text-3xl`} />
                 ))}
               </div>
 
-              <p className="text-sm text-gray-600 mb-4 line-clamp-3">
+              <p className="text-sm text-gray-600 mb-4">
                 {project.description}
               </p>
 
               <div className="flex flex-col md:flex-row gap-2">
                 {project.viewLink && (
-                  <a
-                    href={project.viewLink}
-                    className="w-full py-2 bg-amber-500 text-center text-white font-medium rounded-md flex items-center justify-center"
-                  >
-                    Ver Projeto
-                  </a>
+                  <span className="open-mask-ball">
+                    <ButtonCosmic
+                      fullWidth="true"
+                      pink="true"
+                      href={project.viewLink}
+                    >
+                      View Live
+                    </ButtonCosmic>
+                  </span>
                 )}
 
                 {project.codeLink && (
-                  <a
-                    href={project.codeLink}
-                    className="w-full py-2 bg-black text-center text-white font-medium rounded-md flex items-center justify-center"
-                  >
-                    Ver Código
-                  </a>
+                  <span className="open-mask-ball">
+                    <ButtonCosmic fullWidth="true" href={project.codeLink}>
+                      View Code
+                    </ButtonCosmic>
+                  </span>
                 )}
               </div>
             </div>

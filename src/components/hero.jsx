@@ -27,7 +27,7 @@ export const Hero = () => {
         <div className="relative h-[28px] min-w-[200px]">
           <TypingFx />
         </div>
-        <div className="open-mini-ball-mask mt-10 z-50">
+        <div className="open-mini-ball-mask mt-10 z-50 flex gap-4">
           <ButtonCosmic onClick={() => setIsModalOpen(true)}>
             say hi
           </ButtonCosmic>

@@ -97,15 +97,17 @@ const ProjectSection = ({ project }) => {
         >
           {project.description}
         </p>
-        <div className={`item${project.id} opacity-0 mt-4 -ms-1`}>
+        <div className={`item${project.id} opacity-0 mt-4 -ms-1 flex gap-4`}>
           {project.viewLink && (
-            <button className="bg-amber-400 hover:bg-amber-500 text-black px-4 py-2 mt-4">
-              View Project
-            </button>
+            <span className="open-mask-ball">
+              <ButtonCosmic pink="true" href={project.viewLink}>
+                View Live
+              </ButtonCosmic>
+            </span>
           )}
           {project.codeLink && (
             <span className="open-mask-ball">
-              <ButtonCosmic>View Code</ButtonCosmic>
+              <ButtonCosmic href={project.codeLink}>View Code</ButtonCosmic>
             </span>
           )}
         </div>

@@ -100,7 +100,7 @@ export const projects = [
     gêneros e diretores, exibir todos os filmes por gênero ou diretor, 
     e ver detalhes específicos de cada filme.`,
     viewLink: null,
-    codeLink: "https://github.com/StartechIma/StarPay",
+    codeLink: "https://github.com/marina-barbosa/catalogo-de-filmes-treinadev",
   },
   {
     id: 5,
@@ -179,6 +179,6 @@ export const projects = [
     codeLink: "https://github.com/marina-barbosa/Jogo-Quiz",
   },
 
-  // mini blog, 
+  // mini blog,
   // tcc html css
 ];
