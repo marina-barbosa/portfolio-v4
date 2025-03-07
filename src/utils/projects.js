@@ -55,53 +55,53 @@ export const projects = [
     viewLink: null,
     codeLink: "https://github.com/IReFoodI/Front-end",
   },
-  {
-    id: 3,
-    name: "Star Bank",
-    image: "/star-bank.png",
-    technologies: [
-      "devicon-csharp-plain",
-      "devicon-dotnetcore-plain",
-      "devicon-sqlite-plain-wordmark",
-      "devicon-angularjs-plain",
-      "devicon-css3-plain-wordmark",
-      "devicon-html5-plain-wordmark",
-    ],
-    description: `
-    O Star Bank é um projeto de fintech criado pela equipe Star Tech, 
-    desenvolvido para simular um ambiente de negócios real. 
-    Essa iniciativa faz parte do bootcamp Sharp Coders, 
-    oferecido pela ÍmaTech e MXM Sistemas, proporcionando uma 
-    experiência prática em desenvolvimento de software e métodos ágeis.`,
-    viewLink: null,
-    codeLink: "https://github.com/StartechIma/StarPay",
-  },
-  {
-    id: 4,
-    name: "Catalogo de Filmes",
-    image: "/catalogo-ruby.png",
-    technologies: [
-      "devicon-ruby-plain-wordmark",
-      "devicon-rails-plain-wordmark",
-      "devicon-rspec-plain-wordmark",
-      "devicon-sqlite-plain-wordmark",
-      "devicon-html5-plain-wordmark",
-      "devicon-css3-plain-wordmark",
-    ],
-    description: `
-    Uma aplicação de catálogo de filmes utilizando Ruby on Rails. 
-    Este projeto me permitiu consolidar os conhecimentos adquiridos ao criar 
-    rotas, models, controllers e views. 
-    A aplicação permite o gerenciamento de gêneros de filmes, 
-    diretores e os próprios filmes. 
-    Os usuários podem cadastrar, editar e visualizar informações detalhadas sobre 
-    gêneros, diretores e filmes. 
-    Além disso, a aplicação oferece funcionalidades como listar todos os 
-    gêneros e diretores, exibir todos os filmes por gênero ou diretor, 
-    e ver detalhes específicos de cada filme.`,
-    viewLink: null,
-    codeLink: "https://github.com/marina-barbosa/catalogo-de-filmes-treinadev",
-  },
+  // {
+  //   id: 3,
+  //   name: "Star Bank",
+  //   image: "/star-bank.png",
+  //   technologies: [
+  //     "devicon-csharp-plain",
+  //     "devicon-dotnetcore-plain",
+  //     "devicon-sqlite-plain-wordmark",
+  //     "devicon-angularjs-plain",
+  //     "devicon-css3-plain-wordmark",
+  //     "devicon-html5-plain-wordmark",
+  //   ],
+  //   description: `
+  //   O Star Bank é um projeto de fintech criado pela equipe Star Tech, 
+  //   desenvolvido para simular um ambiente de negócios real. 
+  //   Essa iniciativa faz parte do bootcamp Sharp Coders, 
+  //   oferecido pela ÍmaTech e MXM Sistemas, proporcionando uma 
+  //   experiência prática em desenvolvimento de software e métodos ágeis.`,
+  //   viewLink: null,
+  //   codeLink: "https://github.com/StartechIma/StarPay",
+  // },
+  // {
+  //   id: 4,
+  //   name: "Catalogo de Filmes",
+  //   image: "/catalogo-ruby.png",
+  //   technologies: [
+  //     "devicon-ruby-plain-wordmark",
+  //     "devicon-rails-plain-wordmark",
+  //     "devicon-rspec-plain-wordmark",
+  //     "devicon-sqlite-plain-wordmark",
+  //     "devicon-html5-plain-wordmark",
+  //     "devicon-css3-plain-wordmark",
+  //   ],
+  //   description: `
+  //   Uma aplicação de catálogo de filmes utilizando Ruby on Rails. 
+  //   Este projeto me permitiu consolidar os conhecimentos adquiridos ao criar 
+  //   rotas, models, controllers e views. 
+  //   A aplicação permite o gerenciamento de gêneros de filmes, 
+  //   diretores e os próprios filmes. 
+  //   Os usuários podem cadastrar, editar e visualizar informações detalhadas sobre 
+  //   gêneros, diretores e filmes. 
+  //   Além disso, a aplicação oferece funcionalidades como listar todos os 
+  //   gêneros e diretores, exibir todos os filmes por gênero ou diretor, 
+  //   e ver detalhes específicos de cada filme.`,
+  //   viewLink: null,
+  //   codeLink: "https://github.com/marina-barbosa/catalogo-de-filmes-treinadev",
+  // },
   {
     id: 5,
     name: "NTT Movie Data",
@@ -125,59 +125,59 @@ export const projects = [
     viewLink: "https://nttmoviedata.netlify.app/",
     codeLink: "https://github.com/marina-barbosa/ntt-movie-data",
   },
-  {
-    id: 6,
-    name: "Gerenciador de Tarefas",
-    image: "/task-list.png",
-    technologies: [
-      "devicon-javascript-plain",
-      "devicon-bootstrap-plain-wordmark",
-      "devicon-css3-plain-wordmark",
-      "devicon-html5-plain-wordmark",
-    ],
-    description: `
-    Este projeto apresenta uma solução para o desafio proposto 
-    de desenvolver um sistema de gerenciamento de tarefas. 
-    Utilizando HTML, CSS, JavaScript e Bootstrap e nada mais. 
-    Além das funcionalidades básicas, 
-    foram adicionados um filtro de tarefas e uma barra de pesquisa 
-    para melhorar a de pesquisa para melhorar a usabilidade e eficiência do sistema.`,
-    viewLink:
-      "https://marina-barbosa.github.io/desafio-fast-track-ima-tech/view/",
-    codeLink: "https://github.com/marina-barbosa/desafio-fast-track-ima-tech",
-  },
-  {
-    id: 7,
-    name: "API Vendas",
-    image: "/api-vendas.png",
-    technologies: [
-      "devicon-typescript-plain",
-      "devicon-nodejs-plain-wordmark",
-      "devicon-express-original",
-      "devicon-postgresql-plain-wordmark",
-    ],
-    description: `
-    Aplicação backend para gestão de vendas com funcionalidades para criação de 
-    cadastro de produtos, cadastro de clientes, pedidos de compras 
-    e uma completa gestão de usuários da aplicação, 
-    com autenticação via Token JWT, atualização de perfil, atualização de avatar, 
-    TypeORM, Entidades, Repositórios e outras coisas.`,
-    viewLink: null,
-    codeLink: "https://github.com/marina-barbosa/api-vendas",
-  },
-  {
-    id: 8,
-    name: "Mahoot!",
-    image: "/mahoot.gif",
-    technologies: ["devicon-javascript-plain", "devicon-p5js-original"],
-    description: `
-    Um Quiz Game inspirado no Kahoot, desenvolvido em p5.js! 
-    Este projeto tem como objetivo proporcionar uma experiência interativa 
-    e divertida para os participantes das reuniões do Clube de leitura 
-    do curso Desenvolvimento Backend da Cubos Academy.`,
-    viewLink: "https://marina-barbosa.github.io/Jogo-Quiz/",
-    codeLink: "https://github.com/marina-barbosa/Jogo-Quiz",
-  },
+  // {
+  //   id: 6,
+  //   name: "Gerenciador de Tarefas",
+  //   image: "/task-list.png",
+  //   technologies: [
+  //     "devicon-javascript-plain",
+  //     "devicon-bootstrap-plain-wordmark",
+  //     "devicon-css3-plain-wordmark",
+  //     "devicon-html5-plain-wordmark",
+  //   ],
+  //   description: `
+  //   Este projeto apresenta uma solução para o desafio proposto 
+  //   de desenvolver um sistema de gerenciamento de tarefas. 
+  //   Utilizando HTML, CSS, JavaScript e Bootstrap e nada mais. 
+  //   Além das funcionalidades básicas, 
+  //   foram adicionados um filtro de tarefas e uma barra de pesquisa 
+  //   para melhorar a de pesquisa para melhorar a usabilidade e eficiência do sistema.`,
+  //   viewLink:
+  //     "https://marina-barbosa.github.io/desafio-fast-track-ima-tech/view/",
+  //   codeLink: "https://github.com/marina-barbosa/desafio-fast-track-ima-tech",
+  // },
+  // {
+  //   id: 7,
+  //   name: "API Vendas",
+  //   image: "/api-vendas.png",
+  //   technologies: [
+  //     "devicon-typescript-plain",
+  //     "devicon-nodejs-plain-wordmark",
+  //     "devicon-express-original",
+  //     "devicon-postgresql-plain-wordmark",
+  //   ],
+  //   description: `
+  //   Aplicação backend para gestão de vendas com funcionalidades para criação de 
+  //   cadastro de produtos, cadastro de clientes, pedidos de compras 
+  //   e uma completa gestão de usuários da aplicação, 
+  //   com autenticação via Token JWT, atualização de perfil, atualização de avatar, 
+  //   TypeORM, Entidades, Repositórios e outras coisas.`,
+  //   viewLink: null,
+  //   codeLink: "https://github.com/marina-barbosa/api-vendas",
+  // },
+  // {
+  //   id: 8,
+  //   name: "Mahoot!",
+  //   image: "/mahoot.gif",
+  //   technologies: ["devicon-javascript-plain", "devicon-p5js-original"],
+  //   description: `
+  //   Um Quiz Game inspirado no Kahoot, desenvolvido em p5.js! 
+  //   Este projeto tem como objetivo proporcionar uma experiência interativa 
+  //   e divertida para os participantes das reuniões do Clube de leitura 
+  //   do curso Desenvolvimento Backend da Cubos Academy.`,
+  //   viewLink: "https://marina-barbosa.github.io/Jogo-Quiz/",
+  //   codeLink: "https://github.com/marina-barbosa/Jogo-Quiz",
+  // },
 
   // mini blog,
   // tcc html css
