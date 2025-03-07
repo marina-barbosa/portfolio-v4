@@ -8,7 +8,7 @@ import { ContactModal } from "./contact-modal";
 export const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);  
     return (
-      <section className="mx-auto h-screen flex flex-col items-center justify-center font-raleway">
+      <section id="hero" className="mx-auto h-screen flex flex-col items-center justify-center font-raleway">
         {/* Gradient Orbs */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="cosmic-orb orb-1"></div>

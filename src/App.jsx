@@ -16,6 +16,7 @@ import { ProjectsScrollTrigger } from "./components/projects-scroll-trigger";
 import { RevealTextFx } from "./fx/reveal-text";
 import { Logo } from "./components/logo";
 import MobileProjects from "./components/mobile-projects";
+import FloatingDino from "./fx/floating-dino";
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
         <RevealTextFx />
         <NavbarScrollspy />
         <Glitch />
+        <FloatingDino />
         <Logo />
         <SocialIcons />
         <Hero />

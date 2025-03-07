@@ -76,7 +76,7 @@ const Trajetoria = () => {
                   style={{
                     clipPath:
                       "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
-                    backgroundColor: "lightseagreen", // Cor de fundo do hexágono maior
+                    backgroundColor: "lightgray", // Cor de fundo do hexágono maior
                     zIndex: -1, // Hexágono maior fica atrás do ícone
                   }}
                 ></div>
@@ -89,12 +89,13 @@ const Trajetoria = () => {
                       "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
                     backgroundColor: "white", // Cor de fundo do hexágono menor
                     border: "2px solid transparent", // Borda transparente para manter a forma do hexágono
-                    transform: "scale(0.8)", // Reduzindo um pouco o hexágono branco
+                    transform: "scale(0.94)", // Reduzindo um pouco o hexágono branco
                   }}
                 ></div>
 
                 {/* Ícone no centro, agora com z-index maior para garantir visibilidade */}
-                <RiSchoolLine style={{ zIndex: 1 }} />
+                {/* <RiSchoolLine style={{ zIndex: 1 }} /> */}
+                <img src="/cubosacademy.png" alt="" className="z-10" />
               </div>
             </div>
 
