@@ -5,10 +5,15 @@ import { ButtonCosmic } from "./button-cosmic";
 import { handleDownload } from "../utils/download-cv";
 import { useState } from "react";
 import { ContactModal } from "./contact-modal";
+import { useTranslation } from "react-i18next";
 export const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);  
+  const { t } = useTranslation();
     return (
-      <section id="hero" className="mx-auto h-screen flex flex-col items-center justify-center font-raleway">
+      <section
+        id="hero"
+        className="mx-auto h-screen flex flex-col items-center justify-center font-raleway"
+      >
         {/* Gradient Orbs */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="cosmic-orb orb-1"></div>
@@ -29,9 +34,9 @@ export const Hero = () => {
         </div>
         <div className="open-mini-ball-mask mt-10 z-50 flex gap-4">
           <ButtonCosmic onClick={() => setIsModalOpen(true)}>
-            say hi
+            {t("sayHi")}
           </ButtonCosmic>
-          <ButtonCosmic onClick={handleDownload}>get cv</ButtonCosmic>
+          <ButtonCosmic onClick={handleDownload}>{t("getCV")}</ButtonCosmic>
         </div>
 
         <ContactModal

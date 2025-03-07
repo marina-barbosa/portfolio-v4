@@ -97,7 +97,7 @@ const ProjectSection = ({ project }) => {
         >
           {project.description}
         </p>
-        <div className={`item${project.id} opacity-0 mt-4 -ms-1 flex gap-4`}>
+        <div className={`item${project.id} opacity-0 mt-4 flex gap-4`}>
           {project.viewLink && (
             <span className="open-mask-ball">
               <ButtonCosmic pink="true" href={project.viewLink}>

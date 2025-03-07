@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { ButtonLanguage } from "./button-language";
 
 export const NavbarScrollspy = () => {
   const [activeSection, setActiveSection] = useState("");
+   const { t } = useTranslation();
 
   useEffect(() => {
     const sections = document.querySelectorAll("span[id]");
@@ -88,6 +91,9 @@ export const NavbarScrollspy = () => {
           >
             contato
           </a>
+        </li>
+        <li className="float-right">
+          <ButtonLanguage />
         </li>
       </ul>
     </nav>
