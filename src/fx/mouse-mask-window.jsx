@@ -13,23 +13,29 @@ export const MouseMaskWindow = () => {
   const [circleExpandSize, setCircleExpandSize] = useState(DEFAULT_SIZE);
   const circleSize = useSpring(DEFAULT_SIZE, { stiffness: 100, damping: 20 });
   const [isHoveringNoMask, setIsHoveringNoMask] = useState(false);
+   const [isMobileDevice, setIsMobileDevice] = useState(false);
 
   useEffect(() => {
     const screenWidth = window.innerWidth;
 
     if (screenWidth <= 480) {
       setMousePosition({ x: 35, y: 50 });
+      setIsMobileDevice(true);
     } else if (screenWidth <= 768) {
-      setMousePosition({ x: 0, y: 0 });
+      setMousePosition({ x: 35, y: 50 });
+      setIsMobileDevice(true);
     } else if (screenWidth <= 1024) {
+      setIsMobileDevice(false);
       setMousePosition({ x: 52, y: 50 });
     } else if (screenWidth > 1024) {
+      setIsMobileDevice(false);
       setMousePosition({ x: 52, y: 50 });
     }
   }, []);
 
   useEffect(() => {
     const handleMouseMove = (e) => {
+      if (isMobileDevice) return;
       const { clientX, clientY } = e;
       setMousePosition({ x: clientX, y: clientY });
 
@@ -73,20 +79,25 @@ export const MouseMaskWindow = () => {
     const handleMouseLeaveNoMask = () => setIsHoveringNoMask(false);
 
     window.addEventListener("mousemove", handleMouseMove);
+    if (!isMobileDevice) {
+      window.addEventListener("mousemove", handleMouseMove);
 
-    document.querySelectorAll(".no-mask-section").forEach((el) => {
-      el.addEventListener("mouseenter", handleMouseEnterNoMask);
-      el.addEventListener("mouseleave", handleMouseLeaveNoMask);
-    });
+      document.querySelectorAll(".no-mask-section").forEach((el) => {
+        el.addEventListener("mouseenter", handleMouseEnterNoMask);
+        el.addEventListener("mouseleave", handleMouseLeaveNoMask);
+      });
+    }
 
     return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-      document.querySelectorAll(".no-mask-section").forEach((el) => {
-        el.removeEventListener("mouseenter", handleMouseEnterNoMask);
-        el.removeEventListener("mouseleave", handleMouseLeaveNoMask);
-      });
+      if (!isMobileDevice) {
+        window.removeEventListener("mousemove", handleMouseMove);
+        document.querySelectorAll(".no-mask-section").forEach((el) => {
+          el.removeEventListener("mouseenter", handleMouseEnterNoMask);
+          el.removeEventListener("mouseleave", handleMouseLeaveNoMask);
+        });
+      }
     };
-  }, [isHoveringNoMask]);
+  }, [isHoveringNoMask, isMobileDevice]);
 
   useEffect(() => {
     circleSize.set(circleExpandSize);
