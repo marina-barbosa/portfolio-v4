@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function ServicesList() {
 
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [stars, setStars] = useState([]);
+  const { t } = useTranslation();
 
   // Criar estrelas aleatórias
   useEffect(() => {
@@ -25,29 +27,28 @@ export default function ServicesList() {
 
   const services = [
     {
-      title: "Site Institucional",
-      description: "Sua empresa com uma presença profissional na internet",
+      title: `${t("institutional-site")}`,
+      description: `${t("institutional-site-description")}`,
     },
     {
-      title: "Landing Page",
-      description: "Páginas de captura com foco na conversão de leads e vendas",
+      title: `${t("landing-page")}`,
+      description: `${t("landing-page-description")}`,
     },
     {
-      title: "Blog",
-      description: "Conteúdo organizado para atrair e engajar sua audiência",
+      title: `${t("blog")}`,
+      description: `${t("blog-description")}`,
     },
     {
-      title: "Lojas Virtuais",
-      description:
-        "Lojas virtuais com design moderno e funcionalidades avançadas",
+      title: `${t("ecommerce")}`,
+      description: `${t("ecommerce-description")}`,
     },
   ];
 
    return (
      <section className="no-mask-section relative xl:min-h-screen 2xl:min-h-1/2 pt-8 font-raleway cursor-default">
        <div className="w-full mx-auto">
-         <h2 className="text-[#555555] text-lg tracking-widest max-w-4xl mx-auto text-center sm:text-left mb-12 md:ps-34">
-           WHAT I DO
+         <h2 className="text-[#555555] uppercase text-lg tracking-widest max-w-4xl mx-auto text-center sm:text-left mb-12 md:ps-34">
+           {t("what-i-do")}
          </h2>
          {services.map((service, index) => (
            <div

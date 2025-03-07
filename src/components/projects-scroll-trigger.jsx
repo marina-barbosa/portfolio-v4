@@ -93,7 +93,7 @@ const ProjectSection = ({ project }) => {
           ))}
         </div>
         <p
-          className={`item${project.id} text-lg font-spacegrotesk open-mask-ball mouse-color-changer text-gray-600 md:w-1/3 min-h-[260px] opacity-0`}
+          className={`item${project.id} text-base 2xl:text-lg font-spacegrotesk open-mask-ball mouse-color-changer text-gray-600 md:w-1/3 min-h-[260px] opacity-0`}
         >
           {project.description}
         </p>

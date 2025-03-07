@@ -46,7 +46,7 @@ const CardNormal = ({
               transform: "scale(0.94)",
             }}
           ></div>
-          <img src={img} alt="" className="z-10" />
+          <img src={img} alt="" className="z-10 h-16" />
         </div>
       </div>
 
@@ -92,7 +92,7 @@ const CardInvertido = ({
               transform: "scale(0.94)",
             }}
           ></div>
-          <img src={img} alt="" className="z-10" />
+          <img src={img} alt="" className="z-10 w-12 h-12" />
         </div>
       </div>
 

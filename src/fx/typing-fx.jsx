@@ -1,16 +1,15 @@
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
 // npm install typed.js
+import { useTranslation } from "react-i18next";
 
 const TypingFx = () => {
   const typedRef = useRef(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const typed = new Typed(typedRef.current, {
-      strings: [
-        "Fullstack Developer since 2023",
-        "Fullstack Developer since 2023",
-      ],
+      strings: [`${t("fullstack-developer")}`, `${t("fullstack-developer")}`],
       typeSpeed: 80,
       backSpeed: 50,
       backDelay: 1000,
@@ -21,7 +20,7 @@ const TypingFx = () => {
     return () => {
       typed.destroy();
     };
-  }, []);
+  }, [t]);
 
   return (
     <h2

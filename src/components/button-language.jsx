@@ -12,7 +12,7 @@ export const ButtonLanguage = () => {
   return (
     <button
       onClick={toggleLanguage}
-      className="flex items-center gap-2 transition-opacity opacity-70 hover:opacity-100"
+      className="relative flex items-center gap-2 transition-opacity opacity-70 hover:opacity-100"
     >
       <HiLanguage size={20} />
       <span className="font-raleway sm:tracking-widest text-[14px] 2xl:text-[18px] uppercase">

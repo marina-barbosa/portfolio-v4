@@ -56,40 +56,40 @@ export const NavbarScrollspy = () => {
         <li>
           <a
             href="#projetos"
-            data-value="projetos"
+            data-value={t("projects")}
             className={`hacker-scrambles ${
               activeSection === "projetos"
                 ? "text-[lightseagreen]"
                 : "text-[#555555]"
             }`}
           >
-            projetos
+            {t("projects")}
           </a>
         </li>
         <li>
           <a
             href="#sobre"
-            data-value="sobre"
+            data-value={t("about")}
             className={`hacker-scrambles ${
               activeSection === "sobre"
                 ? "text-[lightseagreen] font-bold"
                 : "text-[#555555]"
             }`}
           >
-            sobre
+            {t("about")}
           </a>
         </li>
         <li>
           <a
             href="#contato"
-            data-value="contato"
+            data-value={t("contact")}
             className={`hacker-scrambles ${
               activeSection === "contato"
                 ? "text-[lightseagreen] font-bold"
                 : "text-[#555555]"
             }`}
           >
-            contato
+            {t("contact")}
           </a>
         </li>
         <li className="float-right">

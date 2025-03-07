@@ -5,8 +5,10 @@ import { IoClose } from "react-icons/io5";
 import { FiUser, FiMessageSquare, FiSend } from "react-icons/fi";
 import { RxEnvelopeClosed } from "react-icons/rx";
 import { ButtonCosmic } from "./button-cosmic";
+import { useTranslation } from "react-i18next";
 
 export const ContactModal = ({ isOpen, onClose }) => {
+  const { t } = useTranslation();
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -17,62 +19,6 @@ export const ContactModal = ({ isOpen, onClose }) => {
 
   if (!isOpen) return null;
 
-  // return (
-  //   <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-  //     <div className="bg-white p-6 rounded-lg shadow-lg w-[90%] max-w-md">
-  //       <h2 className="text-xl font-bold mb-4">Say Hi 👋</h2>
-  //       <form
-  //         name="contact"
-  //         method="POST"
-  //         data-netlify="true"
-  //         data-netlify-honeypot="bot-field"
-  //         className="flex flex-col"
-  //       >
-  //         <input type="hidden" name="form-name" value="contact" />
-  //         <label className="mb-2">
-  //           Your Name
-  //           <input
-  //             type="text"
-  //             name="name"
-  //             required
-  //             className="w-full p-2 border rounded mt-1"
-  //           />
-  //         </label>
-  //         <label className="mb-2">
-  //           Your Email
-  //           <input
-  //             type="email"
-  //             name="email"
-  //             required
-  //             className="w-full p-2 border rounded mt-1"
-  //           />
-  //         </label>
-  //         <label className="mb-4">
-  //           Your Message
-  //           <textarea
-  //             name="message"
-  //             required
-  //             className="w-full p-2 border rounded mt-1"
-  //             rows={4}
-  //           />
-  //         </label>
-  //         <button
-  //           type="submit"
-  //           className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition"
-  //         >
-  //           Send
-  //         </button>
-  //       </form>
-  //       <button
-  //         onClick={onClose}
-  //         className="mt-4 text-gray-600 hover:text-gray-800"
-  //       >
-  //         Close
-  //       </button>
-  //     </div>
-  //   </div>
-  // );
-
   return (
     <>
       <motion.div
@@ -81,7 +27,7 @@ export const ContactModal = ({ isOpen, onClose }) => {
         exit={{ opacity: 0 }}
         className="fixed inset-0 flex items-center justify-center z-50"
       >
-        {/* Backdrop with blur */}
+        {/* Backdrop */}
         <div
           className="absolute inset-0 bg-black/30 backdrop-blur-md"
           onClick={onClose}
@@ -98,16 +44,16 @@ export const ContactModal = ({ isOpen, onClose }) => {
           <button
             onClick={onClose}
             className="absolute right-4 top-4 p-2 rounded-full hover:bg-black/5 transition-colors"
-            aria-label="Close modal"
+            aria-label={t("contactModal.close")}
           >
             <IoClose className="w-5 h-5 text-gray-500" />
           </button>
 
           {/* Header */}
           <div className="mb-8">
-            <h2 className="text-4xl font-bold">Let&apos;s Connect!</h2>
+            <h2 className="text-4xl font-bold">{t("contactModal.title")}</h2>
             <p className="text-gray-600 mt-2">
-              Have a project in mind? I&apos;d love to hear about it.
+              {t("contactModal.description")}
             </p>
           </div>
 
@@ -128,7 +74,7 @@ export const ContactModal = ({ isOpen, onClose }) => {
                 type="text"
                 name="name"
                 required
-                placeholder="Your name"
+                placeholder={t("contactModal.form.name.placeholder")}
                 className="input-underline"
               />
             </div>
@@ -140,7 +86,7 @@ export const ContactModal = ({ isOpen, onClose }) => {
                 type="email"
                 name="email"
                 required
-                placeholder="Your email"
+                placeholder={t("contactModal.form.email.placeholder")}
                 className="input-underline"
               />
             </div>
@@ -151,7 +97,7 @@ export const ContactModal = ({ isOpen, onClose }) => {
               <textarea
                 name="message"
                 required
-                placeholder="Your message"
+                placeholder={t("contactModal.form.message.placeholder")}
                 rows={4}
                 className="textarea-underline"
               />
@@ -160,8 +106,7 @@ export const ContactModal = ({ isOpen, onClose }) => {
             {/* Submit button */}
             <div className="flex justify-end gap-4">
               <ButtonCosmic type="submit">
-                say hi
-                {/* <FiSend className="w-4 h-4 transition-transform group-hover:translate-x-1" /> */}
+                {t("contactModal.form.submit")}
               </ButtonCosmic>
             </div>
           </form>

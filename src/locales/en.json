@@ -20,12 +20,29 @@
   "ecommerce": "E-commerce",
   "ecommerce-description": "Online stores with modern design and advanced features",
   "who-i-am": "who I am",
-  "rh": "hr",
-  "dev": "dev",
-  "fun": "fun",
+  "rh-bio": "Hi, I'm Marina, a fullstack developer with experience in academic projects and volunteer freelance work. My technical background includes Java, Spring Boot, JavaScript, React, Angular, Node.js, and relational databases like PostgreSQL and MySQL. I have a collaborative mindset and thrive on challenges that allow me to learn and grow. I'm currently studying Software Engineering and working on a volunteer e-commerce project for kimonos, which gives me real-world experience in development and teamwork. I'm always looking for opportunities to improve my skills, contribute with new solutions, and add value to the team!",
+  "dev-bio": "I've been a dev since 2023, constantly learning and evolving. My main stack includes Java with Spring Boot, React, Node.js, and PostgreSQL, but I also have experience with .NET, C#, and Ruby on Rails. I've worked with TDD using JUnit, Jest, and RSpec, along with agile methodologies and best development practices. Currently, I'm involved in a volunteer e-commerce project, where I contribute as a fullstack developer. I'm helpful, collaborative, curious, a fast learner, organized, self-managed, hardworking, and a great team player.",
+  "fun-bio": "🎮 Mono Kassadin in Wild Rift and a backup jungle, 🍣 sushi enthusiast, 📺 binge-watcher of series and movies, 🎨 explorer of JS and CSS effects. Always learning something new—whether it's a technology, a game, or a new dish. Wanna chat? 😃 Even better… how about a duo in a game?",
   "connect": "connect",
   "email": "Email: marinabarbosa.exp@gmail.com",
   "phone": "Phone: +55 (13) 99669-7841",
   "made-in-brazil": "Made in Brazil",
-  "created-by": "Created & Coded by Marina"
+  "created-by": "Created & Coded by Marina",
+   "contactModal": {
+      "title": "Let's Connect!",
+      "description": "Have a project in mind? I'd love to hear about it.",
+      "form": {
+        "name": {
+          "placeholder": "Your name"
+        },
+        "email": {
+          "placeholder": "Your email"
+        },
+        "message": {
+          "placeholder": "Your message"
+        },
+        "submit": "send"
+      },
+      "close": "Close modal"
+    }
 }

@@ -20,12 +20,29 @@
   "ecommerce": "Lojas Virtuais",
   "ecommerce-description": "Lojas virtuais com design moderno e funcionalidades avançadas",
   "who-i-am": "quem sou",
-  "rh": "rh",
-  "dev": "dev",
-  "fun": "fun",
-  "connect": "conectar",
+  "rh-bio": "Oi, eu sou a Marina, dev fullstack com experiência em projetos acadêmicos e freelance voluntário. Minha base técnica inclui Java, Spring Boot, Javascript, React, Angular, Node.js e bancos de dados relacionais como PostgreSQL e MySQL. Tenho um perfil colaborativo e sou movida por desafios que me permitam aprender e evoluir. Atualmente, curso Engenharia de Software e atuo em um projeto voluntário de e-commerce de kimonos, o que me proporciona experiência real em desenvolvimento e trabalho em equipe. Estou sempre buscando oportunidades para aprimorar minhas habilidades, contribuir com novas soluções e agregar ao time!",
+  "dev-bio": "Sou dev desde 2023 em constante aprendizado. Minha stack principal inclui Java com Spring Boot, React, Node.js e PostgreSQL, mas também tenho experiência com .NET, C# e Ruby on Rails. Já desenvolvi em TDD usando JUnit, Jest e RSpec, além de metodologias ágeis e boas práticas de desenvolvimento. Atualmente, estou envolvida em um projeto de e-commerce voluntário, onde participo como fullstack. Tenho perfil prestativo, colaborativo, curioso, aprendo rápido, sou organizada, autogerenciada, esforçada e trabalho bem em equipe.",
+  "fun-bio": "🎮 Mono Kassadin no Wildrift e jungle quebra galho, 🍣 apreciadora de sushi, 📺 maratonista de séries e filmes, 🎨 desbravadora de efeitos js e css. Sempre aprendendo algo novo, seja uma tecnologia, um jogo ou um prato diferente. Bora trocar uma ideia? 😃 Melhor... bora de duo em algum joguinho?",
+  "connect": "contato",
   "email": "Email: marinabarbosa.exp@gmail.com",
   "phone": "Telefone: +55 (13) 99669-7841",
   "made-in-brazil": "Feito no Brasil",
-  "created-by": "Criado e codado por Marina"
+  "created-by": "Criado e codado por Marina",
+  "contactModal": {
+    "title": "Vamos Conectar!",
+    "description": "Tem um projeto em mente? Adoraria saber mais sobre ele.",
+    "form": {
+      "name": {
+        "placeholder": "Seu nome"
+      },
+      "email": {
+        "placeholder": "Seu e-mail"
+      },
+      "message": {
+        "placeholder": "Sua mensagem"
+      },
+      "submit": "enviar"
+    },
+    "close": "Fechar modal"
+  }
 }

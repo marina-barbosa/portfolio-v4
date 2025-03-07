@@ -16,7 +16,7 @@ export const cardsData = [
     descricao:
       "Desenvolvimento Fullstack com Angular, C# e .Net pela Ímã Tech em parceria com a MXM Sistemas.",
     ano: "2023",
-    img: "/cubosacademy.png",
+    img: "/imatech.png",
     corHexagono: "lightgray",
   },
   {
@@ -26,7 +26,7 @@ export const cardsData = [
     descricao:
       "TreinaDev 12, TDD com Ruby on Rails, RSpec, Capybara pela Campus Code.",
     ano: "2024",
-    img: "/cubosacademy.png",
+    img: "/campuscode.png",
     corHexagono: "lightgray",
   },
   {
@@ -36,7 +36,7 @@ export const cardsData = [
     descricao:
       "Developer Fullstack Júnior com React, Design, Testes Unitários com Jest, Java, MySQL, Spring Boot, JPA, JUnit pela +PraTi em parceria com a Codifica Edu.",
     ano: "2024",
-    img: "/cubosacademy.png",
+    img: "/maisprati.png",
     corHexagono: "lightgray",
   },
   {
@@ -44,9 +44,9 @@ export const cardsData = [
     titulo: "Engenharia de Software",
     subtitulo: "Faculdade Unopar",
     descricao:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, sunt fugit. Magni consectetur eos qui veniam esse. Exercitationem amet rerum placeat sit ut saepe tenetur eaque reprehenderit, laborum ab dolor!",
+      "Graduação em Engenharia de Software com foco em desenvolvimento fullstack, arquitetura de software, banco de dados, padrões de projeto e metodologias ágeis.",
     ano: "2024",
-    img: "/cubosacademy.png",
+    img: "/unopar.png",
     corHexagono: "lightgray",
   },
   {
@@ -56,7 +56,7 @@ export const cardsData = [
     descricao:
       "Formação Fullstack com Java, JUnit, Javascript, Jest, HTML, CSS, PostgreSQL pela CWI no programa Crescer Lvl. 1.",
     ano: "2025",
-    img: "/cubosacademy.png",
+    img: "/cwi.png",
     corHexagono: "lightgray",
   },
 ];

@@ -1,6 +1,8 @@
 import { ButtonCosmic } from "./button-cosmic";
 import { handleDownload } from "../utils/download-cv";
+import { useTranslation } from "react-i18next";
 export const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className="tracking-widest relative w-full py-8 border-t border-gray-100 text-neutral-700">
       <div className="mx-auto px-4 max-w-5xl">
@@ -8,20 +10,20 @@ export const Footer = () => {
           {/* Coluna da esquerda - Connect */}
           <div className="font-ibm  flex-1 flex flex-col items-center xl:items-start justify-between h-full pb-2">
             <div className="no-mask-section">
-              <h3 className="py-3 font-raleway text-lg tracking-wider no-mask-section">
-                CONNECT
+              <h3 className="py-3 font-raleway uppercase text-lg tracking-wider no-mask-section">
+                {t("connect")}
               </h3>
               <a
                 href="mailto:marinabarbosa.exp@gmail.com"
                 className="py-3 no-mask-section block text-sm hover:opacity-70 transition-opacity"
               >
-                Email: marinabarbosa.exp@gmail.com
+                {t("email")}
               </a>
               <a
                 href="tel:+5513996697841"
                 className="py-3 no-mask-section block text-sm hover:opacity-70 transition-opacity"
               >
-                Phone: +55 (13) 99669-7841
+                {t("phone")}
               </a>
             </div>
           </div>
@@ -36,14 +38,16 @@ export const Footer = () => {
           <div className="font-ibm flex-1 flex flex-col items-center xl:items-end justify-between h-full">
             <div>
               <p className="open-mask-ball mouse-color-changer text-xs text-gray-600 mb-1 text-right pe-2">
-                Made in Brazil
+                {t("made-in-brazil")}
               </p>
               <p className="open-mask-ball mouse-color-changer text-xs text-gray-600 mb-6 text-right pe-2">
-                Created & Coded by Marina
+                {t("created-by")}
               </p>
               <div className="open-mask-ball flex space-x-3 mt-2">
-                <ButtonCosmic>say hi</ButtonCosmic>
-                <ButtonCosmic onClick={handleDownload}>get cv</ButtonCosmic>
+                <ButtonCosmic>{t("sayHi")}</ButtonCosmic>
+                <ButtonCosmic onClick={handleDownload}>
+                  {t("getCV")}
+                </ButtonCosmic>
               </div>
             </div>
           </div>

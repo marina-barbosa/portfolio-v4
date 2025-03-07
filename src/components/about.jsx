@@ -1,49 +1,25 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function About() {
   const [activeTab, setActiveTab] = useState("rh");
+  const { t } = useTranslation();
 
 const tabs = [
   {
     id: "rh",
     label: "RH",
-    content: `
-      Oi, eu sou a Marina, dev fullstack com experiência em projetos acadêmicos e freelance voluntário. 
-      Minha base técnica inclui Java, Spring Boot, Javascript, React, Angular, Node.js 
-      e bancos de dados relacionais como PostgreSQL e MySQL. 
-      Tenho um perfil colaborativo e sou movida por desafios que me permitam aprender e evoluir. 
-      Atualmente, curso Engenharia de Software e atuo em um projeto voluntário de e-commerce de kimonos, 
-      o que me proporciona experiência real em desenvolvimento e trabalho em equipe. 
-      Estou sempre buscando oportunidades para aprimorar minhas habilidades, 
-      contribuir com novas soluções e agregar ao time!`,
+    content: `${t("rh-bio")}`,
   },
   {
     id: "dev",
     label: "Dev",
-    content: `
-       Sou dev desde 2023 em constante aprendizado. 
-       Minha stack principal inclui Java com Spring Boot, React, Node.js e PostgreSQL, 
-       mas também tenho experiência com .NET, C# e Ruby on Rails. 
-       Já desenvolvi em TDD usando JUnit, Jest e RSpec, 
-       além de metodologias ágeis e boas práticas de desenvolvimento. 
-       Atualmente, estou envolvida em um projeto de e-commerce voluntário, onde participo como fullstack. 
-       Tenho perfil prestativo, colaborativo, curioso, 
-       aprendo rápido, sou organizada, autogerenciada, esforçada e trabalho bem em equipe.
-    `,
+    content: `${t("dev-bio")}`,
   },
   {
     id: "fun",
     label: "Fun",
-    content: `
-      🎮 Mono Kassadin no Wildrift e jungle quebra galho, 
-      🍣 apreciadora de sushi, 
-      📺 maratonista de séries e filmes, 
-      🎨 desbravadora de efeitos js e css. 
-      Sempre aprendendo algo novo, 
-      seja uma tecnologia, um jogo ou um prato diferente. 
-      Bora trocar uma ideia? 😃
-      Melhor... bora de duo em algum joguinho?
-    `,
+    content: `${t("fun-bio")}`,
   },
   // {
   //   id: "leigo",
@@ -74,7 +50,7 @@ const tabs = [
 
         <div className="md:w-2/3 xl:w-1/2 text-center md:text-left md:pl-8 xl:pl-0 xl:pr-16 flex flex-col md:-ms-11">
           <h2 className="text-lg tracking-widest uppercase text-[#555555] mb-6">
-            <span className="reveal-text reveal-text-title">quem sou</span>
+            <span className="reveal-text reveal-text-title">{t("who-i-am")}</span>
           </h2>
 
           <div className="flex text-[#555555] mb-6 text-lg tracking-widest mx-auto sm:mx-0">
