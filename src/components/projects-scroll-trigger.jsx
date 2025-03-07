@@ -25,7 +25,7 @@ const ProjectSection = ({ project }) => {
     .to(`.img${project.id}`, {
       duration: 2,
       scale: 0.8,
-      x: 335,
+      x: "26%", // 253px, 335px, 26%, 29%
       y: 50,
     });
 
