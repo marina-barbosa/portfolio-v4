@@ -11,3 +11,4 @@
 - gsap
 - typed.js
 - zustand
+- i18n

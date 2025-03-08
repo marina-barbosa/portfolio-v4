@@ -44,7 +44,7 @@ export default function ServicesList() {
   ];
 
   return (
-    <section className="no-mask-section relative xl:min-h-screen 2xl:min-h-1/2 pt-8 font-raleway cursor-default">
+    <section className="point-3 no-mask-section relative xl:min-h-screen 2xl:min-h-1/2 pt-8 font-raleway cursor-default">
       <div className="w-full mx-auto">
         <h2 className="text-[#555555] uppercase text-lg tracking-widest max-w-4xl mx-auto text-center sm:text-left mb-12 md:ps-34">
           {t("what-i-do")}

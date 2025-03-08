@@ -6,7 +6,7 @@ export default function MobileProjects({data}) {
   const { t } = useTranslation();
 
   return (
-    <div className="relative xl:hidden flex flex-col gap-24 px-3">
+    <section className="point-2 relative xl:hidden flex flex-col gap-24 px-3">
       {data &&
         data.map((project) => (
           <div
@@ -58,6 +58,6 @@ export default function MobileProjects({data}) {
             </div>
           </div>
         ))}
-    </div>
+    </section>
   );
 }

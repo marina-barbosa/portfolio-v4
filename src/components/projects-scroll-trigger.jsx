@@ -122,16 +122,16 @@ const ProjectSection = ({ project }) => {
 
 export const ProjectsScrollTrigger = ({ data }) => {
   return (
-    <main className="relative hidden xl:block overflow-hidden">
+    <section className="point-2 relative hidden xl:block overflow-hidden">
       {data &&
         data.map((project) => (
           <>
-            <span key={project.id} >
+            <span key={project.id}>
               <ProjectSection project={project} />
               <div className="h-[90vh]" />
             </span>
           </>
         ))}
-    </main>
+    </section>
   );
 };
