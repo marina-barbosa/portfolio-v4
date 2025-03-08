@@ -38,6 +38,7 @@ export const Hero = () => {
           </ButtonCosmic>
           <ButtonCosmic onClick={handleDownload}>{t("getCV")}</ButtonCosmic>
         </div>
+        <div className="hidden uw:flex text-7xl relative z-50 text-red-600">testando breaking point</div>
 
         <ContactModal
           isOpen={isModalOpen}

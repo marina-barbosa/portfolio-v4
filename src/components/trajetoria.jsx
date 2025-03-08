@@ -215,7 +215,7 @@ const Trajetoria = () => {
       >
         <div ref={contentRef} className="flex h-full items-center px-14">
           {/* Timeline line */}
-          <div className="absolute h-0.5 bg-[#4af7e07e] w-[405vw] sm:w-[655vw] xl:w-[345vw] 2xl:w-[309vw] left-0 top-1/2 -translate-y-1/2"></div>
+          <div className="absolute h-0.5 bg-[#4af7e07e] w-[405vw] sm:w-[655vw] xl:w-[345vw] 2xl:w-[309vw] uw:w-[165vw] left-0 top-1/2 -translate-y-1/2"></div>
 
           <h1 className="hidden sm:block border xl:text-5xl 2xl:text-6xl text-transparent uppercase font-bold text-center">
             eeeeeeeeeeee
@@ -267,7 +267,7 @@ const Trajetoria = () => {
         </div>
       </section>
 
-      <div className="h-[121vh] md:h-[248vh] xl:h-[513vh] 2xl:h-[140vw]" />
+      <div className="h-[121vh] md:h-[248vh] xl:h-[513vh] 2xl:h-[140vw] uw:h-[100vh]" />
       <style>{`
         .fade-mask-nv2 {
           position: relative;

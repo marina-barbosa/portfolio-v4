@@ -2,7 +2,7 @@ import { LuLinkedin, LuGithub } from "react-icons/lu";
 import { FaWhatsapp } from "react-icons/fa";
 export const SocialIcons = () => {
   return (
-    <ul className="open-mini-ball-mask flex 2xl:gap-4 flex-col fixed top-18 sm:top-8 md:top-50 2xl:top-95 left-3 sm:left-8 z-50">
+    <ul className="open-mini-ball-mask flex 2xl:gap-4 flex-col fixed top-18 sm:top-8 md:top-50 2xl:top-95 uw:top-155 left-3 sm:left-8 z-50">
       <li>
         <span className="glitch-tremble glitch-colors flex items-center justify-center w-11 h-11 border-2 border-transparent rounded-full">
           <a
