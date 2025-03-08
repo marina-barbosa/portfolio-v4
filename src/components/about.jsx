@@ -37,7 +37,7 @@ const tabs = [
 ];
 
   return (
-    <section className="font-raleway relative flex items-center justify-center">
+    <section className="point-4 font-raleway relative flex items-center justify-center">
       <div className="max-w-6xl min-h-[550px] mx-auto flex flex-col xl:flex-row items-center xl:items-start">
         <div className="mb-8 md:mb-0 md:w-1/2 flex justify-center mx-auto">
           <img

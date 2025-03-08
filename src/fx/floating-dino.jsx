@@ -15,13 +15,16 @@ const FloatingDino = () => {
     const handleScroll = () => {
       const point2 = document.querySelector(".point-2");
       const point3 = document.querySelector(".point-3");
+      const point4 = document.querySelector(".point-4");
       if (!point2) return;
 
       const rect = point2.getBoundingClientRect();
       const rect3 = point3.getBoundingClientRect();
+      const rect4 = point3.getBoundingClientRect();
       const middleScreen = window.innerHeight / 2;
       const elementMiddle = rect.top + rect.height / 4;
       const elementMiddle3 = rect3.top + rect3.height / 4;
+      const elementMiddle4 = rect4.top + rect4.height / 4;
 
       let newPosition = { ...position };
 
@@ -31,8 +34,11 @@ const FloatingDino = () => {
       if (middleScreen <= elementMiddle) {
         newPosition = { left: 36, top: window.innerHeight - 50 };
       }
-      if (middleScreen >= elementMiddle3) {
-        newPosition = { left: 70, top: 40 };
+      if (middleScreen >= elementMiddle3 && middleScreen <= elementMiddle4) {
+        newPosition = { left: 170, top: 40 };
+      }
+      if (middleScreen >= elementMiddle4) {
+        newPosition = { left: 70, top: window.innerHeight - 150 };
       }
 
       // newPosition =
