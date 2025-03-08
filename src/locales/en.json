@@ -28,21 +28,87 @@
   "phone": "Phone: +55 (13) 99669-7841",
   "made-in-brazil": "Made in Brazil",
   "created-by": "Created & Coded by Marina",
-   "contactModal": {
-      "title": "Let's Connect!",
-      "description": "Have a project in mind? I'd love to hear about it.",
-      "form": {
-        "name": {
-          "placeholder": "Your name"
-        },
-        "email": {
-          "placeholder": "Your email"
-        },
-        "message": {
-          "placeholder": "Your message"
-        },
-        "submit": "send"
+  "contactModal": {
+    "title": "Let's Connect!",
+    "description": "Have a project in mind? I'd love to hear about it.",
+    "form": {
+      "name": {
+        "placeholder": "Your name"
       },
-      "close": "Close modal"
+      "email": {
+        "placeholder": "Your email"
+      },
+      "message": {
+        "placeholder": "Your message"
+      },
+      "submit": "send"
+    },
+    "close": "Close modal"
+  },
+  "cards": {
+    "dev_backend": {
+      "titulo": "Software Development - Backend",
+      "subtitulo": "Cubos Academy",
+      "descricao": "Backend development with JavaScript, Node.js, Express.js, and PostgreSQL at Cubos Academy in partnership with iFood."
+    },
+    "sharp_coders": {
+      "titulo": "Sharp Coders Training - Fullstack",
+      "subtitulo": "Ima Tech + MXM Sistemas",
+      "descricao": "Fullstack development with Angular, C#, and .NET by Ímã Tech in partnership with MXM Sistemas."
+    },
+    "treina_dev": {
+      "titulo": "Treina Dev 12",
+      "subtitulo": "Campus Code",
+      "descricao": "TreinaDev 12, TDD with Ruby on Rails, RSpec, Capybara by Campus Code."
+    },
+    "fullstack_junior": {
+      "titulo": "Junior Fullstack Development",
+      "subtitulo": "Mais Pra TI + Codifica Edu",
+      "descricao": "Junior Fullstack Developer with React, Design, Unit Testing with Jest, Java, MySQL, Spring Boot, JPA, JUnit by +PraTi in partnership with Codifica Edu."
+    },
+    "software_engineering": {
+      "titulo": "Software Engineering",
+      "subtitulo": "Unopar University",
+      "descricao": "Bachelor's degree in Software Engineering focused on fullstack development, software architecture, databases, design patterns, and agile methodologies."
+    },
+    "cwi_crescer": {
+      "titulo": "Fullstack Developer Training",
+      "subtitulo": "CWI - Crescer lvl 1",
+      "descricao": "Fullstack training with Java, JUnit, JavaScript, Jest, HTML, CSS, PostgreSQL at CWI in the Crescer Level 1 program."
     }
+  },
+  "project-list": {
+    "sprawl": {
+      "name": "Sprawl – Kimonos E-commerce",
+      "description": "I work as a Volunteer Fullstack Developer at Sprawl, a kimonos e-commerce, contributing to backend development with ExpressJS and frontend with ReactJS. I participate in the implementation of RESTful APIs for product, order, and transaction management, as well as creating an intuitive user interface. I also collaborate on integrating essential e-commerce features such as authentication, shopping cart, and order processing, along with developing the admin panel for managing products, orders, and customers. The platform uses PostgreSQL as the database and Stripe for payment processing, ensuring efficiency and security in transactions."
+    },
+    "refood": {
+      "name": "Refood",
+      "description": "Refood is a platform that allows commercial establishments to sell products close to their expiration date at affordable prices, helping to reduce food waste. As a fullstack developer, I contributed to the backend implementation with Java 17 and Spring Boot, using PostgreSQL for data storage and Firebase for file storage. On the frontend, I developed modern and responsive interfaces with React, Vite, Tailwind, and Shadcn/ui. The system features secure authentication via OAuth2 and JWT, restaurant, product, and order management, integration with ZIP codes for delivery, and interactive API documentation with Swagger."
+    },
+    "star_bank": {
+      "name": "Star Bank",
+      "description": "Star Bank is a fintech project created by the Star Tech team, developed to simulate a real business environment. This initiative is part of the Sharp Coders bootcamp, offered by ÍmaTech and MXM Sistemas, providing practical experience in software development and agile methods."
+    },
+    "catalogo_filmes": {
+      "name": "Movie Catalog",
+      "description": "A movie catalog application using Ruby on Rails. This project allowed me to consolidate the knowledge acquired by creating routes, models, controllers, and views. The application allows the management of movie genres, directors, and the movies themselves. Users can register, edit, and view detailed information about genres, directors, and movies. Additionally, the application offers features such as listing all genres and directors, displaying all movies by genre or director, and viewing specific details of each movie."
+    },
+    "ntt_movie_data": {
+      "name": "NTT Movie Data",
+      "description": "NTT Movie Data is a SPA (Single Page Application) developed as a Front-End test, allowing the search for detailed information about movies and series. In addition to viewing seasons and episodes, users can mark titles as favorites. The project was developed with Angular, Bootstrap, and SCSS, using Firebase Store for data storage and Google authentication. The application consumes the OMDb API to display information about movies and series, and the MyMemory API for automatic translations of titles and descriptions."
+    },
+    "gerenciador_tarefas": {
+      "name": "Task Manager",
+      "description": "This project presents a solution to the proposed challenge of developing a task management system. Using HTML, CSS, JavaScript, and Bootstrap and nothing more. In addition to basic functionalities, a task filter and a search bar were added to improve the system's usability and efficiency."
+    },
+    "api_vendas": {
+      "name": "Sales API",
+      "description": "Backend application for sales management with functionalities for creating product registration, customer registration, purchase orders, and complete user management of the application, with JWT Token authentication, profile update, avatar update, TypeORM, Entities, Repositories, and other things."
+    },
+    "mahoot": {
+      "name": "Mahoot!",
+      "description": "A Quiz Game inspired by Kahoot, developed in p5.js! This project aims to provide an interactive and fun experience for participants of the Reading Club meetings in the Backend Development course at Cubos Academy."
+    }
+  }
 }

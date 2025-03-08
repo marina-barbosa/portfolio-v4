@@ -3,12 +3,14 @@ import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ButtonCosmic } from "./button-cosmic";
-import { projects } from "../utils/projects";
+// import { projects } from "../utils/projects";
+import { useTranslation } from "react-i18next";
 
 gsap.registerPlugin(ScrollTrigger);
 
 
 const ProjectSection = ({ project }) => {
+  const { t } = useTranslation();
   useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -101,13 +103,15 @@ const ProjectSection = ({ project }) => {
           {project.viewLink && (
             <span className="open-mask-ball">
               <ButtonCosmic pink="true" href={project.viewLink}>
-                View Live
+                {t("viewLive")}
               </ButtonCosmic>
             </span>
           )}
           {project.codeLink && (
             <span className="open-mask-ball">
-              <ButtonCosmic href={project.codeLink}>View Code</ButtonCosmic>
+              <ButtonCosmic href={project.codeLink}>
+                {t("viewCode")}
+              </ButtonCosmic>
             </span>
           )}
         </div>
@@ -116,15 +120,18 @@ const ProjectSection = ({ project }) => {
   );
 };
 
-export const ProjectsScrollTrigger = () => {
+export const ProjectsScrollTrigger = ({ data }) => {
   return (
     <main className="relative hidden xl:block overflow-hidden">
-      {projects && projects.map((project) => (
-        <>
-          <ProjectSection key={project.id} project={project} />
-          <div className="h-[90vh]" />
-        </>
-      ))}
+      {data &&
+        data.map((project) => (
+          <>
+            <span key={project.id} >
+              <ProjectSection project={project} />
+              <div className="h-[90vh]" />
+            </span>
+          </>
+        ))}
     </main>
   );
 };

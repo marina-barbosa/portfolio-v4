@@ -19,6 +19,7 @@ import { Logo } from "./components/logo";
 import MobileProjects from "./components/mobile-projects";
 import FloatingDino from "./fx/floating-dino";
 import LoadingScreen from "./components/loading-screen";
+import { ProjectList } from "./components/project-list";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -48,8 +49,9 @@ const App = () => {
         <Hero />
         <span className="flex flex-col space-y-[6rem]">
           <span id="projetos" className="block h-[100px] mt-[-100px]" />
-          <MobileProjects />
-          <ProjectsScrollTrigger />
+          <ProjectList />
+          {/* <MobileProjects />
+          <ProjectsScrollTrigger /> */}
           <ServicesList />
           <span id="projetos-fim" className="block h-[100px] mt-[-100px]" />
           <span id="sobre" className="block h-[100px] mt-[-100px]" />

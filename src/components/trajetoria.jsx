@@ -2,8 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { RiSchoolLine } from "react-icons/ri";
-import { cardsData } from "../utils/trajetoria";
+import { useTranslation } from "react-i18next";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -110,6 +109,74 @@ const CardInvertido = ({
 const Trajetoria = () => {
   const sectionRef = useRef(null);
   const contentRef = useRef(null);
+  const { t } = useTranslation();
+
+  const cardsData = [
+      {
+        tipo: "normal",
+        titulo: t("cards.dev_backend.titulo"),
+        subtitulo: t("cards.dev_backend.subtitulo"),
+        descricao: t("cards.dev_backend.descricao"),
+        ano: "2023",
+        img: "/cubosacademy.png",
+        corHexagono: "lightgray",
+      },
+      {
+        tipo: "invertido",
+        titulo: t("cards.sharp_coders.titulo"),
+        subtitulo: t("cards.sharp_coders.subtitulo"),
+        descricao: t("cards.sharp_coders.descricao"),
+        ano: "2023",
+        img: "/imatech.png",
+        corHexagono: "lightgray",
+      },
+      {
+        tipo: "normal",
+        titulo: t("cards.treina_dev.titulo"),
+        subtitulo: t("cards.treina_dev.subtitulo"),
+        descricao: t("cards.treina_dev.descricao"),
+        ano: "2024",
+        img: "/campuscode.png",
+        corHexagono: "lightgray",
+      },
+      {
+        tipo: "invertido",
+        titulo: t("cards.fullstack_junior.titulo"),
+        subtitulo: t("cards.fullstack_junior.subtitulo"),
+        descricao: t("cards.fullstack_junior.descricao"),
+        ano: "2024",
+        img: "/maisprati.png",
+        corHexagono: "lightgray",
+      },
+      {
+        tipo: "normal",
+        titulo: t("cards.software_engineering.titulo"),
+        subtitulo: t("cards.software_engineering.subtitulo"),
+        descricao: t("cards.software_engineering.descricao"),
+        ano: "2024",
+        img: "/unopar.png",
+        corHexagono: "lightgray",
+      },
+      {
+        tipo: "invertido",
+        titulo: t("cards.cwi_crescer.titulo"),
+        subtitulo: t("cards.cwi_crescer.subtitulo"),
+        descricao: t("cards.cwi_crescer.descricao"),
+        ano: "2025",
+        img: "/cwi.png",
+        corHexagono: "lightgray",
+      },
+      // {
+      //   tipo: "normal",
+      //   titulo: t("cards.bootcamp_onp.titulo"),
+      //   subtitulo: t("cards.bootcamp_onp.subtitulo"),
+      //   descricao: t("cards.bootcamp_onp.descricao"),
+      //   ano: "2025",
+      //   img: "/onp.png",
+      //   corHexagono: "lightgray",
+      // },
+    ]
+
 
   useEffect(() => {
     const trajetoria = sectionRef.current;

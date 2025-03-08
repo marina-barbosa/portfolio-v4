@@ -1,11 +1,14 @@
-import { projects } from "../utils/projects";
+/* eslint-disable react/prop-types */
+// import { projects } from "../utils/projects";
 import { ButtonCosmic } from "./button-cosmic";
-export default function MobileProjects() {
+import { useTranslation } from "react-i18next";
+export default function MobileProjects({data}) {
+  const { t } = useTranslation();
 
   return (
     <div className="relative xl:hidden flex flex-col gap-24 px-3">
-      {projects &&
-        projects.map((project) => (
+      {data &&
+        data.map((project) => (
           <div
             key={project.id}
             className="w-full max-w-xl mx-auto bg-white rounded-lg overflow-hidden shadow-md"
@@ -39,7 +42,7 @@ export default function MobileProjects() {
                       pink="true"
                       href={project.viewLink}
                     >
-                      View Live
+                      {t("viewLive")}
                     </ButtonCosmic>
                   </span>
                 )}
@@ -47,7 +50,7 @@ export default function MobileProjects() {
                 {project.codeLink && (
                   <span className="open-mask-ball">
                     <ButtonCosmic fullWidth="true" href={project.codeLink}>
-                      View Code
+                      {t("viewCode")}
                     </ButtonCosmic>
                   </span>
                 )}
