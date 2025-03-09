@@ -33,9 +33,10 @@ const FloatingDino = () => {
       const rect3 = point3.getBoundingClientRect();
       // console.log(rect3.y);
       const rect4 = point4.getBoundingClientRect();
+      // console.log(rect4.y)
       // const rect5 = point5.getBoundingClientRect();
       const rect6 = point6.getBoundingClientRect();
-      console.log(rect6.y);
+      // console.log(rect6.y);
 
       let newPosition = { ...position };
       // hero - bottom
@@ -51,27 +52,26 @@ const FloatingDino = () => {
       // service-list -mid~right
       if (rect3.y < bottomScreen) {
         newPosition = {
-          left: (window.innerWidth / 3) * 2,
+          left: ((window.innerWidth / 4) * 3),
           top: window.innerHeight / 2,
         };
       }
       // about - mid~left
-      if (rect4.y < middleScreen) {
+      if (rect4.y < bottomScreen) {
         setShouldFloat(true);
         newPosition = {
-          left: window.innerWidth / 4,
+          left: (window.innerWidth / 5) - 60,
           top: window.innerHeight / 2,
         };
       }
       // marquee~traj - logo
-      if (rect4.y < topScreen) {
+      if (rect4.y < (topScreen - middleScreen)) {
         setShouldFloat(false);
         setShouldMosca(true);
         newPosition = { top: 40, left: 36 };
       }
       // footer - center
-      if (rect6.y < 840) {
-        setShouldFloat(false);
+      if (rect6.y < 2620) {
         setShouldMosca(false);
         newPosition = {
           top: window.innerHeight - 50,
@@ -79,8 +79,6 @@ const FloatingDino = () => {
         };
       }
       if (rect6.y <= 600) {
-        setShouldFloat(false);
-        setShouldMosca(false);
         const smoothTop = position.top + ((rect6.y - 25) - position.top) * 0.1; // Amortecimento
         newPosition = {
           top: smoothTop,
