@@ -25,7 +25,7 @@ const TypingFx = () => {
   return (
     <h2
       ref={typedRef}
-      className="inline-block text-xl z-20 open-mini-ball-mask mouse-color-changer font-ibm align-middle leading-tight"
+      className="inline-block sm:text-xl z-20 open-mini-ball-mask mouse-color-changer font-ibm align-middle leading-tight"
     ></h2>
   );
 };
