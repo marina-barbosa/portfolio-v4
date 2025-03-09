@@ -7,9 +7,11 @@ const FloatingDino = () => {
     left: 36,
   });
   const [prevPosition, setPrevPosition] = useState(position);
-  const [isMoving, setIsMoving] = useState(false);
+  const [isFloating, setIsFloating] = useState(true);
+  const [shouldFloat, setShouldFloat] = useState(true);
   const [animationKey, setAnimationKey] = useState(0);
   const [floatHeight, setFloatHeight] = useState(-30);
+  const [shouldMosca, setShouldMosca] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +20,7 @@ const FloatingDino = () => {
       const point3 = document.querySelector(".point-3");
       const point4 = document.querySelector(".point-4");
       const point5 = document.querySelector(".point-5");
+      const point6 = document.querySelector(".point-6");
 
       const middleScreen = window.innerHeight / 2; // 472,5
       const bottomScreen = window.innerHeight; // 945
@@ -28,33 +31,61 @@ const FloatingDino = () => {
       // console.log(rect1.y);
       // const rect2 = point2.getBoundingClientRect();
       const rect3 = point3.getBoundingClientRect();
-      console.log(rect3.y);
+      // console.log(rect3.y);
       const rect4 = point4.getBoundingClientRect();
       // const rect5 = point5.getBoundingClientRect();
+      const rect6 = point6.getBoundingClientRect();
+      console.log(rect6.y);
 
       let newPosition = { ...position };
       // hero - bottom
       if (rect1.y === 32) {
+        setShouldFloat(true);
         newPosition = { top: window.innerHeight - 50, left: 36 };
       }
-      // project - logo
-      if (rect1.y < 32) {
+      // hero~project - logo
+      if (rect1.y < 32 && rect4.y > middleScreen) {
+        setShouldFloat(false);
         newPosition = { top: 40, left: 36 };
       }
+      // service-list -mid~right
       if (rect3.y < bottomScreen) {
         newPosition = {
           left: (window.innerWidth / 3) * 2,
           top: window.innerHeight / 2,
         };
       }
+      // about - mid~left
       if (rect4.y < middleScreen) {
+        setShouldFloat(true);
         newPosition = {
           left: window.innerWidth / 4,
           top: window.innerHeight / 2,
         };
       }
+      // marquee~traj - logo
       if (rect4.y < topScreen) {
+        setShouldFloat(false);
+        setShouldMosca(true);
         newPosition = { top: 40, left: 36 };
+      }
+      // footer - center
+      if (rect6.y < 840) {
+        setShouldFloat(false);
+        setShouldMosca(false);
+        newPosition = {
+          top: window.innerHeight - 50,
+          left: window.innerWidth / 2 - 25,
+        };
+      }
+      if (rect6.y <= 600) {
+        setShouldFloat(false);
+        setShouldMosca(false);
+        const smoothTop = position.top + ((rect6.y - 25) - position.top) * 0.1; // Amortecimento
+        newPosition = {
+          top: smoothTop,
+          left: window.innerWidth / 2 - 25,
+        };
       }
 
       if (
@@ -64,7 +95,7 @@ const FloatingDino = () => {
         setPrevPosition(position);
         setPosition(newPosition);
         setAnimationKey((prev) => prev + 1);
-        setIsMoving(true);
+        setIsFloating(false);
       }
     };
 
@@ -79,18 +110,25 @@ const FloatingDino = () => {
   return (
     <motion.div
       key={animationKey}
-      className={`fixed z-50 ${!isMoving ? "floating" : ""}`}
+      className={`fixed z-50 ${isFloating ? "floating" : ""}`}
       initial={{ top: prevPosition.top, left: prevPosition.left }}
-      animate={{
-        top: position.top,
-        left: position.left,
-        rotate: isMoving ? [0, 25, -20, 15, -10, 5, 0] : 0,
-        scale: isMoving ? [1, 1.1, 1, 1.2, 1] : 1,
-        x: isMoving ? [0, 40, -30, 20, -10, 0] : 0,
-        y: isMoving ? [0, -20, 25, -15, 10, -5, 0] : 0,
-      }}
+      animate={
+        shouldMosca
+          ? {
+              top: position.top,
+              left: position.left,
+              rotate: !isFloating ? [0, 25, -20, 15, -10, 5, 0] : 0,
+              scale: !isFloating ? [1, 1.1, 1, 1.2, 1] : 1,
+              x: !isFloating ? [0, 40, -30, 20, -10, 0] : 0,
+              y: !isFloating ? [0, -20, 25, -15, 10, -5, 0] : 0,
+            }
+          : {
+              top: position.top,
+              left: position.left,
+            }
+      }
       transition={{ duration: 2, ease: "easeInOut" }}
-      onAnimationComplete={() => setIsMoving(false)}
+      onAnimationComplete={shouldFloat ? () => setIsFloating(true) : null}
     >
       <a href="#hero">
         <img
