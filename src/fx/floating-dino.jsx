@@ -13,38 +13,49 @@ const FloatingDino = () => {
 
   useEffect(() => {
     const handleScroll = () => {
+      const point1 = document.querySelector(".point-1");
       const point2 = document.querySelector(".point-2");
       const point3 = document.querySelector(".point-3");
       const point4 = document.querySelector(".point-4");
-      if (!point2) return;
+      const point5 = document.querySelector(".point-5");
 
-      const rect = point2.getBoundingClientRect();
+      const middleScreen = window.innerHeight / 2; // 472,5
+      const bottomScreen = window.innerHeight; // 945
+      const topScreen = 0; // 0
+
+      const rect1 = point1.getBoundingClientRect();
+      // console.log(rect1);
+      // console.log(rect1.y);
+      // const rect2 = point2.getBoundingClientRect();
       const rect3 = point3.getBoundingClientRect();
-      const rect4 = point3.getBoundingClientRect();
-      const middleScreen = window.innerHeight / 2;
-      const elementMiddle = rect.top + rect.height / 4;
-      const elementMiddle3 = rect3.top + rect3.height / 4;
-      const elementMiddle4 = rect4.top + rect4.height / 4;
+      console.log(rect3.y);
+      const rect4 = point4.getBoundingClientRect();
+      // const rect5 = point5.getBoundingClientRect();
 
       let newPosition = { ...position };
-
-      if (middleScreen >= elementMiddle && middleScreen <= elementMiddle3) {
-        newPosition = { left: 36, top: 40 };
+      // hero - bottom
+      if (rect1.y === 32) {
+        newPosition = { top: window.innerHeight - 50, left: 36 };
       }
-      if (middleScreen <= elementMiddle) {
-        newPosition = { left: 36, top: window.innerHeight - 50 };
+      // project - logo
+      if (rect1.y < 32) {
+        newPosition = { top: 40, left: 36 };
       }
-      if (middleScreen >= elementMiddle3 && middleScreen <= elementMiddle4) {
-        newPosition = { left: 170, top: 40 };
+      if (rect3.y < bottomScreen) {
+        newPosition = {
+          left: (window.innerWidth / 3) * 2,
+          top: window.innerHeight / 2,
+        };
       }
-      if (middleScreen >= elementMiddle4) {
-        newPosition = { left: 70, top: window.innerHeight - 150 };
+      if (rect4.y < middleScreen) {
+        newPosition = {
+          left: window.innerWidth / 4,
+          top: window.innerHeight / 2,
+        };
       }
-
-      // newPosition =
-      //   middleScreen >= elementMiddle
-      //     ? { left: 36, top: 40  }
-      //     : { left: 36, top: window.innerHeight - 50 };
+      if (rect4.y < topScreen) {
+        newPosition = { top: 40, left: 36 };
+      }
 
       if (
         newPosition.top !== position.top ||

@@ -37,20 +37,22 @@ const tabs = [
 ];
 
   return (
-    <section className="point-4 font-raleway relative flex items-center justify-center">
+    <section className="font-raleway relative flex items-center justify-center">
       <div className="max-w-6xl min-h-[550px] mx-auto flex flex-col xl:flex-row items-center xl:items-start">
         <div className="mb-8 md:mb-0 md:w-1/2 flex justify-center mx-auto">
           <img
             src="/img-placeholder.png"
             // src="/me.jpg"
             alt="About me"
-            className="w-80 h-80 rounded-full object-cover self-start border mt-10 md:mb-20 xl:mb-0"
+            className="point-4 w-80 h-80 rounded-full object-cover self-start border mt-10 md:mb-20 xl:mb-0"
           />
         </div>
 
         <div className="md:w-2/3 xl:w-1/2 text-center md:text-left md:pl-8 xl:pl-0 xl:pr-16 flex flex-col md:-ms-11">
           <h2 className="text-lg tracking-widest uppercase text-[#555555] mb-6">
-            <span className="reveal-text reveal-text-title">{t("who-i-am")}</span>
+            <span className="reveal-text reveal-text-title">
+              {t("who-i-am")}
+            </span>
           </h2>
 
           <div className="flex text-[#555555] mb-6 text-lg tracking-widest mx-auto sm:mx-0">
