@@ -52,7 +52,8 @@ const FloatingDino = () => {
       // service-list -mid~right
       if (rect3.y < bottomScreen) {
         newPosition = {
-          left: ((window.innerWidth / 4) * 3),
+          // left: ((window.innerWidth / 4) * 3),
+          left: (rect3.x + rect3.width) - (window.innerWidth / 5),
           top: window.innerHeight / 2,
         };
       }
@@ -60,7 +61,8 @@ const FloatingDino = () => {
       if (rect4.y < bottomScreen) {
         setShouldFloat(true);
         newPosition = {
-          left: (window.innerWidth / 5) - 60,
+          // left: (window.innerWidth / 5) - 60,
+          left: rect4.x - 100,
           top: window.innerHeight / 2,
         };
       }
@@ -72,13 +74,15 @@ const FloatingDino = () => {
       }
       // footer - center
       if (rect6.y < 2620) {
+        setShouldFloat(true);
         setShouldMosca(false);
         newPosition = {
-          top: window.innerHeight - 50,
+          top: window.innerHeight - 100,
           left: window.innerWidth / 2 - 25,
         };
       }
       if (rect6.y <= 600) {
+        setShouldFloat(false);
         const smoothTop = position.top + ((rect6.y - 25) - position.top) * 0.1; // Amortecimento
         newPosition = {
           top: smoothTop,
@@ -108,7 +112,7 @@ const FloatingDino = () => {
   return (
     <motion.div
       key={animationKey}
-      className={`fixed z-50 ${isFloating ? "floating" : ""}`}
+      className={`hidden sm:block fixed z-50 ${isFloating ? "floating" : ""}`}
       initial={{ top: prevPosition.top, left: prevPosition.left }}
       animate={
         shouldMosca

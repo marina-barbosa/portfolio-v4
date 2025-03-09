@@ -41,8 +41,8 @@ const tabs = [
       <div className="max-w-6xl min-h-[550px] mx-auto flex flex-col xl:flex-row items-center xl:items-start">
         <div className="mb-8 md:mb-0 md:w-1/2 flex justify-center mx-auto">
           <img
-            src="/img-placeholder.png"
-            // src="/me.jpg"
+            // src="/img-placeholder.png"
+            src="/me.jpg"
             alt="About me"
             className="point-4 w-80 h-80 rounded-full object-cover self-start border mt-10 md:mb-20 xl:mb-0"
           />
