@@ -20,6 +20,7 @@ import MobileProjects from "./components/mobile-projects";
 import FloatingDino from "./fx/floating-dino";
 import LoadingScreen from "./components/loading-screen";
 import { ProjectList } from "./components/project-list";
+import FloatingDinoUW from "./fx/floating-dino-uw";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -44,6 +45,7 @@ const App = () => {
         <NavbarScrollspy />
         <Glitch />
         <FloatingDino />
+        <FloatingDinoUW />
         <Logo />
         <SocialIcons />
         <Hero />

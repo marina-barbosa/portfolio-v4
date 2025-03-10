@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-const FloatingDino = () => {
+const FloatingDinoUW = () => {
   const [position, setPosition] = useState({
     top: window.innerHeight - 50,
     left: 36,
@@ -49,29 +49,33 @@ const FloatingDino = () => {
         setShouldFloat(false);
         newPosition = { top: 40, left: 36 };
       }
+
       // service-list -mid~right
-      if (rect3.y < bottomScreen) {
-        newPosition = {
-          // left: ((window.innerWidth / 4) * 3),
-          left: (rect3.x + rect3.width) - (window.innerWidth / 5),
-          top: window.innerHeight / 2,
-        };
-      }
+      // if (rect3.y < bottomScreen) {
+      //   newPosition = {
+      //     // left: ((window.innerWidth / 4) * 3),
+      //     left: (rect3.x + rect3.width) - (window.innerWidth / 5),
+      //     top: window.innerHeight / 2,
+      //   };
+      // }
+
       // about - mid~left
-      if (rect4.y < bottomScreen) {
-        setShouldFloat(true);
-        newPosition = {
-          // left: (window.innerWidth / 5) - 60,
-          left: rect4.x - 100,
-          top: window.innerHeight / 2,
-        };
-      }
+      // if (rect4.y < bottomScreen) {
+      //   setShouldFloat(true);
+      //   newPosition = {
+      //     // left: (window.innerWidth / 5) - 60,
+      //     left: rect4.x - 100,
+      //     top: window.innerHeight / 2,
+      //   };
+      // }
+
       // marquee~traj - logo
-      if (rect4.y < (topScreen - middleScreen)) {
-        setShouldFloat(false);
-        setShouldMosca(true);
-        newPosition = { top: 40, left: 36 };
-      }
+      // if (rect4.y < (topScreen - middleScreen)) {
+      //   setShouldFloat(false);
+      //   setShouldMosca(true);
+      //   newPosition = { top: 40, left: 36 };
+      // }
+      
       // footer - center
       if (rect6.y < 2620) {
         setShouldFloat(true);
@@ -112,9 +116,7 @@ const FloatingDino = () => {
   return (
     <motion.div
       key={animationKey}
-      className={`hidden sm:block uw:hidden fixed z-50 ${
-        isFloating ? "floating" : ""
-      }`}
+      className={`hidden uw:block fixed z-50 ${isFloating ? "floating" : ""}`}
       initial={{ top: prevPosition.top, left: prevPosition.left }}
       animate={
         shouldMosca
@@ -158,4 +160,4 @@ const FloatingDino = () => {
   );
 };
 
-export default FloatingDino;
+export default FloatingDinoUW;
