@@ -21,12 +21,12 @@ export const Hero = () => {
           <div className="cosmic-orb orb-2"></div>
           <div className="cosmic-orb orb-3"></div>
         </div>
-        <h1 className="open-mask-ball mouse-color-changer mb-4 z-10 mx-auto max-w-[78vw] m-10 text-5xl sm:text-7xl uppercase font-bold text-center">
+        <h2 className="open-mask-ball mouse-color-changer mb-4 z-10 mx-auto max-w-[78vw] m-10 text-5xl sm:text-7xl uppercase font-bold text-center">
           <span className="start-hacker-scrambles">{t("you-dream")}</span>{" "}
           <br className="sm:hidden" />{" "}
           <span className="start-hacker-scrambles">{t("i-create")}</span> <br />
           <span className="start-hacker-scrambles">{t("just-like-that")}</span>
-        </h1>
+        </h2>
         {/* <span className="relative mb-4 z-10 mx-auto max-w-[78vw] m-10">
           <TitleHero />
         </span> */}

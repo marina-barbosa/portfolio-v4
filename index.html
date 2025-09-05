@@ -1,20 +1,67 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/twitch-dinodance.gif" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marina Barbosa</title>
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-      <input type="text" name="name" />
-      <input type="email" name="email" />
-      <textarea name="message"></textarea>
-    </form>
 
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Title e descrição SEO -->
+  <title>Marina Barbosa | Desenvolvedora Fullstack</title>
+  <meta name="description"
+    content="Portfólio de Marina Barbosa, desenvolvedora fullstack freelance. Tecnologias: JavaScript, TypeScript, React, Next.js, React Native, Node.js, Java, Angular e PostgreSQL." />
+
+  <!-- Ícone -->
+  <link rel="icon" type="image/x-icon" href="/twitch-dinodance.ico" />
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:title" content="Portfólio | Marina Barbosa" />
+  <meta property="og:description"
+    content="Desenvolvedora fullstack freelance. Confira meus trabalhos e entre em contato." />
+  <meta property="og:image" content="/preview.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://marina-barbosa.netlify.app/" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Portfólio | Marina Barbosa" />
+  <meta name="twitter:description"
+    content="Desenvolvedora fullstack freelance. Confira meus trabalhos e entre em contato." />
+  <meta name="twitter:image" content="/preview.png" />
+  <meta property="twitter:url" content="https://marina-barbosa.netlify.app/" />
+
+  <!-- Robots -->
+  <meta name="robots" content="index, follow" />
+
+  <!-- Devicons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+  <!-- Schema.org (dados estruturados) -->
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Marina Barbosa",
+        "url": "https://marina-barbosa.netlify.app/",
+        "jobTitle": "Desenvolvedora Fullstack",
+        "sameAs": [
+          "https://github.com/marina-barbosa",
+          "https://www.linkedin.com/in/marina-barbosa-exp/"
+        ]
+      }
+    </script>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <!-- Form Netlify (backup hidden) -->
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <textarea name="message"></textarea>
+  </form>
+
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>

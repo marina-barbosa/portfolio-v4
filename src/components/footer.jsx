@@ -36,6 +36,7 @@ export const Footer = () => {
               <img
                 src="/twitch-dinodance.gif"
                 className="point-6 h-10 open-mask-medium opacity-0"
+                alt="Dancing Dino"
               />
             </a>
           </div>

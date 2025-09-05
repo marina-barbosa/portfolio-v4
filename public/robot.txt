@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://marina-barbosa.netlify.app/sitemap.xml
