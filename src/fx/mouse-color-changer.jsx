@@ -62,7 +62,7 @@ export default function MouseColorChanger() {
 
         const intensity = Math.max(0, 1 - distance / circleSize);
         const originalColor = originalColors.current.get(element) || "black";
-        const fxColor = "#1ea59e";
+        const fxColor = "#17837D";
 
         if (property === "backgroundImage") {
           const circleSize = isNearElement ? 200 : 20;

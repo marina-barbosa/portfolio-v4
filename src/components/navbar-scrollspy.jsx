@@ -58,7 +58,7 @@ export const NavbarScrollspy = () => {
             href="#projetos"
             data-value={t("projects")}
             className={`hacker-scrambles ${
-              activeSection === "projetos" ? "text-[#1ea59e]" : "text-[#555555]"
+              activeSection === "projetos" ? "text-[#17837D]" : "text-[#555555]"
             }`}
           >
             {t("projects")}
@@ -70,7 +70,7 @@ export const NavbarScrollspy = () => {
             data-value={t("about")}
             className={`hacker-scrambles ${
               activeSection === "sobre"
-                ? "text-[#1ea59e] font-bold"
+                ? "text-[#17837D] font-bold"
                 : "text-[#555555]"
             }`}
           >
@@ -83,7 +83,7 @@ export const NavbarScrollspy = () => {
             data-value={t("contact")}
             className={`hacker-scrambles ${
               activeSection === "contato"
-                ? "text-[#1ea59e] font-bold"
+                ? "text-[#17837D] font-bold"
                 : "text-[#555555]"
             }`}
           >

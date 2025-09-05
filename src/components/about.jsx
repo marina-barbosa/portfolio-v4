@@ -60,8 +60,8 @@ const tabs = [
               <div key={tab.id} className="flex items-center">
                 <button
                   onClick={() => setActiveTab(tab.id)}
-                  className={`space-x-2 cursor-pointer hover:text-[#1ea59e] ${
-                    activeTab === tab.id ? "font-bold text-[#1ea59e]" : ""
+                  className={`space-x-2 cursor-pointer hover:text-[#17837D] ${
+                    activeTab === tab.id ? "font-bold text-[#17837D]" : ""
                   }`}
                 >
                   {tab.label}
