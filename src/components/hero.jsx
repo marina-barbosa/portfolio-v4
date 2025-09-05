@@ -4,8 +4,9 @@ import TypingFx from "../fx/typing-fx";
 import { ButtonCosmic } from "./button-cosmic";
 import { handleDownload } from "../utils/download-cv";
 import { useState } from "react";
-import { ContactModal } from "./contact-modal";
+import { ContactModal } from "../form-contact/contact-modal";
 import { useTranslation } from "react-i18next";
+import { ContactModalFormSubmit } from "../form-contact/form-submit";
 export const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);  
   const { t } = useTranslation();
@@ -39,10 +40,11 @@ export const Hero = () => {
           <ButtonCosmic onClick={handleDownload}>{t("getCV")}</ButtonCosmic>
         </div>
 
-        <ContactModal
+        {/* <ContactModal
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
-        />
+        /> */}
+        <ContactModalFormSubmit isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
         {/* CSS for the gradient orbs */}
         <style>{`

@@ -2,7 +2,7 @@ import { ButtonCosmic } from "./button-cosmic";
 import { handleDownload } from "../utils/download-cv";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import { ContactModal } from "./contact-modal";
+import { ContactModal } from "../form-contact/contact-modal";
 export const Footer = () => {
   const { t } = useTranslation();
   const [isModalOpen, setIsModalOpen] = useState(false);

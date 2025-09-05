@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { IoClose } from "react-icons/io5";
 import { FiUser, FiMessageSquare, FiSend } from "react-icons/fi";
 import { RxEnvelopeClosed } from "react-icons/rx";
-import { ButtonCosmic } from "./button-cosmic";
+import { ButtonCosmic } from "../components/button-cosmic";
 import { useTranslation } from "react-i18next";
 
 export const ContactModal = ({ isOpen, onClose }) => {
