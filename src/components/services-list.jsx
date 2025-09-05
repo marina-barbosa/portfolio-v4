@@ -99,7 +99,7 @@ export default function ServicesList() {
                 {service.title}
               </h3>
               <p
-                className={`absolute text-lg text-center font-ibm text-[lightseagreen] transition-opacity duration-500 ${
+                className={`absolute text-lg text-center font-ibm text-[#1ea59e] transition-opacity duration-500 ${
                   hoveredIndex === index ? "opacity-100" : "opacity-0"
                 }`}
               >

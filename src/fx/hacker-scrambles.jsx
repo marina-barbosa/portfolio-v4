@@ -55,7 +55,7 @@ export const HackerScrambles = () => {
     <style>
       {`    
       .hacker-scrambles:hover {
-        text-shadow: 1px 1px lightseagreen, 2px -1px #f0f;
+        text-shadow: 1px 1px #1ea59e, 2px -1px #f0f;
       }
     `}
     </style>

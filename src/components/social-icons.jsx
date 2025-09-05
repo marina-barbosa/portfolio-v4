@@ -9,6 +9,7 @@ export const SocialIcons = () => {
             href="https://github.com/marina-barbosa"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Github de Marina Barbosa"
           >
             <LuGithub className="social-icons-stroke glitch-tremble w-6 h-6" />
           </a>
@@ -20,6 +21,7 @@ export const SocialIcons = () => {
             href="https://www.linkedin.com/in/marina-barbosa-exp/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Linkedin de Marina Barbosa"
           >
             <LuLinkedin className="social-icons-stroke glitch-tremble w-6 h-6" />
           </a>
@@ -31,6 +33,7 @@ export const SocialIcons = () => {
             href="https://wa.me/5513996697841"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Whatsapp de Marina Barbosa"
           >
             <FaWhatsapp className="social-icons-fill glitch-tremble w-6 h-6" />
           </a>

@@ -12,7 +12,7 @@ export const ButtonLanguage = () => {
   return (
     <button
       onClick={toggleLanguage}
-      className="cursor-pointer flex items-center gap-2 z-50 text-[#555555] hover:text-[lightseagreen]"
+      className="cursor-pointer flex items-center gap-2 z-50 text-[#555555] hover:text-[#1ea59e]"
     >
       <HiLanguage size={20} />
       <span className="font-raleway sm:tracking-widest text-[14px] 2xl:text-[18px] uppercase">
