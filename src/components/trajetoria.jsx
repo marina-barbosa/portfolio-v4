@@ -17,8 +17,8 @@ const CardNormal = ({
   return (
     <div className="w-60 sm:w-md flex-shrink-0 grid grid-rows-[1fr_50px_1fr] gap-5 relative z-10">
       <div className="flex flex-col justify-end text-center">
-        <h4 className="font-raleway text-lg text-neutral-900 mb-1">{titulo}</h4>
-        <h4 className="font-ibm text-neutral-600 mb-2">{subtitulo}</h4>
+        <h4 className="font-raleway font-medium text-lg text-neutral-900 mb-1">{titulo}</h4>
+        <h4 className="font-spacegrotesk text-neutral-600 mb-2">{subtitulo}</h4>
         <p className="font-spacegrotesk text-sm text-neutral-500">
           {descricao}
         </p>
@@ -96,8 +96,8 @@ const CardInvertido = ({
       </div>
 
       <div className="flex flex-col justify-start text-center">
-        <h4 className="font-raleway text-lg text-neutral-900 mb-1">{titulo}</h4>
-        <h4 className="font-ibm text-neutral-600 mb-2">{subtitulo}</h4>
+        <h4 className="font-raleway font-medium text-lg text-neutral-900 mb-1">{titulo}</h4>
+        <h4 className="font-spacegrotesk text-neutral-600 mb-2">{subtitulo}</h4>
         <p className="font-spacegrotesk text-sm text-neutral-500">
           {descricao}
         </p>

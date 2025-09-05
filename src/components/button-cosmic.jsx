@@ -9,7 +9,7 @@ export const ButtonCosmic = ({
 }) => {
   return (
     <button
-      className={`font-ibm relative cursor-pointer inline-flex items-center justify-center gap-4 group rounded-sm ${
+      className={`font-spacegrotesk relative cursor-pointer inline-flex items-center justify-center gap-4 group rounded-sm ${
         fullWidth ? "w-full" : ""
       } ${pink ? "bg-pink-400 hover:bg-pink-500" : "bg-black"}`}
       onClick={onClick}

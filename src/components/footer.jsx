@@ -11,7 +11,7 @@ export const Footer = () => {
       <div className="mx-auto px-4 max-w-5xl">
         <div className="flex flex-col xl:flex-row xl:items-center xl:justify-between">
           {/* Coluna da esquerda - Connect */}
-          <div className="font-ibm  flex-1 flex flex-col items-center xl:items-start justify-between h-full pb-2">
+          <div className="font-spacegrotesk  flex-1 flex flex-col items-center xl:items-start justify-between h-full pb-2">
             <div className="no-mask-section">
               <h3 className="py-3 font-raleway uppercase text-lg tracking-wider no-mask-section">
                 {t("connect")}
@@ -41,7 +41,7 @@ export const Footer = () => {
             </a>
           </div>
           {/* Coluna da direita - Créditos */}
-          <div className="font-ibm flex-1 flex flex-col items-center xl:items-end justify-between h-full">
+          <div className="font-spacegrotesk flex-1 flex flex-col items-center xl:items-end justify-between h-full">
             <div>
               <p className="open-mask-ball mouse-color-changer text-xs text-gray-600 mb-1 text-right pe-2">
                 {t("made-in-brazil")}
