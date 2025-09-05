@@ -19,6 +19,10 @@
   "blog-description": "Organized content to attract and engage your audience",
   "ecommerce": "E-commerce",
   "ecommerce-description": "Online stores with modern design and advanced features",
+  "mobile-app": "mobile apps",
+  "mobile-app-description": "Cross-platform mobile applications developed with React Native",
+  "desktop-app": "desktop applications",
+  "desktop-app-description": "Installable systems for Windows developed with C#",
   "who-i-am": "who I am",
   "rh-bio": "Hi, I'm Marina, a fullstack developer with experience in academic projects and volunteer freelance work. My technical background includes Java, Spring Boot, JavaScript, React, Angular, Node.js, and relational databases like PostgreSQL and MySQL. I have a collaborative mindset and thrive on challenges that allow me to learn and grow. I'm currently studying Software Engineering and working on a volunteer e-commerce project for kimonos, which gives me real-world experience in development and teamwork. I'm always looking for opportunities to improve my skills, contribute with new solutions, and add value to the team!",
   "dev-bio": "I've been a dev since 2023, constantly learning and evolving. My main stack includes Java with Spring Boot, React, Node.js, and PostgreSQL, but I also have experience with .NET, C#, and Ruby on Rails. I've worked with TDD using JUnit, Jest, and RSpec, along with agile methodologies and best development practices. Currently, I'm involved in a volunteer e-commerce project, where I contribute as a fullstack developer. I'm helpful, collaborative, curious, a fast learner, organized, self-managed, hardworking, and a great team player.",
@@ -109,6 +113,10 @@
     "mahoot": {
       "name": "Mahoot!",
       "description": "A Quiz Game inspired by Kahoot, developed in p5.js! This project aims to provide an interactive and fun experience for participants of the Reading Club meetings in the Backend Development course at Cubos Academy."
+    },
+    "sd_arreios": {
+      "name": "SD Arreios – Sales Management App",
+      "description": "Mobile app developed with React Native for SD Arreios, focused on internal sales management of leather and agricultural products (saddles, belts, etc.). As a fullstack mobile developer, I worked on frontend, backend, and integrations. The app provides product and client registration, quote and order creation with price control, discounts and payment methods, as well as sharing via WhatsApp. It also allows generating product catalogs in PDF, viewing sales reports by period, and user login. Stack: React Native, Expo, Firebase, Cloudflare R2, Zustand, react-hook-form, among others."
     }
   }
 }

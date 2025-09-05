@@ -19,6 +19,10 @@
   "blog-description": "Conteúdo organizado para atrair e engajar sua audiência",
   "ecommerce": "Lojas Virtuais",
   "ecommerce-description": "Lojas virtuais com design moderno e funcionalidades avançadas",
+  "mobile-app": "aplicativos mobile",
+  "mobile-app-description": "Aplicativos móveis multiplataforma desenvolvidos em React Native",
+  "desktop-app": "aplicativos desktop",
+  "desktop-app-description": "Sistemas instaláveis para Windows desenvolvidos em C#",
   "who-i-am": "quem sou",
   "rh-bio": "Oi, eu sou a Marina, dev fullstack com experiência em projetos acadêmicos e freelance voluntário. Minha base técnica inclui Java, Spring Boot, Javascript, React, Angular, Node.js e bancos de dados relacionais como PostgreSQL e MySQL. Tenho um perfil colaborativo e sou movida por desafios que me permitam aprender e evoluir. Atualmente, curso Engenharia de Software e atuo em um projeto voluntário de e-commerce de kimonos, o que me proporciona experiência real em desenvolvimento e trabalho em equipe. Estou sempre buscando oportunidades para aprimorar minhas habilidades, contribuir com novas soluções e agregar ao time!",
   "dev-bio": "Sou dev desde 2023 em constante aprendizado. Minha stack principal inclui Java com Spring Boot, React, Node.js e PostgreSQL, mas também tenho experiência com .NET, C# e Ruby on Rails. Já desenvolvi em TDD usando JUnit, Jest e RSpec, além de metodologias ágeis e boas práticas de desenvolvimento. Atualmente, estou envolvida em um projeto de e-commerce voluntário, onde participo como fullstack. Tenho perfil prestativo, colaborativo, curioso, aprendo rápido, sou organizada, autogerenciada, esforçada e trabalho bem em equipe.",
@@ -109,6 +113,10 @@
     "mahoot": {
       "name": "Mahoot!",
       "description": "Um Quiz Game inspirado no Kahoot, desenvolvido em p5.js! Este projeto tem como objetivo proporcionar uma experiência interativa e divertida para os participantes das reuniões do Clube de leitura do curso Desenvolvimento Backend da Cubos Academy."
+    },
+    "sd_arreios": {
+      "name": "SD Arreios – Gestão Interna de Vendas",
+      "description": "Aplicativo mobile desenvolvido em React Native para a empresa SD Arreios, voltado para a gestão interna de vendas de produtos agro/couro (selas, cintos, etc). Como desenvolvedora fullstack mobile, atuei no frontend, backend e integração de funcionalidades. O app oferece cadastro de produtos e clientes, criação de orçamentos e pedidos com controle de preços, descontos e formas de pagamento, além de compartilhamento via WhatsApp. Também possibilita gerar catálogos em PDF, visualizar relatórios de vendas por período e realizar login de usuários. Stack: React Native, Expo, Firebase, Cloudflare R2, Zustand, react-hook-form e outras libs."
     }
   }
 }

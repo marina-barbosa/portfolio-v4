@@ -21,6 +21,21 @@ export const ProjectList = () => {
       codeLink: null,
     },
     {
+      id: 9,
+      name: t("project-list.sd_arreios.name"),
+      image: "/sd-arreios.png",
+      technologies: [
+        "devicon-react-original-wordmark",
+        "devicon-android-plain",
+        "devicon-firebase-plain-wordmark",
+        "devicon-cloudflare-plain",
+        "devicon-tailwindcss-original",
+      ],
+      description: t("project-list.sd_arreios.description"),
+      viewLink: null,
+      codeLink: null,
+    },
+    {
       id: 2,
       name: t("project-list.refood.name"),
       image: "/refood.jpeg",

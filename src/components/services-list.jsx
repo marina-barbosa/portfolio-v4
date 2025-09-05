@@ -41,6 +41,16 @@ export default function ServicesList() {
       title: `${t("ecommerce")}`,
       description: `${t("ecommerce-description")}`,
     },
+    {
+      id: 5,
+      title: `${t("mobile-app")}`,
+      description: `${t("mobile-app-description")}`,
+    },
+    {
+      id: 6,
+      title: `${t("desktop-app")}`,
+      description: `${t("desktop-app-description")}`,
+    },
   ];
 
   return (
