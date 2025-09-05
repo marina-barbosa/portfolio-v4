@@ -92,20 +92,3 @@ button, a, .clickable {
 .social-icons-stroke:hover {
   stroke: #17837D;
 }
-
-
-@font-face {
-  font-family: 'IBM Plex Mono';
-  src: url('/fonts/IBM-Plex-Mono.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'VCR OSD Mono';
-  src: url('/fonts/VCR-OSD-Mono.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
