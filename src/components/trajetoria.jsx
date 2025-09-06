@@ -178,7 +178,8 @@ const Trajetoria = () => {
     ]
 
 
-  useEffect(() => {
+useEffect(() => {
+  const idleCallback = () => {
     const trajetoria = sectionRef.current;
     const content = contentRef.current;
 
@@ -200,11 +201,26 @@ const Trajetoria = () => {
         anticipatePin: 1,
       },
     });
+  };
 
-    return () => {
-      ScrollTrigger.getAll().forEach((st) => st.kill());
-    };
-  }, []);
+  let idleId;
+  if ("requestIdleCallback" in window) {
+    idleId = requestIdleCallback(idleCallback, { timeout: 2000 });
+  } else {
+    // fallback se o navegador não suportar
+    idleId = setTimeout(idleCallback, 1000);
+  }
+
+  return () => {
+    if ("cancelIdleCallback" in window) {
+      cancelIdleCallback(idleId);
+    } else {
+      clearTimeout(idleId);
+    }
+    ScrollTrigger.getAll().forEach((st) => st.kill());
+  };
+}, []);
+
 
   return (
     <>

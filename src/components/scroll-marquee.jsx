@@ -8,7 +8,8 @@ const ScrollMarquee = () => {
   const marqueeLeftRef = useRef(null);
   const marqueeRightRef = useRef(null);
 
-  useEffect(() => {
+useEffect(() => {
+  const initMarquee = () => {
     if (marqueeLeftRef.current) {
       gsap.to(marqueeLeftRef.current, {
         xPercent: -200,
@@ -34,7 +35,25 @@ const ScrollMarquee = () => {
         },
       });
     }
-  }, []);
+  };
+
+  let idleId;
+  if ("requestIdleCallback" in window) {
+    idleId = requestIdleCallback(initMarquee, { timeout: 2000 });
+  } else {
+    idleId = setTimeout(initMarquee, 1000);
+  }
+
+  return () => {
+    if ("cancelIdleCallback" in window) {
+      cancelIdleCallback(idleId);
+    } else {
+      clearTimeout(idleId);
+    }
+    ScrollTrigger.getAll().forEach((st) => st.kill());
+  };
+}, []);
+
 
   return (
     <div className="md:-mb-32 xl:mb-0 flex flex-col gap-5 bg-transparent py-10 overflow-hidden fade-mask-nv2">

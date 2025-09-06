@@ -8,65 +8,84 @@ import { useTranslation } from "react-i18next";
 
 gsap.registerPlugin(ScrollTrigger);
 
-
 const ProjectSection = ({ project }) => {
   const { t } = useTranslation();
   useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: `.step${project.id}`,
-        start: "top 3%",
-        end: "90% top",
-        scrub: 2,
-        pin: true,
-      },
-    });
+    const initAnimations = () => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: `.step${project.id}`,
+          start: "top 3%",
+          end: "90% top",
+          scrub: 2,
+          pin: true,
+        },
+      });
 
-    tl
-    .to(`.img${project.id}`, { duration: 2 })
-    .to(`.img${project.id}`, {
-      duration: 2,
-      scale: 0.8,
-      x: "26%", // 253px, 335px, 26%, 29%
-      y: 50,
-    });
+      tl.to(`.img${project.id}`, { duration: 2 }).to(`.img${project.id}`, {
+        duration: 2,
+        scale: 0.8,
+        x: "26%",
+        y: 50,
+      });
 
-    const tl2 = gsap.timeline({
-      scrollTrigger: {
-        trigger: `.step${project.id}`,
-        start: "3% 3%",
-        end: "110% top",
-        scrub: 2,
-        pin: true,
-      },
-    });
+      const tl2 = gsap.timeline({
+        scrollTrigger: {
+          trigger: `.step${project.id}`,
+          start: "3% 3%",
+          end: "110% top",
+          scrub: 2,
+          pin: true,
+        },
+      });
 
-    tl2
-      .to(`.item${project.id}`, {
-        opacity: 1,
-        x: 50,
-        duration: 1,
-        stagger: 0.8,
-      })
-      .to(`.item${project.id}`, { duration: 2 });
+      tl2
+        .to(`.item${project.id}`, {
+          opacity: 1,
+          x: 50,
+          duration: 1,
+          stagger: 0.8,
+        })
+        .to(`.item${project.id}`, { duration: 2 });
 
-    const tl3 = gsap.timeline({
-      scrollTrigger: {
-        trigger: `.step${project.id}`,
-        start: "30% 3%",
-        end: "90% top",
-        scrub: 2,
-      },
-    });
+      const tl3 = gsap.timeline({
+        scrollTrigger: {
+          trigger: `.step${project.id}`,
+          start: "30% 3%",
+          end: "90% top",
+          scrub: 2,
+        },
+      });
 
-    tl3
-      .to(`.img${project.id}`, { duration: 2, x: 900, opacity: 0 })
-      .to(`.text-box${project.id}`, { duration: 2, x: -500, opacity: 0 }, "<");
+      tl3
+        .to(`.img${project.id}`, { duration: 2, x: 900, opacity: 0 })
+        .to(
+          `.text-box${project.id}`,
+          { duration: 2, x: -500, opacity: 0 },
+          "<"
+        );
+
+      return () => {
+        tl.kill();
+        tl2.kill();
+        tl3.kill();
+      };
+    };
+
+    let idleId;
+    if ("requestIdleCallback" in window) {
+      idleId = requestIdleCallback(initAnimations, { timeout: 2000 });
+    } else {
+      idleId = setTimeout(initAnimations, 1000);
+    }
 
     return () => {
-      tl.kill();
-      tl2.kill();
-      tl3.kill();
+      if ("cancelIdleCallback" in window) {
+        cancelIdleCallback(idleId);
+      } else {
+        clearTimeout(idleId);
+      }
+      ScrollTrigger.getAll().forEach((st) => st.kill());
     };
   }, [project.id]);
 
@@ -125,12 +144,10 @@ export const ProjectsScrollTrigger = ({ data }) => {
     <section className="point-2 relative hidden xl:block overflow-hidden">
       {data &&
         data.map((project) => (
-          <>
-            <span key={project.id}>
-              <ProjectSection project={project} />
-              <div className="h-[90vh]" />
-            </span>
-          </>
+          <span key={project.id}>
+            <ProjectSection project={project} />
+            <div className="h-[90vh]" />
+          </span>
         ))}
     </section>
   );
