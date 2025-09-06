@@ -1,4 +1,3 @@
-import { TitleHero } from "../fx/title-hero";
 import TypingFx from "../fx/typing-fx";
 import { ButtonCosmic } from "./button-cosmic";
 import { handleDownload } from "../utils/download-cv";
