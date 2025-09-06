@@ -31,6 +31,13 @@
   font-display: swap;
 }
 
+/* Devicon */
+@font-face {
+  font-family: "devicon";
+  src: url("https://cdn.jsdelivr.net/gh/devicons/devicon/fonts/devicon.ttf") format("truetype");
+  font-display: swap; /* 👈 força o comportamento */
+}
+
 
 @theme {
   --breakpoint-uw: 121rem; 

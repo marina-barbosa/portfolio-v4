@@ -58,7 +58,9 @@ export const NavbarScrollspy = () => {
             href="#projetos"
             data-value={t("projects")}
             className={`hacker-scrambles ${
-              activeSection === "projetos" ? "text-[#17837D]" : "text-[#555555]"
+              activeSection === "projetos"
+                ? "text-[#17837D] font-bold"
+                : "text-[#555555]"
             }`}
           >
             {t("projects")}
